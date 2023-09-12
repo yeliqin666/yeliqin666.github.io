@@ -244,6 +244,128 @@
             
 
   
+    <article id="post-人民日报一键下载-bash脚本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2023/09/12/%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%E4%B8%80%E9%94%AE%E4%B8%8B%E8%BD%BD-bash%E8%84%9A%E6%9C%AC/" target="_blank">人民日报一键下载-bash脚本</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2023/09/12/%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%E4%B8%80%E9%94%AE%E4%B8%8B%E8%BD%BD-bash%E8%84%9A%E6%9C%AC/" class="archive-article-date">
+        <time datetime="2023-09-12T05:28:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-12</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">504字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">2分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>这是我高三的某个晚上写的小脚本，用于下载人民日报国内版与国外版报纸PDF，包括分版与合并版</p>
+<p>虽然报纸没读过几次…但这么丢了也可惜，分享给大伙使用</p>
+<p>依赖于pdftk实现页面合并，报纸资源来自人民日报官网，侵删</p>
+<p>代码如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">clear &amp;&amp; packs=$(dpkg -s pdftk)</span><br><span class="line">	if ! echo $packs | grep -q &quot;install ok installed&quot; &gt; /dev/null ;then</span><br><span class="line">		echo -e &quot;\033[31m  安装pdftk \033[0m&quot;</span><br><span class="line">		$&#123;su&#125; apt-get install pdftk -y</span><br><span class="line">	fi</span><br><span class="line">read -p &quot;请输入下载报纸的日期：(eg. 20220930)&quot; pdate</span><br><span class="line">pdate=$&#123;1&#125;</span><br><span class="line">rm -rf $&#123;pdate&#125;-国内_split $&#123;pdate&#125;-海外_split &amp;&amp; mkdir $&#123;pdate&#125;-国内_split $&#123;pdate&#125;-海外_split</span><br><span class="line">i=1</span><br><span class="line">echo 开始获取$pdate人民日报国内版</span><br><span class="line">while :</span><br><span class="line">do</span><br><span class="line">	if [[ &quot;$(expr length $i)&quot; == &quot;1&quot; ]] ; then i=0$&#123;i&#125;;fi</span><br><span class="line">	purl=&quot;http://paper.people.com.cn/rmrb/images/$(echo $pdate|cut -c 1-4)-$(echo $pdate|cut -c 5-6)/$(echo $pdate|cut -c 7-8)/$i/rmrb$&#123;pdate&#125;$i.pdf&quot;</span><br><span class="line">	if [[ &quot;$(curl -o /dev/null --connect-timeout 3 -s -w &quot;%&#123;http_code&#125;&quot; $purl)&quot; == &quot;200&quot; ]];then</span><br><span class="line">		echo 获取第$i版中...</span><br><span class="line">		wget $purl -O $&#123;pdate&#125;-国内_split/RMRB$&#123;pdate&#125;第$i版.pdf  &gt; /dev/null 2&gt;&amp;1</span><br><span class="line">	else</span><br><span class="line">		break</span><br><span class="line">	fi</span><br><span class="line">i=$((10#$i + 1))</span><br><span class="line">done</span><br><span class="line">echo &quot;合并中...&quot;</span><br><span class="line">pdftk $&#123;pdate&#125;-国内_split/*.pdf output 人民日报$&#123;pdate&#125;_国内.pdf</span><br><span class="line">i=1</span><br><span class="line">echo 开始获取$pdate人民日报海外版</span><br><span class="line">while :</span><br><span class="line">do</span><br><span class="line">	if [[ &quot;$(expr length $i)&quot; == &quot;1&quot; ]] ; then i=0$&#123;i&#125;;fi</span><br><span class="line">	purl=&quot;http://paper.people.com.cn/rmrbhwb/images/$(echo $pdate|cut -c 1-4)-$(echo $pdate|cut -c 5-6)/$(echo $pdate|cut -c 7-8)/$i/rmrbhwb$&#123;pdate&#125;$i.pdf&quot;</span><br><span class="line">	if [[ &quot;$(curl -o /dev/null --connect-timeout 3 -s -w &quot;%&#123;http_code&#125;&quot; $purl)&quot; == &quot;200&quot; ]];then</span><br><span class="line">		echo 获取第$i版中...</span><br><span class="line">		wget $purl -O $&#123;pdate&#125;-海外_split/RMRB$&#123;pdate&#125;第$i版.pdf  &gt; /dev/null 2&gt;&amp;1</span><br><span class="line">	else</span><br><span class="line">		break</span><br><span class="line">	fi</span><br><span class="line">i=$((10#$i + 1))</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">echo &quot;合并中...&quot;</span><br><span class="line">pdftk $&#123;pdate&#125;-海外_split/*.pdf output 人民日报$&#123;pdate&#125;_海外.pdf</span><br><span class="line">echo $pdate人民日报国内、海外分版及合并版已下载完成！</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">人民日报</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/资源//" class="article-tag-list-link color3">资源</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2023/09/12/%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%E4%B8%80%E9%94%AE%E4%B8%8B%E8%BD%BD-bash%E8%84%9A%E6%9C%AC/">打开文章 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Flipped阅读笔记-Chapter2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -983,6 +1105,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">人民日报</a>
               </li>
             
             <div class="clearfix"></div>

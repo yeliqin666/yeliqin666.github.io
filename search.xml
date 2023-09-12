@@ -246,6 +246,22 @@
       </categories>
   </entry>
   <entry>
+    <title>人民日报一键下载-bash脚本</title>
+    <url>/2023/09/12/%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%E4%B8%80%E9%94%AE%E4%B8%8B%E8%BD%BD-bash%E8%84%9A%E6%9C%AC/</url>
+    <content><![CDATA[<p>这是我高三的某个晚上写的小脚本，用于下载人民日报国内版与国外版报纸PDF，包括分版与合并版</p>
+<p>虽然报纸没读过几次…但这么丢了也可惜，分享给大伙使用</p>
+<p>依赖于pdftk实现页面合并，报纸资源来自人民日报官网，侵删</p>
+<p>代码如下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">clear &amp;&amp; packs=$(dpkg -s pdftk)</span><br><span class="line">	if ! echo $packs | grep -q &quot;install ok installed&quot; &gt; /dev/null ;then</span><br><span class="line">		echo -e &quot;\033[31m  安装pdftk \033[0m&quot;</span><br><span class="line">		$&#123;su&#125; apt-get install pdftk -y</span><br><span class="line">	fi</span><br><span class="line">read -p &quot;请输入下载报纸的日期：(eg. 20220930)&quot; pdate</span><br><span class="line">pdate=$&#123;1&#125;</span><br><span class="line">rm -rf $&#123;pdate&#125;-国内_split $&#123;pdate&#125;-海外_split &amp;&amp; mkdir $&#123;pdate&#125;-国内_split $&#123;pdate&#125;-海外_split</span><br><span class="line">i=1</span><br><span class="line">echo 开始获取$pdate人民日报国内版</span><br><span class="line">while :</span><br><span class="line">do</span><br><span class="line">	if [[ &quot;$(expr length $i)&quot; == &quot;1&quot; ]] ; then i=0$&#123;i&#125;;fi</span><br><span class="line">	purl=&quot;http://paper.people.com.cn/rmrb/images/$(echo $pdate|cut -c 1-4)-$(echo $pdate|cut -c 5-6)/$(echo $pdate|cut -c 7-8)/$i/rmrb$&#123;pdate&#125;$i.pdf&quot;</span><br><span class="line">	if [[ &quot;$(curl -o /dev/null --connect-timeout 3 -s -w &quot;%&#123;http_code&#125;&quot; $purl)&quot; == &quot;200&quot; ]];then</span><br><span class="line">		echo 获取第$i版中...</span><br><span class="line">		wget $purl -O $&#123;pdate&#125;-国内_split/RMRB$&#123;pdate&#125;第$i版.pdf  &gt; /dev/null 2&gt;&amp;1</span><br><span class="line">	else</span><br><span class="line">		break</span><br><span class="line">	fi</span><br><span class="line">i=$((10#$i + 1))</span><br><span class="line">done</span><br><span class="line">echo &quot;合并中...&quot;</span><br><span class="line">pdftk $&#123;pdate&#125;-国内_split/*.pdf output 人民日报$&#123;pdate&#125;_国内.pdf</span><br><span class="line">i=1</span><br><span class="line">echo 开始获取$pdate人民日报海外版</span><br><span class="line">while :</span><br><span class="line">do</span><br><span class="line">	if [[ &quot;$(expr length $i)&quot; == &quot;1&quot; ]] ; then i=0$&#123;i&#125;;fi</span><br><span class="line">	purl=&quot;http://paper.people.com.cn/rmrbhwb/images/$(echo $pdate|cut -c 1-4)-$(echo $pdate|cut -c 5-6)/$(echo $pdate|cut -c 7-8)/$i/rmrbhwb$&#123;pdate&#125;$i.pdf&quot;</span><br><span class="line">	if [[ &quot;$(curl -o /dev/null --connect-timeout 3 -s -w &quot;%&#123;http_code&#125;&quot; $purl)&quot; == &quot;200&quot; ]];then</span><br><span class="line">		echo 获取第$i版中...</span><br><span class="line">		wget $purl -O $&#123;pdate&#125;-海外_split/RMRB$&#123;pdate&#125;第$i版.pdf  &gt; /dev/null 2&gt;&amp;1</span><br><span class="line">	else</span><br><span class="line">		break</span><br><span class="line">	fi</span><br><span class="line">i=$((10#$i + 1))</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">echo &quot;合并中...&quot;</span><br><span class="line">pdftk $&#123;pdate&#125;-海外_split/*.pdf output 人民日报$&#123;pdate&#125;_海外.pdf</span><br><span class="line">echo $pdate人民日报国内、海外分版及合并版已下载完成！</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>资源</category>
+      </categories>
+      <tags>
+        <tag>人民日报</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的第一篇博客</title>
     <url>/2023/09/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>  全民制作人们大家好，欢迎来到 @yeliqin666的博客! 这是我的<em>第一篇帖子</em>。我喜欢唱、跳、Rap、玩原神(bushi)，你可以在 Gitee 或者 Github 访问我的开源仓库.</p>
