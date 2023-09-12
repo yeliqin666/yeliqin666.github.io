@@ -10,15 +10,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="这是我高三的某个晚上写的小脚本，用于下载人民日报国内版与国外版报纸PDF，包括分版与合并版 虽然报纸没读过几次…但这么丢了也可惜，分享给大伙使用 依赖于pdftk实现页面合并，报纸资源来自人民日报官网，侵删 代码如下 1234567891011121314151617181920212223242526272829303132333435363738394041424344#!&#x2F;bin&#x2F;bashc">
+  <meta name="description" content="这是我高三的某个晚上写的小脚本，用于下载人民日报国内版与国外版报纸PDF，包括分版与合并版 虽然报纸没读过几次…但这么丢了也可惜，分享给大伙使用 依赖于pdftk实现页面合并，报纸资源来自人民日报官网，侵删">
 <meta property="og:type" content="article">
 <meta property="og:title" content="人民日报一键下载-bash脚本">
 <meta property="og:url" content="http://yeliqin666.pages.dev/2023/09/12/%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%E4%B8%80%E9%94%AE%E4%B8%8B%E8%BD%BD-bash%E8%84%9A%E6%9C%AC/index.html">
 <meta property="og:site_name" content="Yeliqin666-Blog">
-<meta property="og:description" content="这是我高三的某个晚上写的小脚本，用于下载人民日报国内版与国外版报纸PDF，包括分版与合并版 虽然报纸没读过几次…但这么丢了也可惜，分享给大伙使用 依赖于pdftk实现页面合并，报纸资源来自人民日报官网，侵删 代码如下 1234567891011121314151617181920212223242526272829303132333435363738394041424344#!&#x2F;bin&#x2F;bashc">
+<meta property="og:description" content="这是我高三的某个晚上写的小脚本，用于下载人民日报国内版与国外版报纸PDF，包括分版与合并版 虽然报纸没读过几次…但这么丢了也可惜，分享给大伙使用 依赖于pdftk实现页面合并，报纸资源来自人民日报官网，侵删">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-09-12T05:28:17.000Z">
-<meta property="article:modified_time" content="2023-09-12T05:35:19.088Z">
+<meta property="article:modified_time" content="2023-09-12T08:51:31.161Z">
 <meta property="article:author" content="yeliqin666">
 <meta property="article:tag" content="人民日报">
 <meta name="twitter:card" content="summary">
@@ -298,6 +298,7 @@
     <p>这是我高三的某个晚上写的小脚本，用于下载人民日报国内版与国外版报纸PDF，包括分版与合并版</p>
 <p>虽然报纸没读过几次…但这么丢了也可惜，分享给大伙使用</p>
 <p>依赖于pdftk实现页面合并，报纸资源来自人民日报官网，侵删</p>
+<span id="more"></span>
 <p>代码如下</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">clear &amp;&amp; packs=$(dpkg -s pdftk)</span><br><span class="line">	if ! echo $packs | grep -q &quot;install ok installed&quot; &gt; /dev/null ;then</span><br><span class="line">		echo -e &quot;\033[31m  安装pdftk \033[0m&quot;</span><br><span class="line">		$&#123;su&#125; apt-get install pdftk -y</span><br><span class="line">	fi</span><br><span class="line">read -p &quot;请输入下载报纸的日期：(eg. 20220930)&quot; pdate</span><br><span class="line">pdate=$&#123;1&#125;</span><br><span class="line">rm -rf $&#123;pdate&#125;-国内_split $&#123;pdate&#125;-海外_split &amp;&amp; mkdir $&#123;pdate&#125;-国内_split $&#123;pdate&#125;-海外_split</span><br><span class="line">i=1</span><br><span class="line">echo 开始获取$pdate人民日报国内版</span><br><span class="line">while :</span><br><span class="line">do</span><br><span class="line">	if [[ &quot;$(expr length $i)&quot; == &quot;1&quot; ]] ; then i=0$&#123;i&#125;;fi</span><br><span class="line">	purl=&quot;http://paper.people.com.cn/rmrb/images/$(echo $pdate|cut -c 1-4)-$(echo $pdate|cut -c 5-6)/$(echo $pdate|cut -c 7-8)/$i/rmrb$&#123;pdate&#125;$i.pdf&quot;</span><br><span class="line">	if [[ &quot;$(curl -o /dev/null --connect-timeout 3 -s -w &quot;%&#123;http_code&#125;&quot; $purl)&quot; == &quot;200&quot; ]];then</span><br><span class="line">		echo 获取第$i版中...</span><br><span class="line">		wget $purl -O $&#123;pdate&#125;-国内_split/RMRB$&#123;pdate&#125;第$i版.pdf  &gt; /dev/null 2&gt;&amp;1</span><br><span class="line">	else</span><br><span class="line">		break</span><br><span class="line">	fi</span><br><span class="line">i=$((10#$i + 1))</span><br><span class="line">done</span><br><span class="line">echo &quot;合并中...&quot;</span><br><span class="line">pdftk $&#123;pdate&#125;-国内_split/*.pdf output 人民日报$&#123;pdate&#125;_国内.pdf</span><br><span class="line">i=1</span><br><span class="line">echo 开始获取$pdate人民日报海外版</span><br><span class="line">while :</span><br><span class="line">do</span><br><span class="line">	if [[ &quot;$(expr length $i)&quot; == &quot;1&quot; ]] ; then i=0$&#123;i&#125;;fi</span><br><span class="line">	purl=&quot;http://paper.people.com.cn/rmrbhwb/images/$(echo $pdate|cut -c 1-4)-$(echo $pdate|cut -c 5-6)/$(echo $pdate|cut -c 7-8)/$i/rmrbhwb$&#123;pdate&#125;$i.pdf&quot;</span><br><span class="line">	if [[ &quot;$(curl -o /dev/null --connect-timeout 3 -s -w &quot;%&#123;http_code&#125;&quot; $purl)&quot; == &quot;200&quot; ]];then</span><br><span class="line">		echo 获取第$i版中...</span><br><span class="line">		wget $purl -O $&#123;pdate&#125;-海外_split/RMRB$&#123;pdate&#125;第$i版.pdf  &gt; /dev/null 2&gt;&amp;1</span><br><span class="line">	else</span><br><span class="line">		break</span><br><span class="line">	fi</span><br><span class="line">i=$((10#$i + 1))</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">echo &quot;合并中...&quot;</span><br><span class="line">pdftk $&#123;pdate&#125;-海外_split/*.pdf output 人民日报$&#123;pdate&#125;_海外.pdf</span><br><span class="line">echo $pdate人民日报国内、海外分版及合并版已下载完成！</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -429,6 +430,15 @@
 
 
 <nav id="article-nav">
+  
+    <a href="/2023/09/12/Flipped-Chapter3-1%E8%AE%B2%E8%A7%A3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Flipped-Chapter3-1讲解(上)+原文
+        
+      </div>
+    </a>
   
   
     <a href="/2023/09/11/Flipped%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0-Chapter2/" id="article-nav-older" class="article-nav-link-wrap">
