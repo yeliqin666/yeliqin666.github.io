@@ -14439,7 +14439,7 @@ class TextAnnotationElement extends AnnotationElement {
     this.container.classList.add("textAnnotation");
     const image = document.createElement("img");
     image.src = this.imageResourcesPath + "annotation-" + this.data.name.toLowerCase() + ".svg";
-    image.alt = "[{{type}} Annotation]";
+    image.alt = "[ Annotation]";
     image.dataset.l10nId = "text_annotation_type";
     image.dataset.l10nArgs = JSON.stringify({
       type: this.data.name
@@ -16112,11 +16112,11 @@ Object.defineProperty(exports, "__esModule", ({
 exports.NullL10n = void 0;
 exports.getL10nFallback = getL10nFallback;
 const DEFAULT_L10N_STRINGS = {
-  of_pages: "of {{pagesCount}}",
-  page_of_pages: "({{pageNumber}} of {{pagesCount}})",
-  document_properties_kb: "{{size_kb}} KB ({{size_b}} bytes)",
-  document_properties_mb: "{{size_mb}} MB ({{size_b}} bytes)",
-  document_properties_date_string: "{{date}}, {{time}}",
+  of_pages: "of ",
+  page_of_pages: "( of )",
+  document_properties_kb: " KB ( bytes)",
+  document_properties_mb: " MB ( bytes)",
+  document_properties_date_string: "1694579234969, ",
   document_properties_page_size_unit_inches: "in",
   document_properties_page_size_unit_millimeters: "mm",
   document_properties_page_size_orientation_portrait: "portrait",
@@ -16125,32 +16125,32 @@ const DEFAULT_L10N_STRINGS = {
   document_properties_page_size_name_a4: "A4",
   document_properties_page_size_name_letter: "Letter",
   document_properties_page_size_name_legal: "Legal",
-  document_properties_page_size_dimension_string: "{{width}} × {{height}} {{unit}} ({{orientation}})",
-  document_properties_page_size_dimension_name_string: "{{width}} × {{height}} {{unit}} ({{name}}, {{orientation}})",
+  document_properties_page_size_dimension_string: " ×   ()",
+  document_properties_page_size_dimension_name_string: " ×   (, )",
   document_properties_linearized_yes: "Yes",
   document_properties_linearized_no: "No",
   additional_layers: "Additional Layers",
-  page_landmark: "Page {{page}}",
-  thumb_page_title: "Page {{page}}",
-  thumb_page_canvas: "Thumbnail of Page {{page}}",
+  page_landmark: "Page ",
+  thumb_page_title: "Page ",
+  thumb_page_canvas: "Thumbnail of Page ",
   find_reached_top: "Reached top of document, continued from bottom",
   find_reached_bottom: "Reached end of document, continued from top",
-  "find_match_count[one]": "{{current}} of {{total}} match",
-  "find_match_count[other]": "{{current}} of {{total}} matches",
-  "find_match_count_limit[one]": "More than {{limit}} match",
-  "find_match_count_limit[other]": "More than {{limit}} matches",
+  "find_match_count[one]": " of  match",
+  "find_match_count[other]": " of  matches",
+  "find_match_count_limit[one]": "More than  match",
+  "find_match_count_limit[other]": "More than  matches",
   find_not_found: "Phrase not found",
   page_scale_width: "Page Width",
   page_scale_fit: "Page Fit",
   page_scale_auto: "Automatic Zoom",
   page_scale_actual: "Actual Size",
-  page_scale_percent: "{{scale}}%",
+  page_scale_percent: "%",
   loading_error: "An error occurred while loading the PDF.",
   invalid_file_error: "Invalid or corrupted PDF file.",
   missing_file_error: "Missing PDF file.",
   unexpected_response_error: "Unexpected server response.",
   rendering_error: "An error occurred while rendering the page.",
-  annotation_date_string: "{{date}}, {{time}}",
+  annotation_date_string: "1694579234969, ",
   printing_not_supported: "Warning: Printing is not fully supported by this browser.",
   printing_not_ready: "Warning: The PDF is not fully loaded for printing.",
   web_fonts_disabled: "Web fonts are disabled: unable to use embedded PDF fonts.",
@@ -16160,7 +16160,7 @@ const DEFAULT_L10N_STRINGS = {
   editor_ink_canvas_aria_label: "User-created image"
 };
 {
-  DEFAULT_L10N_STRINGS.print_progress_percent = "{{progress}}%";
+  DEFAULT_L10N_STRINGS.print_progress_percent = "%";
 }
 function getL10nFallback(key, args) {
   switch (key) {
@@ -16178,7 +16178,7 @@ function formatL10nValue(text, args) {
     return text;
   }
   return text.replaceAll(/\{\{\s*(\w+)\s*\}\}/g, (all, name) => {
-    return name in args ? args[name] : "{{" + name + "}}";
+    return name in args ? args[name] : " + name + ";
   });
 }
 const NullL10n = {
