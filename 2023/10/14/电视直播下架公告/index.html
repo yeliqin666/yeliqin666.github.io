@@ -18,7 +18,7 @@
 <meta property="og:description" content="😫亲爱的朋友，您们好！本站试运行一个月以来，“电视直播”板块直播源稳定性较低、时效性较差的问题凸显且难以解决，决定暂时予以下架，恢复时间未知… 为避免不必要的麻烦，本站即日起对所有文章添加作者与版权信息，如有相关问题请由首页联系方式告知我，我将第一时间审核并处理相关内容。 中午没休息好，脑子很乱。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-10-14T15:46:15.000Z">
-<meta property="article:modified_time" content="2023-10-18T06:05:23.234Z">
+<meta property="article:modified_time" content="2023-10-18T06:10:12.375Z">
 <meta property="article:author" content="yeliqin666">
 <meta name="twitter:card" content="summary">
   
@@ -253,25 +253,6 @@
   
 
 
-	<div class="weather">
-  <!-- 《添加“心知天气”-->
-    <div id="tp-weather-widget"></div>
-  <script>
-    (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
-    window.SeniverseWeatherWidget('show', {
-      flavor: "slim",
-      location: "WX4FBXXFKE4F",
-      geolocation: true,
-      language: "zh-Hans",
-      unit: "c",
-      theme: "auto",
-      token: "efb760e3-5326-4f08-839b-122738249a17",
-      hover: "enabled",
-      container: "tp-weather-widget"
-    })
-  </script>
-  <!-- 添加“心知天气”》-->
-  </div>
   
   
         
@@ -309,6 +290,41 @@
 
 
   
+	<div class="weather">
+  <!-- 《添加“心知天气”-->
+    <div id="tp-weather-widget"></div>
+  <script>
+    (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+    window.SeniverseWeatherWidget('show', {
+      flavor: "slim",
+      location: "WX4FBXXFKE4F",
+      geolocation: true,
+      language: "zh-Hans",
+      unit: "c",
+      theme: "auto",
+      token: "efb760e3-5326-4f08-839b-122738249a17",
+      hover: "enabled",
+      container: "tp-weather-widget"
+    })
+  </script>
+  <!-- 添加“心知天气”》-->
+  </div>
+  <div class="poem-wrap">
+  <div class="poem-border poem-left"></div>
+  <div class="poem-border poem-right"></div>
+    <h>念两句诗</h>
+    <p id="poem">挑选中...</p>
+    <p id="info">
+  <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    jinrishici.load(function(result) {
+      poem.innerHTML = result.data.content
+      info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+      document.getElementById("poem").value(poem);
+      document.getElementById("info").value(info);  
+  });
+  </script>
+</div>
   </header>
   
   <div class="article-entry" itemprop="articleBody">
