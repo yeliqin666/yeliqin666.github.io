@@ -1,0 +1,380 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/gaowanliang/NMSL/src/icon.png" type="image/x-icon" />
+    <!--  metadata goes here   -->
+    <title>抽象话转换器——你说你emoji呢</title>
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145667660-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-145667660-4');
+    </script>
+
+</head>
+
+<body class="mdui-theme-primary-lime mdui-theme-accent-lime">
+    <div class="mdui-appbar">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a href="javascript:;" class="mdui-typo-headline">抽象带师</a>
+            <a href="javascript:;" class="mdui-typo-title">亚文化转换器</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="https://github.com/gaowanliang/NMSL" target="_blank" class="mdui-btn mdui-btn-icon"><i
+                    class="mdui-icon material-icons fa fa-github"></i></a>
+        </div>
+    </div>
+    <div id="tab" class="mdui-tab mdui-tab-full-width mdui-color-theme" mdui-tab>
+        <a href="#tab1" class="mdui-ripple mdui-ripple-white">
+            <i class="mdui-icon material-icons">🐎</i>
+            <label>抽象话转换器</label>
+        </a>
+        <a href="#tab2" class="mdui-ripple mdui-ripple-white">
+            <i class="mdui-icon material-icons">weekend</i>
+            <label>杂项</label>
+        </a>
+        <a href="#tab3" class="mdui-ripple mdui-ripple-white">
+            <i class="mdui-icon material-icons"><img style="width: 24px"
+                    src="https://cdn.jsdelivr.net/gh/gaowanliang/p/114514.png" /></i>
+            <label>万能论证机</label>
+        </a>
+    </div>
+    </div>
+    <div id="tab1" class="mdui-p-a-2">
+        <div style="margin-top: 20px;" class="mdui-container">
+            <div class="mdui-row">
+                <div style="width: 330px;" class="mdui-center">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <img class="mdui-img-fluid" src="https://cdn.jsdelivr.net/gh/gaowanliang/p/1.png" />
+                            <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
+                                <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">其实根本没有孙笑川，或者说人人都是孙笑川</div>
+                                    <div class="mdui-card-primary-subtitle">——孙笑川</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdui-card-actions">
+                            <button id="global" class="mdui-btn mdui-btn-dense mdui-ripple"
+                                onclick="location.href='https://chouxiang.ml/'">国际版网站</button>
+                            <button id="domestic" class="mdui-btn mdui-btn-dense mdui-ripple"
+                                onclick="location.href='https://gaowanliang.gitee.io/nmsl/'">国内版网站</button>
+                            <button class="mdui-btn mdui-btn-dense mdui-ripple"
+                                onclick="location.href='./'">动态加载版网站</button>
+                            <button class="mdui-btn mdui-btn-dense "
+                                onclick="location.href='https://github.com/gaowanliang/NMSL'">⭐ with Github</button>
+                            <button class="mdui-btn mdui-btn-dense "
+                                onclick="location.href='https://docs.qq.com/sheet/DQmlGU0lualVBUU5h'">对词库进行补全</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mdui-container">
+            <div class="mdui-textfield mdui-textfield-floating-label">
+                <label class="mdui-textfield-label">请输入需要抽象的话</label>
+                <textarea class="mdui-textfield-input" id="t" type="text" required></textarea>
+                <div class="mdui-textfield-helper">如果分词不准确，可自行加空格分词</div>
+            </div>
+            <div>
+                <label class="mdui-radio">
+                    <input type="radio" value="1" name="group1" checked />
+                    <i class="mdui-radio-icon"></i>
+                    轻度抽象
+                </label>
+                <label class="mdui-radio">
+                    <input type="radio" value="2" name="group1" />
+                    <i class="mdui-radio-icon"></i>
+                    高度抽象
+                </label>
+                <br>
+                <div class="mdui-typo-body-2">
+                    皮肤选择
+                    <select id="skinSel" class="mdui-select" mdui-select>
+                        <option value="0">👴</option>
+                        <option value="1">👴🏻</option>
+                        <option value="2">👴🏼</option>
+                        <option value="3">👴🏽</option>
+                        <option value="4">👴🏾</option>
+                        <option value="5">👴🏿</option>
+                        <option value="6">🎅</option>
+                        <option value="7">👽</option>
+                    </select>
+                </div>
+                <br>
+                <label id="checkbox-1" class="mdui-checkbox">
+                    <input type="checkbox" id="checkda" />
+                    <i class="mdui-checkbox-icon"></i>
+                    将所有“大”转换为“带”
+                </label><br>
+                <label class="mdui-checkbox">
+                    <input type="checkbox" id="checkai" />
+                    <i class="mdui-checkbox-icon"></i>
+                    "爱"转化为"i"，而不是"💓"
+                </label><br>
+                <label class="mdui-checkbox">
+                    <input type="checkbox" id="checkye" />
+                    <i class="mdui-checkbox-icon"></i>
+                    "我"转化为"👴"
+                </label><br>
+                <label class="mdui-checkbox" onclick="livere()">
+                    <input type="checkbox" id="checklook" />
+                    <i class="mdui-checkbox-icon"></i>
+                    如果发现转换后的结果缺字或乱码，请选中这个
+                </label>
+            </div>
+        </div>
+    </div>
+    <div id="tab2" class="mdui-p-a-2">
+        <div class="mdui-panel mdui-panel-popout mdui-container" mdui-panel style="margin-top: 20px;">
+
+
+            <div class="mdui-panel-item">
+                <div class="mdui-panel-item-header">
+                    <div class="mdui-panel-item-title">打字带空格</div>
+                    <div class="mdui-panel-item-summary">将你输入的每个字之间都加上空格</div>
+                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+                <div class="mdui-panel-item-body">
+                    <div class="mdui-container">
+                        <div class="mdui-textfield mdui-textfield-floating-label">
+                            <label class="mdui-textfield-label">请输入需要加空格的话</label>
+                            <textarea class="mdui-textfield-input" id="t1" type="text" required></textarea>
+                        </div>
+                        <div>
+                            <label class="mdui-checkbox">
+                                <input type="checkbox" id="zhadd" />
+                                <i class="mdui-checkbox-icon"></i>
+                                只有中文之间才加空格，数字，英文不加
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mdui-panel-item-actions">
+                        <button class="mdui-btn mdui-ripple mdui-btn-raised mdui-color-theme-accent"
+                            onclick="offensive()" mdui-dialog="{target: '#e'}">一　転　攻　勢</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdui-panel-item">
+                <div class="mdui-panel-item-header">
+                    <div class="mdui-panel-item-title">化学元素转换</div>
+                    <div class="mdui-panel-item-summary">将你输入的话用化学元素转换</div>
+                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+                <div class="mdui-panel-item-body">
+                    <div class="mdui-container">
+                        <div class="mdui-textfield mdui-textfield-floating-label">
+                            <label class="mdui-textfield-label">请输入需要转成化学元素的句子</label>
+                            <textarea class="mdui-textfield-input" id="t2" type="text" required></textarea>
+                        </div>
+                    </div>
+                    <div class="mdui-panel-item-actions">
+                        <button class="mdui-btn mdui-ripple mdui-btn-raised mdui-color-theme-accent"
+                            onclick="replacement()" mdui-dialog="{target: '#e'}">置换</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdui-panel-item">
+                <div class="mdui-panel-item-header">
+                    <div class="mdui-panel-item-title">删减片段生成</div>
+                    <div class="mdui-panel-item-summary">又到了👴最爱的删减环节</div>
+                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+                <div class="mdui-panel-item-body">
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">这段视频拍摄于(请填时间节点)</label>
+                        <input id="aoTime" class="mdui-textfield-input" type="text" value="1999年" />
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">当时(请填事件)</label>
+                        <input id="aoEvent" class="mdui-textfield-input" type="text" value="外星人入侵" />
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">(请填主人公)</label>
+                        <input id="aoProtagonist" class="mdui-textfield-input" type="text" value="辽宁朝阳巨魔" />
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">为了(请填具体事件)</label>
+                        <input id="aoSpecific" class="mdui-textfield-input" type="text" value="激励广大民众积极抗敌" />
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">而发表了这段振奋人心的演讲，后来因为（请填具体事件）而被删除</label>
+                        <input id="aoDel" class="mdui-textfield-input" type="text" value="为了隐瞒这份历史" />
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">现在在（请填网站）又能看到这段视频</label>
+                        <input id="aoWeb" class="mdui-textfield-input" type="text" value="b站" />
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-floating-label">
+                        <label class="mdui-textfield-label">我非常地（请填感想）</label>
+                        <input id="aoFeeling" class="mdui-textfield-input" type="text" value="疑惑，说好的保密协议呢？" />
+                    </div>
+                    <div class="mdui-panel-item-actions">
+                        <button class="mdui-btn mdui-ripple mdui-btn-raised mdui-color-theme-accent" onclick="aoligei()"
+                            mdui-dialog="{target: '#e'}">奥利给</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tab3" class="mdui-p-a-2">
+        <div style="margin-top: 20px;" class="mdui-container">
+            <div class="mdui-row">
+                <div style="width: 290px;" class="mdui-center">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <img class="mdui-img-fluid" src="https://i.loli.net/2019/11/11/ntixQ6soHUFgVAO.png" />
+                            <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
+                                <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">
+                                        <span style="font-size:30px;"><span><b><ruby>
+                                                        <rb>いいよ</rb>
+                                                        <rp>（</rp>
+                                                        <rt style="font-size:0.75em">1 1 4</rt>
+                                                        <rp>）</rp>
+                                                    </ruby>、<ruby>
+                                                        <rb>こいよ</rb>
+                                                        <rp>（</rp>
+                                                        <rt style="font-size:0.75em">5 1 4</rt>
+                                                        <rp>）</rp>
+                                                    </ruby></b></span></span>
+                                    </div>
+                                    <div class="mdui-card-primary-subtitle">——野獣先輩</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdui-card-actions">
+                            <button class="mdui-btn mdui-ripple"
+                                onclick="location.href='https://chouxiang.ml'">国际版网站</button>
+                            <button class="mdui-btn mdui-ripple"
+                                onclick="location.href='https://gaowanliang.gitee.io/nmsl/'">国内版网站</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div name="info_form" class="mdui-container">
+            <div class="mdui-textfield mdui-textfield-floating-label">
+                <label class="mdui-textfield-label">迫害对象</label>
+                <input class="mdui-textfield-input" type="text" value="我" id="i_item" />
+            </div>
+            <p class="mdui-typo-title">正文</p>
+            <div>
+                <div class="mdui-typo-body-2">
+                    性别
+                    <select class="mdui-select" mdui-select id="i_gender">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                        <option value="不确定">不确定</option>
+                    </select>
+                </div>
+                <div class="mdui-typo-body-2">
+                    是虚拟人物吗
+                    <select class="mdui-select" mdui-select id="i_illus">
+                        <option value="是">是</option>
+                        <option value="不是">不是</option>
+                    </select>
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label">
+                    <label class="mdui-textfield-label">比谁年长</label>
+                    <input class="mdui-textfield-input" type="text" value="小学生" id="i_whom" />
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label">
+                    <label class="mdui-textfield-label">做过的坏事/缺点</label>
+                    <input class="mdui-textfield-input" type="text" value="便乘他人的代码" id="i_what" />
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label">
+                    <label class="mdui-textfield-label">做过的好事/优点</label>
+                    <input class="mdui-textfield-input" type="text" value="编写万能论证机造福众homo" id="i_good" />
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label">
+                    <label class="mdui-textfield-label">做不到/不会做的事</label>
+                    <input class="mdui-textfield-input" type="text" value="考上清华" id="i_no" />
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label">
+                    <label class="mdui-textfield-label">梦想/目标</label>
+                    <input class="mdui-textfield-input" type="text" value="统治全世界" id="i_dream" />
+                    <div class="mdui-textfield-helper">原作者地址：https://github.com/wyusagi/Proof_Yajuu</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdui-container">
+        <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-col-xs-2 mdui-col-offset-xs-9"
+            id="up" mdui-dialog="{target: '#e'}">给👴转</button>
+    </div>
+    <div class="mdui-dialog" id="e">
+        <div class="mdui-dialog-title">抽象结果</div>
+        <div class="mdui-progress">
+            <div id="p1" class="mdui-progress-determinate" style="width:0%;"></div>
+        </div>
+        <div class="mdui-dialog-content" id='res'>
+            <p id="te">出现错误，请重试</p>
+            <div id="p2" style="display: none;">
+                <div class="mdui-spinner mdui-spinner-colorful"></div>正在加载，请稍后
+            </div>
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>
+            <button id="copy" class="btn mdui-btn mdui-ripple" data-clipboard-text="" mdui-dialog-confirm>复制</button>
+        </div>
+    </div>
+
+    <div class="mdui-panel mdui-container" style="margin-top: 20px;" mdui-panel>
+        <div class="mdui-panel-item" onclick="livere()">
+            <div class="mdui-panel-item-header">
+                <div class="mdui-panel-item-title">点击展开评论区</div>
+                <div class="mdui-panel-item-summary">欢迎各位👴在下方评论区提供建议或bug</div>
+                <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+            </div>
+            <div class="mdui-panel-item-body">
+                <div style="padding:0 20px;" id="lv-container" data-id="city" data-uid="MTAyMC80Njc4NC8yMzI4NQ=="></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        (function (d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+            if (typeof LivereTower === 'function') { return; }
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+    </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+
+    <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+    <script src="https://cdn.bootcss.com/clipboard.js/2.0.1/clipboard.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/sxei/pinyinjs/dict/pinyin_dict_withtone.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/sxei/pinyinjs/dict/pinyin_dict_polyphone.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/sxei/pinyinjs/pinyinUtil.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gaowanliang/NMSL/src/js/segmentCXH.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gaowanliang/NMSL/src/js/aoligei.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gaowanliang/p/emoji-regex.js"></script>
+    <script type="text/javascript" src="./src/js/fast.min.js">
+    </script>
+    <footer class="mdui-center mdui-text-center">
+        <p class="mdui-typo-caption-opacity">分清场合,适度玩梗,要有基本社会道德,请勿滥用此梗或幸灾乐祸!</p>
+        <p class="mdui-typo-caption-opacity">本页面使用了纯前端中文分词黑科技,加载较缓慢,请耐心等待</p>
+        <p class="mdui-typo-caption-opacity">一个纯前端的亚文化转换器 Powered by:高玩梁</p>
+    </footer>
+</body>
+
+</html>
