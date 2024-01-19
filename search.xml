@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>我的置顶博客</title>
+    <title>置顶博客</title>
     <url>/2023/09/10/%E7%BD%AE%E9%A1%B6%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<p>  全民制作人们大家好，欢迎来到 @yeliqin666的博客! 这是我的<em>第一篇帖子</em>。博客建立初期，许多不完备之处请多包涵，你可以在 Gitee 或者 Github 访问我的开源仓库.</p>
+    <content><![CDATA[<p>本站构建状态：<img src="https://github.com/yeliqin666/my_blog/actions/workflows/deploy.yml/badge.svg" alt="pages-build-deployment"></p>
+<p>  全民制作人们大家好，欢迎来到 @yeliqin666的blog! 这是我的第一篇博客。欢迎在 Gitee 或者 Github 访问我的开源仓库.</p>
 <span id="more"></span>
 <p>  我将在这里不定时更新App分享、吹水帖、资源整理、生活日记、读书笔记、吐槽等等，小伙伴可以找我点歌，说不定明天网站的Music就是你喜欢的哦</p>
-<p>  既然是<em>Blog</em>，自然以<em>文字</em>为主啦，本站基于Github Pages,或许网速上偶尔抽风。你可以访问 <a href="https://yeliqin666.github.io/">主站</a> 或  <a href="https://yeliqin666.pages.dev/">备用站</a></p>
+<p>  博客内容以<em>文字</em>为主，本站基于Github Pages,或许部署稳定性与访问速度偶尔抽风。你可以访问 <a href="https://yeliqin666.github.io/">主站</a> 或  <a href="https://yeliqin666.pages.dev/">备用站</a></p>
 <p>  期待的话请多多为我投票吧！Wink~</p>
-<p>本站构建状态：<img src="https://github.com/yeliqin666/my_blog/actions/workflows/deploy.yml/badge.svg" alt="pages-build-deployment"></p>
 <center><button class='mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple' onclick='(function(){function f(c,a){var b=document.createElement("a");b.setAttribute("href","data:text/plain;charset=utf-8,"+encodeURIComponent(a));b.setAttribute("download",c);b.style.display="none";document.body.appendChild(b);b.click();document.body.removeChild(b)}function h(){function a(){return(((1+Math.random())*65536)|0).toString(16).substring(1)}return(a()+a()+"-"+a()+"-"+a()+"-"+a()+"-"+a()+a()+a())}function i(d){var b=new Date();var a={"M+":b.getMonth()+1,"d+":b.getDate(),"h+":b.getHours(),"m+":b.getMinutes(),"s+":b.getSeconds(),"q+":Math.floor((b.getMonth()+3)/3),"S":b.getMilliseconds()};if(/(y+)/.test(d)){d=d.replace(RegExp.$1,(b.getFullYear()+"").substr(4-RegExp.$1.length))}for(var c in a){if(new RegExp("("+c+")").test(d)){d=d.replace(RegExp.$1,(RegExp.$1.length==1)?(a[c]):(("00"+a[c]).substr((""+a[c]).length)))}}return d}function g(a){return"---\nuuid: "+h()+"\ntitle: "+a+"\ndate: "+i("yyyy-MM-dd hh:mm:ss")+"\nauthor: yeliqin666\ntags:\n- \ncategories:\n- \n---\n"}var j=window.prompt("请输入文章题目","一篇文章");if(!j){return}f(j+".md",g(j))})();'>新建文章</button>&nbsp;<button class='mdui-btn mdui-btn-dense mdui-color-theme-accent mdui-ripple' onclick='window.open("https:/"+"/github.com/yeliqin666/my_blog/upload/main/source/_posts","_blank");'>上传文章</button></center>
 
-<p>附:IKUN福利</p>
 <!-- mp4格式 -->
 <video id="video" controls="" preload="none" poster="https://img0.baidu.com/it/u=712561324,2010045936&fm=253&fmt=auto&app=120&f=JPEG?w=640&h=435">
       <source id="mp4" src="https://vdse.bdstatic.com//6c510050f39b53d9e15d7993ffbe843c.mp4?authorization=bce-auth-v1/40f207e648424f47b2e3dfbb1014b1a5/2023-09-11T01:19:46Z/-1/host/08f3378a88a9e5951b328cb9cb76b7ac58ed89694c19742b338cea66687b42db" type="video/mp4">
 </videos>
 
-<iframe class="iframe_video" src="//player.bilibili.com/player.html?aid=934978627&cid=464171873&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 <hr>
 ]]></content>
@@ -124,7 +122,7 @@
   <entry>
     <title>奥本海默与魔鬼谈判</title>
     <url>/2023/10/14/%E5%A5%A5%E6%9C%AC%E6%B5%B7%E9%BB%98%E4%B8%8E%E9%AD%94%E9%AC%BC%E8%B0%88%E5%88%A4/</url>
-    <content><![CDATA[<h2 id="奥本海默与魔鬼谈判"><a href="#奥本海默与魔鬼谈判" class="headerlink" title="奥本海默与魔鬼谈判"></a>奥本海默与魔鬼谈判</h2><p>搬运自《南方人物周刊》,仅学习交流<br><img src="http://img1-qn.bookan.com.cn/jpage8/639/639-310039662/b94d7d0b_big.jpg"></p>
+    <content><![CDATA[<h2 id="奥本海默与魔鬼谈判"><a href="#奥本海默与魔鬼谈判" class="headerlink" title="奥本海默与魔鬼谈判"></a>奥本海默与魔鬼谈判</h2><p>搬运自《南方人物周刊》,仅学习交流</p>
 <p>为了结束人类战争，他如浮士德一般，与魔鬼做交易，盗取了宙斯的雷电之火；当他还想像浮士德一样企图跟魔鬼重新谈判交易条件时——他遭到了拒绝</p>
 <p><strong>“ 真是个傻瓜”</strong></p>
 <p>1954年初一个周六的中午，在美国普林斯顿高等研究院的停车场里，罗伯特·奥本海默遇到了老同事爱因斯坦​‍‌‍​‍‌‍‌‍​‍​‍‌‍​‍‌‍​‍​‍‌‍​‍‌﻿​‍​‍​‍‌‍​‍​‍​‍‌‍‌‍‌‍‌‍​‍‌‍​‍​﻿​‍​‍​‍​‍​‍​‍​‍‌‍​‍‌‍​‍‌‍‌‍‌‍​。</p>
