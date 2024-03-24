@@ -3,7 +3,7 @@
   <entry>
     <title>置顶博客</title>
     <url>/2023/09/10/top/</url>
-    <content><![CDATA[<p>本站构建状态：<img src="https://github.com/yeliqin666/my_blog/actions/workflows/deploy.yml/badge.svg" alt="pages-build-deployment"></p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><p>本站构建状态：<a href="https://github.com/yeliqin666/my_blog/actions/workflows/deploy.yml/badge.svg" title="pages-build-deployment" class="gallery-item" style="box-shadow: none;"> <img src="https://github.com/yeliqin666/my_blog/actions/workflows/deploy.yml/badge.svg" alt="pages-build-deployment"></a></p>
 <p>  全民制作人们大家好，欢迎来到 @yeliqin666的blog! 这是我的第一篇博客。欢迎在 Gitee 或者 Github 访问我的开源仓库.</p>
 <span id="more"></span>
 <p>  我将在这里不定时更新App分享、吹水帖、资源整理、生活日记、读书笔记、吐槽等等，小伙伴可以找我点歌，说不定明天网站的Music就是你喜欢的哦</p>
@@ -22,7 +22,12 @@
 
 
 <hr>
-]]></content>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
       <categories>
         <category>有感</category>
       </categories>
@@ -30,7 +35,7 @@
   <entry>
     <title>奥本海默与魔鬼谈判</title>
     <url>/2023/10/14/Oppenheimer/</url>
-    <content><![CDATA[<h2 id="奥本海默与魔鬼谈判"><a href="#奥本海默与魔鬼谈判" class="headerlink" title="奥本海默与魔鬼谈判"></a>奥本海默与魔鬼谈判</h2><p>搬运自《南方人物周刊》,仅学习交流</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="奥本海默与魔鬼谈判"><a href="#奥本海默与魔鬼谈判" class="headerlink" title="奥本海默与魔鬼谈判"></a>奥本海默与魔鬼谈判</h2><p>搬运自《南方人物周刊》,仅学习交流</p>
 <p>为了结束人类战争，他如浮士德一般，与魔鬼做交易，盗取了宙斯的雷电之火；当他还想像浮士德一样企图跟魔鬼重新谈判交易条件时——他遭到了拒绝</p>
 <p><strong>“ 真是个傻瓜”</strong></p>
 <p>1954年初一个周六的中午，在美国普林斯顿高等研究院的停车场里，罗伯特·奥本海默遇到了老同事爱因斯坦​‍‌‍​‍‌‍‌‍​‍​‍‌‍​‍‌‍​‍​‍‌‍​‍‌﻿​‍​‍​‍‌‍​‍​‍​‍‌‍‌‍‌‍‌‍​‍‌‍​‍​﻿​‍​‍​‍​‍​‍​‍​‍‌‍​‍‌‍​‍‌‍‌‍‌‍​。</p>
@@ -79,7 +84,7 @@
 <p>29岁的姬蒂当时已有过三段婚史。她曾与第二任丈夫、共产党员乔·达莱度过几年艰苦的革命生活。西班牙内战爆发后，达莱为参加反法西斯战争来到欧洲，不久就在西班牙战场上牺牲了。27岁的姬蒂成了一名共产党战斗英雄的遗孀，两人的通信被党组织结集出版为《西班牙来信》。1938年，她回到美国，在宾夕法尼大学读植物学，又迅速嫁给了英俊的实习医生哈里森，跟着第三任丈夫来到加州。</p>
 <p>现在，她被这个有着一双蓝色眼睛的物理学家迷住了。奥本海默邀请她一起到新墨西哥州农场度假。旅行结束后，姬蒂发现自己怀孕了。奥本海默找哈里森摊牌，达成共识，然后和姬蒂仓促结婚。</p>
 <p>奥本海默的不少朋友、亲戚对姬蒂的评价很负面，认为她强势、果断、好斗，很情绪化，反复无常，有一种无情的、强烈的折磨身边人的倾向。她还有严重的酗酒问题，常常从中午开始，一直喝到晚上，引发了许多事故。但奥本海默一直以平静和忍耐应对妻子的自毁倾向​‍‌‍​‍‌‍‌‍​‍​‍‌‍​‍‌‍​‍​‍‌‍​‍‌﻿​‍​‍​‍‌‍​‍​‍​‍‌‍‌‍‌‍‌‍​‍‌‍​‍​﻿​‍​‍​‍​‍​‍​‍​‍‌‍​‍‌‍​‍‌‍‌‍‌‍​。他为她找过心理医生，后来他告诉一位朋友：他已经决定睁开双眼，接受现实。</p>
-<p><img src="https://epub.bookan.com.cn/epub2/639/639-310039662/310039662_44ccb393/OEBPS/Images/Figure-0021-0013.jpg" alt="奥本海默向爱因斯坦学习 图/视觉中国"></p>
+<p><a href="https://epub.bookan.com.cn/epub2/639/639-310039662/310039662_44ccb393/OEBPS/Images/Figure-0021-0013.jpg" title="奥本海默向爱因斯坦学习 图/视觉中国" class="gallery-item" style="box-shadow: none;"> <img src="https://epub.bookan.com.cn/epub2/639/639-310039662/310039662_44ccb393/OEBPS/Images/Figure-0021-0013.jpg" alt="奥本海默向爱因斯坦学习 图/视觉中国"></a></p>
 <p>另一方面，奥本海默很依赖她。是姬蒂身上战士一般的斗志激励着他一路向前，完成以他原本个性无法完成的使命，</p>
 <p>在冷战和麦卡锡主义兴盛的时代，奥本海默的前女友，他的妻子和妻子的前夫，都是他个人档案上的红色惊叹号。</p>
 <p>“ <strong>还有更加紧迫的任务”</strong></p>
@@ -88,7 +93,7 @@
 <p>最早推动美国政府进行原子弹研究的，是核物理学家利奥·西拉德。1939年，在二战爆发一个月前，他给罗斯福总统写了一封信，并说服爱因斯坦和他联署。他在信里警告说，某种新型的、威力极大的炸弹可能会出现，并暗示德国人已经在研究了。收到信后，罗斯福下令成立”铀委员会”。</p>
 <p>两年后的1941年，政府新成立的”科研和发展办公室”主管万尼瓦尔·布什读到一份”用铀制造炸弹”的英国秘密报告，该报告预测这种炸弹两年内就可能研制出来。他随后向罗斯福提交一份备忘录说：原子弹爆炸的威力有炸弹的成千上万倍，它的作用将会是决定性的。</p>
 <p>罗斯福立刻把”铀委员会”升级为一个直接向白宫汇报的小组，代号为”S-1”。委员会成员包括副总统亨利·华莱士、战争部长亨利·史汀生、总参谋长乔治·马歇尔、哈佛大学校长詹姆斯·科南特。科南特担任该委员会的主席，与布什一起利用政府的巨大资源，在全美范围为核弹项目招募科学家。</p>
-<p><img src="https://epub.bookan.com.cn/epub2/639/639-310039662/310039662_44ccb393/OEBPS/Images/Figure-0022-0014.jpg" alt="1954年7月，奥本海默（左）与曼哈顿计划的负责人莱斯利·格罗夫斯在原子弹测试现场 图/视觉中国"></p>
+<p><a href="https://epub.bookan.com.cn/epub2/639/639-310039662/310039662_44ccb393/OEBPS/Images/Figure-0022-0014.jpg" title="1954年7月，奥本海默（左）与曼哈顿计划的负责人莱斯利·格罗夫斯在原子弹测试现场 图/视觉中国" class="gallery-item" style="box-shadow: none;"> <img src="https://epub.bookan.com.cn/epub2/639/639-310039662/310039662_44ccb393/OEBPS/Images/Figure-0022-0014.jpg" alt="1954年7月，奥本海默（左）与曼哈顿计划的负责人莱斯利·格罗夫斯在原子弹测试现场 图/视觉中国"></a></p>
 <p>1942年5月，奥本海默高兴地得知他被正式任命为”S-1委员会”快中子研究项目主任，头衔是”速裂协调人”。那年夏天，他组织了一个被重重保护起来的研讨会，与会者都是全美顶尖的理论物理学家，他们一起讨论原子弹的基本结构。奥本海默之后起草了研讨会的总结报告，结论是：原子弹制造在总体上可行，但需要组织大规模的科技和工业资源。谁会是领导这个秘密武器实验基地最有可能的负责人呢？</p>
 <p>布什和科南特都认为奥本海默是最佳人选，他在整个夏天的表现让他们更坚信这点。但是，军方对奥本海默依然不信任。1942年初，他就填写过一份安全问卷调查，列举他参加过的组织，其中一些被认为是共产党的外围组织。</p>
 <p>跟德国赛跑研制原子弹的紧张氛围，加上布什和科南特反复的努力沟通和推动，让陆军部最终通过了奥本海默和其他一些有左翼倾向的科学家的”安全许可”。</p>
@@ -153,7 +158,7 @@
 <p>在国会为新法案辩论期间，奥本海默辞去了实验基地科学主管一职。当年10月，他再次到华盛顿参加会议，向议员们阐明原子弹对国家的危险，并尖锐地批评了国务卿伯恩斯把原子弹当作国际外交资本的念头。”原子弹科学家的负罪感，是我见过的最感到震惊的事。”前副总统亨利·华莱士在日记里写道。在他的鼓励下，奥本海默争取到与杜鲁门总统会面的机会。</p>
 <p>后来证明这是一次十分糟糕的会面。会见中，杜鲁门愚蠢又自信地说苏联永远不会发展出核武器。沟通不畅，奥根海默在焦虑不安下说了一句让他后来万分后悔的话——“总统先生，我觉得我的手满是鲜血。”</p>
 <p>这果然激怒了杜鲁门。会见结束后，有人听到总统嘀咕道，”他手上有血？见鬼！他手上的血还没有我手上的一半多呢。这种事你不用到处抱怨吧。”他后来对国务卿迪安·艾奇逊说，”我再也不想看到这个婊子养的家伙。”</p>
-<p><img src="https://epub.bookan.com.cn/epub2/639/639-310039662/310039662_44ccb393/OEBPS/Images/Figure-0027-0016.jpg" alt="在美国化学学会展览上，奥本海默介绍一张美军在日本广岛投放原子弹时的爆炸照片 图/视觉中国"></p>
+<p><a href="https://epub.bookan.com.cn/epub2/639/639-310039662/310039662_44ccb393/OEBPS/Images/Figure-0027-0016.jpg" title="在美国化学学会展览上，奥本海默介绍一张美军在日本广岛投放原子弹时的爆炸照片 图/视觉中国" class="gallery-item" style="box-shadow: none;"> <img src="https://epub.bookan.com.cn/epub2/639/639-310039662/310039662_44ccb393/OEBPS/Images/Figure-0027-0016.jpg" alt="在美国化学学会展览上，奥本海默介绍一张美军在日本广岛投放原子弹时的爆炸照片 图/视觉中国"></a></p>
 <p>1945年的圣诞节，奥本海默到纽约拜访了老朋友拉比。两人坐在黑暗中，一边抽着烟，一边探讨了核军备竞赛带来的威胁​‍‌‍​‍‌‍‌‍​‍​‍‌‍​‍‌‍​‍​‍‌‍​‍‌﻿​‍​‍​‍‌‍​‍​‍​‍‌‍‌‍‌‍‌‍​‍‌‍​‍​﻿​‍​‍​‍​‍​‍​‍​‍‌‍​‍‌‍​‍‌‍‌‍‌‍​。他们都认为：要成立一个真正有权力的国际原子能机构，才能控制核武器并和平使用核能；被发现秘密制造核武器的国家将面临核设施被关闭的惩罚。</p>
 <p>一个月后，有了令人兴奋的好消息——美苏几个国家举行的协商有了结果，会议决定成立一个联合国原子能机构。杜鲁门为此指定成立一个专门委员会来负责制定相关的控制核武器方案，由艾奇逊担任主席。</p>
 <p>奥本海默成为顾问小组成员。他主导了这一讨论的过程，构思并撰写了约34000字的草案。这份报告后来被称为《艾奇逊-利林塔尔报告》。然而，国务卿任命了一个拥有铀矿的华尔街金融家巴鲁克代表美国到联合国谈判，他把方案改得面目全非。他自负地认为苏联20年内都没有能力研制出原子弹，这是美国的”胜利武器”，必须保持绝对垄断。</p>
@@ -194,7 +199,12 @@
 <p>1967年2月18日，他在睡梦中去世，终年62岁。在一个暴风雨后的下午，妻子姬蒂和儿子在朋友的陪伴下，驱车到西属维京群岛圣约翰岛鹰巢湾，把装着奥本海默骨灰的盒子投进了海里，静静地看着它最终消失在海水中。</p>
 <p>“这就是他想要的归宿。”她说。 </p>
 <p>（参考资料：《奥本海默传》，中信出版社；NBC 1965年的纪录片；《科学家与政治：杨振宁谈奥本海默、泰勒、费米》。）</p>
-]]></content>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
       <categories>
         <category>读书</category>
       </categories>
@@ -205,7 +215,7 @@
   <entry>
     <title>The Giver在线阅读</title>
     <url>/2023/10/05/thegiver_online/</url>
-    <content><![CDATA[<h2 id="The-Giver电子版，资源来自网络，-侵删"><a href="#The-Giver电子版，资源来自网络，-侵删" class="headerlink" title="The Giver电子版，资源来自网络， 侵删"></a>The Giver电子版，资源来自网络， 侵删</h2> 
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="The-Giver电子版，资源来自网络，-侵删"><a href="#The-Giver电子版，资源来自网络，-侵删" class="headerlink" title="The Giver电子版，资源来自网络， 侵删"></a>The Giver电子版，资源来自网络， 侵删</h2> 
 
 	<div class="row">
     <embed src="/files/The-giver.pdf" width="100%" height="550" type="application/pdf">
@@ -214,7 +224,12 @@
 
 
 
-]]></content>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
       <categories>
         <category>读书</category>
       </categories>
@@ -225,7 +240,7 @@
   <entry>
     <title>水调歌头·黄州快哉亭赠张偓佺【苏轼】</title>
     <url>/2023/09/16/passage2/</url>
-    <content><![CDATA[<h2 id="水调歌头·黄州快哉亭赠张偓佺"><a href="#水调歌头·黄州快哉亭赠张偓佺" class="headerlink" title="水调歌头·黄州快哉亭赠张偓佺"></a>水调歌头·黄州快哉亭赠张偓佺</h2><h3 id="苏轼〔宋代〕"><a href="#苏轼〔宋代〕" class="headerlink" title="苏轼〔宋代〕"></a>苏轼〔宋代〕</h3><blockquote>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="水调歌头·黄州快哉亭赠张偓佺"><a href="#水调歌头·黄州快哉亭赠张偓佺" class="headerlink" title="水调歌头·黄州快哉亭赠张偓佺"></a>水调歌头·黄州快哉亭赠张偓佺</h2><h3 id="苏轼〔宋代〕"><a href="#苏轼〔宋代〕" class="headerlink" title="苏轼〔宋代〕"></a>苏轼〔宋代〕</h3><blockquote>
 <p>落日绣帘卷，亭下水连空。知君为我新作，窗户湿青红。长记平山堂上，欹枕江南烟雨，杳杳没孤鸿。认得醉翁语，山色有无中。</p>
 </blockquote>
 <p>落日中卷起绣帘眺望，亭下江水与碧空相接，远处的夕阳与亭台相映，空阔无际。为了我的来到，你特意在窗户上涂上了清油的朱漆，色彩犹新。这让我想起当年在平山堂的时候，靠着枕席，欣赏江南的烟雨，遥望远方天际孤鸿出没的情景。今天看到眼前的景象，我方体会到欧阳醉翁词句中所描绘的，山色若隐若现的景致。</p>
@@ -233,7 +248,12 @@
 <p>一千顷，都镜净，倒碧峰。忽然浪起，掀舞一叶白头翁。堪笑兰台公子，未解庄生天籁，刚道有雌雄。一点浩然气，千里快哉风。</p>
 </blockquote>
 <p>广阔的水面十分明净，山峰翠绿的影子倒映其中。忽然江面波涛汹涌，一个渔翁驾着小舟在风浪中掀舞。见此不由得想起了宋玉的《风赋》，像宋玉这样可笑的人，是不可能理解庄子的风是天籁之说的，硬说什么风有雄雌。其实，一个人只要具备至大至刚的浩然之气，就能在任何境遇中都处之泰然，享受到无穷快意的千里雄风。</p>
-]]></content>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
       <categories>
         <category>读书</category>
       </categories>
@@ -244,7 +264,7 @@
   <entry>
     <title>滕王阁序-王勃</title>
     <url>/2023/09/16/passage3/</url>
-    <content><![CDATA[<h2 id="滕王阁序"><a href="#滕王阁序" class="headerlink" title="滕王阁序"></a>滕王阁序</h2><h3 id="王勃〔唐〕"><a href="#王勃〔唐〕" class="headerlink" title="王勃〔唐〕"></a>王勃〔唐〕</h3><blockquote>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="滕王阁序"><a href="#滕王阁序" class="headerlink" title="滕王阁序"></a>滕王阁序</h2><h3 id="王勃〔唐〕"><a href="#王勃〔唐〕" class="headerlink" title="王勃〔唐〕"></a>王勃〔唐〕</h3><blockquote>
 <p>　　豫章故郡，洪都新府。星分翼轸，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，徐孺下陈蕃之榻。雄州雾列，俊采星驰。台隍枕夷夏之交，宾主尽东南之美。都督阎公之雅望，棨戟遥临；宇文新州之懿范，襜帷暂驻。十旬休假，胜友如云；千里逢迎，高朋满座。腾蛟起凤，孟学士之词宗；紫电青霜，王将军之武库。家君作宰，路出名区；童子何知，躬逢胜饯。</p>
 </blockquote>
 <p>　　这里是汉代的豫章郡城，如今是洪州的都督府，天上的方位属于翼、轸两星宿的分野，地上的位置连结着衡山和庐山。以三江为衣襟，以五湖为衣带，控制着楚地，连接着闽越。这里物产的华美，有如天降之宝，其光彩上冲牛斗之宿。这里的土地有灵秀之气，陈蕃专为徐孺设下几榻。洪州境内的建筑如云雾排列，有才能的人士如流星一般奔驰驱走。城池据于中原与南夷的交界之处，宾客与主人包括了东南地区最优秀的人物。都督阎公，享有崇高的名望，远道来到洪州坐镇，宇文州牧，是美德的楷模，赴任途中在此暂留。每逢十日一旬的假期，来了很多的良友，迎接远客，高贵的朋友坐满了席位。文词宗主孟学士所作文章就像腾起的蛟龙、飞舞的彩凤；王将军的兵器库中，藏有像紫电、青霜这样锋利的宝剑。由于父亲在交趾做县令，我在探亲途中经过这个著名的地方。我年幼无知，竟有幸亲身参加了这次盛大的宴会。</p>
@@ -289,7 +309,12 @@
 <p>　　阁中帝子今何在？槛外长江空自流。</p>
 </blockquote>
 <p>　　昔日游赏于高阁中的滕王如今已不知哪里去了，只有那栏杆外的滔滔江水空自向远方奔流。</p>
-]]></content>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
       <categories>
         <category>读书</category>
       </categories>
@@ -300,7 +325,7 @@
   <entry>
     <title>玩机资源整理（1）</title>
     <url>/2023/09/16/Resource_organization1/</url>
-    <content><![CDATA[<h2 id="玩机资源整理-第一弹"><a href="#玩机资源整理-第一弹" class="headerlink" title="玩机资源整理-第一弹"></a>玩机资源整理-第一弹</h2><ul>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="玩机资源整理-第一弹"><a href="#玩机资源整理-第一弹" class="headerlink" title="玩机资源整理-第一弹"></a>玩机资源整理-第一弹</h2><ul>
 <li><p><a href="https://pan.baidu.com/s/1OjPuG0jeWZzodOXcnuUf0g">V神-Adobe全家桶</a>  提取码：1122</p>
 </li>
 <li><p><a href="https://www.foodieguide.com/iptvsearch/">电视直播源搜索</a></p>
@@ -325,7 +350,12 @@
 </li>
 </ul>
 <iframe class="iframe_video" src="//player.bilibili.com/player.html?aid=934978627&cid=464171873&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-]]></content>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
       <categories>
         <category>资源</category>
       </categories>
@@ -336,7 +366,7 @@
   <entry>
     <title>交大网站整理</title>
     <url>/2023/09/15/Resource_organization2/</url>
-    <content><![CDATA[<p><img src="http://zs.xjtu.edu.cn/images/newadbanner.jpg" alt="图片"></p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><p><a href="http://zs.xjtu.edu.cn/images/newadbanner.jpg" title="图片" class="gallery-item" style="box-shadow: none;"> <img src="http://zs.xjtu.edu.cn/images/newadbanner.jpg" alt="图片"></a></p>
 <blockquote>
 <p>整理一些学校的网站，避免办事的时候翻官网翻到眼花…</p>
 </blockquote>
@@ -374,7 +404,12 @@
 <li><p><a href="https://www.xjtu.edu.cn/">交大官网</a></p>
 </li>
 </ul>
-]]></content>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
       <categories>
         <category>资源</category>
       </categories>
@@ -385,14 +420,19 @@
   <entry>
     <title>智能传感与万物互联的意义</title>
     <url>/2023/09/12/homework1/</url>
-    <content><![CDATA[<p>当代科技快速发展，物联网是将物理世界与数字世界融合的重要一步，它代表着人类社会进入了一个全新的时代，即物联网时代。物联网是基于物的网络，信息可以由任何时间、任何地点的任何人或物产生，智能传感与万物互联之意义重大，深刻影响社会发展。</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><p>当代科技快速发展，物联网是将物理世界与数字世界融合的重要一步，它代表着人类社会进入了一个全新的时代，即物联网时代。物联网是基于物的网络，信息可以由任何时间、任何地点的任何人或物产生，智能传感与万物互联之意义重大，深刻影响社会发展。</p>
 <span id="more"></span>
 <p>传感技术是物联网的关键技术之一，决定其感知层的构成。国内目前传感器应用占比最多的是工业和汽车领域，发展最快的是汽车电子和通信电子应用市场。此外，在智能农业、智能交通、智能楼宇、智能环保、智能电网、健康医疗、智能穿戴等领域，传感器同样有着广阔的应用空间。</p>
 <p>传感与IOT提供了全面的信息收集和数据汇聚能力。通过在物体上植入各种微型感应芯片使其智能化, 然后借助无线网络, 实现人和物“对话”, 物和物“交流”。物联网为我们展示了生活中任何物品都可以变得“有感觉、有思想”这样一幅智能图景, 被认为是世界下一次信息技术浪潮和新经济的引擎。物联网可以实时感知和收集来自物体的大量数据，并将这些数据传递给云端进行处理和分析。对于科学研究、产业发展和社会管理等方面，这种全面信息的提供具有重要的意义。</p>
 <p>IOT提升了生产力和效率。IOT赋能智能制造引领转型升级，各类物体通过传感器与互联网连接起来，实现智能化和自动化的交互。比如，智能家居系统可以通过传感器获取用户的家庭习惯和需求，根据这些信息实现自动化的温度控制、照明管理等功能。智能工厂可以通过传感器实时监测生产设备的工作状态，从而实现生产的精益化和智能化。这种提升生产力和效率的能力可以大大推动社会经济的发展，并为人们的生活带来更多便利和舒适。</p>
 <p>此外，IOT促进了创新和产业发展。物联网的发展为各行各业的创新提供了广阔的平台。传感技术的应用使得传统物体得以与互联网连接，创造出更多的智能化应用和服务。例如，智能医疗可以通过传感技术实现对患者身体状况的实时监测，提供远程医疗服务；智能交通可以通过车联网技术实现道路交通的智能化管理和优化等。这种创新和产业发展的能力为社会经济的转型和升级提供了新的机遇。<br>从国家层面看，基于工业化与信息化融合战略，政府大力推进物联网技术向传统行业中的深度渗透，使得传感器成为提升我国现代信息技术、带动产业化发展的最好突破口；从技术层面看，承担着数据采集和传输重任的传感器，通过物联网领域的引导，正在朝着智能化、微型化、集成化、网络化、多功能、低功耗的方向发展。</p>
 <p>综上，智能传感与IOT提供全面信息的收集和数据汇聚能力，提升生产力和效率，促进创新和产业发展，为我们的社会带来了巨大的变革和机遇。然而，核心制造技术严重滞后于国外，人才资源匮乏，产业发展不足统筹规划不足，投资力度不够等等使我国目前传感器与IOT发展面临困难，这需要不断的技术创新和社会治理的努力来解决，最终促成建设和谐、繁荣、可持续的社会。</p>
-]]></content>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
       <categories>
         <category>有感</category>
       </categories>
@@ -404,12 +444,17 @@
   <entry>
     <title>人民日报一键下载-bash脚本</title>
     <url>/2023/09/12/download-Peoplesdaily_bash/</url>
-    <content><![CDATA[<p>高三某晚写的小脚本，用于下载人民日报国内版与国外版报纸PDF，包括分版与合并版</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><p>高三某晚写的小脚本，用于下载人民日报国内版与国外版报纸PDF，包括分版与合并版</p>
 <p>依赖于pdftk实现页面合并，报纸资源来自人民日报官网，侵删</p>
 <span id="more"></span>
 <p>代码如下</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">clear &amp;&amp; packs=$(dpkg -s pdftk)</span><br><span class="line">	if ! echo $packs | grep -q &quot;install ok installed&quot; &gt; /dev/null ;then</span><br><span class="line">		echo -e &quot;\033[31m  安装pdftk \033[0m&quot;</span><br><span class="line">		$&#123;su&#125; apt-get install pdftk -y</span><br><span class="line">	fi</span><br><span class="line">read -p &quot;请输入下载报纸的日期：(eg. 20220930)&quot; pdate</span><br><span class="line">pdate=$&#123;1&#125;</span><br><span class="line">rm -rf $&#123;pdate&#125;-国内_split $&#123;pdate&#125;-海外_split &amp;&amp; mkdir $&#123;pdate&#125;-国内_split $&#123;pdate&#125;-海外_split</span><br><span class="line">i=1</span><br><span class="line">echo 开始获取$pdate人民日报国内版</span><br><span class="line">while :</span><br><span class="line">do</span><br><span class="line">	if [[ &quot;$(expr length $i)&quot; == &quot;1&quot; ]] ; then i=0$&#123;i&#125;;fi</span><br><span class="line">	purl=&quot;http://paper.people.com.cn/rmrb/images/$(echo $pdate|cut -c 1-4)-$(echo $pdate|cut -c 5-6)/$(echo $pdate|cut -c 7-8)/$i/rmrb$&#123;pdate&#125;$i.pdf&quot;</span><br><span class="line">	if [[ &quot;$(curl -o /dev/null --connect-timeout 3 -s -w &quot;%&#123;http_code&#125;&quot; $purl)&quot; == &quot;200&quot; ]];then</span><br><span class="line">		echo 获取第$i版中...</span><br><span class="line">		wget $purl -O $&#123;pdate&#125;-国内_split/RMRB$&#123;pdate&#125;第$i版.pdf  &gt; /dev/null 2&gt;&amp;1</span><br><span class="line">	else</span><br><span class="line">		break</span><br><span class="line">	fi</span><br><span class="line">i=$((10#$i + 1))</span><br><span class="line">done</span><br><span class="line">echo &quot;合并中...&quot;</span><br><span class="line">pdftk $&#123;pdate&#125;-国内_split/*.pdf output 人民日报$&#123;pdate&#125;_国内.pdf</span><br><span class="line">i=1</span><br><span class="line">echo 开始获取$pdate人民日报海外版</span><br><span class="line">while :</span><br><span class="line">do</span><br><span class="line">	if [[ &quot;$(expr length $i)&quot; == &quot;1&quot; ]] ; then i=0$&#123;i&#125;;fi</span><br><span class="line">	purl=&quot;http://paper.people.com.cn/rmrbhwb/images/$(echo $pdate|cut -c 1-4)-$(echo $pdate|cut -c 5-6)/$(echo $pdate|cut -c 7-8)/$i/rmrbhwb$&#123;pdate&#125;$i.pdf&quot;</span><br><span class="line">	if [[ &quot;$(curl -o /dev/null --connect-timeout 3 -s -w &quot;%&#123;http_code&#125;&quot; $purl)&quot; == &quot;200&quot; ]];then</span><br><span class="line">		echo 获取第$i版中...</span><br><span class="line">		wget $purl -O $&#123;pdate&#125;-海外_split/RMRB$&#123;pdate&#125;第$i版.pdf  &gt; /dev/null 2&gt;&amp;1</span><br><span class="line">	else</span><br><span class="line">		break</span><br><span class="line">	fi</span><br><span class="line">i=$((10#$i + 1))</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">echo &quot;合并中...&quot;</span><br><span class="line">pdftk $&#123;pdate&#125;-海外_split/*.pdf output 人民日报$&#123;pdate&#125;_海外.pdf</span><br><span class="line">echo $pdate人民日报国内、海外分版及合并版已下载完成！</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
       <categories>
         <category>资源</category>
       </categories>
@@ -420,7 +465,7 @@
   <entry>
     <title>人其实高不过一棵庄稼</title>
     <url>/2023/09/11/passage1/</url>
-    <content><![CDATA[<p>  人住在村子里，养鸡，喂狗，用铡刀铡碎一捆青草，是为了一头牛青青黄黄的日子。鸡会打鸣，会下蛋，会在村前的小河滩上领着一帮子女逮蚂蚱。人也想，可是脱不开身呀，村外的田里种着庄稼，村子里整天发生着大大小小的事情。所以，人想活成一只鸡都不成；再说，鸡的下场也不怎么光荣。狗最会看家，看似卧在墙根下，眯缝着眼，稍有动静，就红了眼，把一个“汪”字重复喊了很多遍。其实，见你一哈腰，便弓了身子，夹起尾巴，钻进一个柴草窠里，再不愿管别人的闲事。人不像狗，要不然，活得多没意义。</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><p>  人住在村子里，养鸡，喂狗，用铡刀铡碎一捆青草，是为了一头牛青青黄黄的日子。鸡会打鸣，会下蛋，会在村前的小河滩上领着一帮子女逮蚂蚱。人也想，可是脱不开身呀，村外的田里种着庄稼，村子里整天发生着大大小小的事情。所以，人想活成一只鸡都不成；再说，鸡的下场也不怎么光荣。狗最会看家，看似卧在墙根下，眯缝着眼，稍有动静，就红了眼，把一个“汪”字重复喊了很多遍。其实，见你一哈腰，便弓了身子，夹起尾巴，钻进一个柴草窠里，再不愿管别人的闲事。人不像狗，要不然，活得多没意义。</p>
 <span id="more"></span>
 <p>  牛呢，我不说你也知道。主人下地了，被拴在林东的一棵歪脖子柳树上，日头在东，在西边卧；日头爬上南天门，就靠紧了柳树根。嘴倒嚼着，尾巴甩来甩去，也拍不到一只苍蝇；日头落在屋檐上的时候，牛们大都站起身来，朝着庄稼地的方向，哞——哞——喊了两嗓子，不大会儿就有人走了过来。天就黑了。</p>
 <p>  庄稼住在地里。南岗子，西水洼，起起伏伏，不咋平坦的老河滩上都是庄稼的家。眼下，庄稼做不了自己的主，村子里住的有的是人。别看平常不怎么出来，开春了，动镰了，一个个像从战壕里跃出来的士兵，跟无形的时光拼着抢着，不过是为了果腹，重复上演着祖先继续了很多年的战争。庄稼一开始不大理会这个，好像有了人，日子便再不会像草那么索然无趣。老河滩上的草就没人管，发芽了，开花了，结果了。羊呢，比较挑嘴，喜欢的，抿在嘴里，不紧不慢，咀嚼着光阴；不喜欢的，比如刺老牙，打了个响鼻，分明在告诉自己的子女：那玩意儿碰不得。</p>
@@ -438,7 +483,12 @@
 <p>  玉米又长起来了，蝉的歌唱得无比嘹亮，村庄在仲夏的氤氲里安详。人还是村子里的人，唤狗的唤狗，撵鸡的撵鸡，把日子过得琐琐碎碎，细细长长。一棵庄稼在田野里，听风，听雨，听蟋蟀柔柔的丝弦，明明知道人其实高不过一棵庄稼，也不炫耀所谓的丰功伟绩。</p>
 <p>  其实，人知道就好。知道了一棵庄稼的高度，才能仔细审视脚下的土地，无论走多远，不忘却，不迷惘，就会像一棵庄稼，明晰自己的方向。哪怕最后化身为土，也会在来生茁壮。</p>
 <p>注：宋长征，山东农民作家。</p>
-]]></content>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
       <categories>
         <category>读书</category>
       </categories>
@@ -446,7 +496,7 @@
   <entry>
     <title>Markdown语法小记</title>
     <url>/2023/09/10/markdown_note/</url>
-    <content><![CDATA[<p>Markdown（百度百科：<a href="https://baike.baidu.com/link?url=u9yLyguvr1TEzeJViCDtlIHOJgpuJc7iCgYKRecaIUBiUoFmMOIbZhvKbReXCLm4LPtv8QIzokVHe9H78XjS9uNN1_tQ4wrSIAjTxferXOO">Markdown</a>）是一种轻量级的标记语言，语法简洁明了，易学易写，非常适合于编写结构化文档。Markdown的语法和HTML很类似，都是“文本+标记”的形式，文本表示内容，标记表示结构和排版。和HTML不同的是，Markdown的语法要简单的多，只涵盖纯文本可以涵盖的范围，所用的标记也只对应HTML标记中有关文本内容的部分。但Markdown的语法是兼容HTML的，也就是说，可以直接在Markdown文档中插入任何HTML内容，插入的HTML内容将得到与在HTML文档中相同的呈现效果。Markdown文档的扩展名为<code>.md</code>，可以使用任意文本编辑器（如记事本）打开和编辑。但要看到Markdown文档的呈现效果，则需要使用MarkdownPad等Markdown解析器。当然，也有许多在线Markdown解析器可供使用。</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><p>Markdown（百度百科：<a href="https://baike.baidu.com/link?url=u9yLyguvr1TEzeJViCDtlIHOJgpuJc7iCgYKRecaIUBiUoFmMOIbZhvKbReXCLm4LPtv8QIzokVHe9H78XjS9uNN1_tQ4wrSIAjTxferXOO">Markdown</a>）是一种轻量级的标记语言，语法简洁明了，易学易写，非常适合于编写结构化文档。Markdown的语法和HTML很类似，都是“文本+标记”的形式，文本表示内容，标记表示结构和排版。和HTML不同的是，Markdown的语法要简单的多，只涵盖纯文本可以涵盖的范围，所用的标记也只对应HTML标记中有关文本内容的部分。但Markdown的语法是兼容HTML的，也就是说，可以直接在Markdown文档中插入任何HTML内容，插入的HTML内容将得到与在HTML文档中相同的呈现效果。Markdown文档的扩展名为<code>.md</code>，可以使用任意文本编辑器（如记事本）打开和编辑。但要看到Markdown文档的呈现效果，则需要使用MarkdownPad等Markdown解析器。当然，也有许多在线Markdown解析器可供使用。</p>
 <span id="more"></span>
 
 <h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="区块元素"><a href="#区块元素" class="headerlink" title="区块元素"></a>区块元素</h3><h4 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h4><ul>
@@ -562,7 +612,12 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- [ ] A</span><br><span class="line">- [x] B</span><br><span class="line">    - [x] B1</span><br><span class="line">    - [x] B2</span><br><span class="line">    - [x] B3</span><br><span class="line">- [ ] C</span><br></pre></td></tr></table></figure>
 
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>Markdown发展到现在，在不同的解析器中产生了一些不同的标准，显示的效果也会有差异，但大都涵盖了上述语法。在使用不同的Markdown解析器前，最好先看一下该解析器的说明文档，了解它使用哪些标准，会支持哪些Markdown语法。</p>
-]]></content>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
       <categories>
         <category>资源</category>
       </categories>
