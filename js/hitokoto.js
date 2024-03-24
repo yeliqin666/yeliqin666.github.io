@@ -1,1 +1,1 @@
-fetch("https://v1.hitokoto.cn/?c=k").then(function(t){return t.json()}).then(function(t){document.getElementById("quote").innerText=t.hitokoto}).catch(function(t){console.error(t)});
+fetch("https://v1.jinrishici.com/all.json").then(function(n){return n.json()}).then(function(n){document.getElementById("quote").innerText=n.content+"---"+n.author+"《"+n.origin+"》"}).catch(function(n){console.error(n)});
