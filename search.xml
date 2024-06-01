@@ -426,7 +426,7 @@
   <entry>
     <title>人民日报一键下载-bash脚本</title>
     <url>/2023/09/12/download-Peoplesdaily_bash/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><p>高三某晚写的小脚本，用于下载人民日报国内版与国外版报纸PDF，包括分版与合并版</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><p>用于下载人民日报国内版与国外版报纸PDF，包括分版与合并版</p>
 <p>依赖于pdftk实现页面合并，报纸资源来自人民日报官网，侵删</p>
 <span id="more"></span>
 <p>代码如下</p>
