@@ -3,13 +3,12 @@
   <entry>
     <title>构建状态&amp;更新日志</title>
     <url>/2023/09/10/top/</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><p>这是一个置顶博客，偶尔置顶一些重要消息~</p>
-<h3 id="20240630更新"><a href="#20240630更新" class="headerlink" title="20240630更新"></a>20240630更新</h3><p>1.更换默认字体为思源宋体<br>2.修复音乐解锁的错误提升“运行源代码”<br>3.更换为第三方CDN,去除无效文件，加快访问速度<br>4.去除暗黑模式功能</p>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><p>这是一个置顶博客，放置更新内容和一些重要消息~</p>
+<h3 id="20240630更新"><a href="#20240630更新" class="headerlink" title="20240630更新"></a>20240630更新</h3><p>1.更换默认字体为思源宋体<br>2.修复音乐解锁“运行源代码”的错误提示<br>3.更换为第三方CDN,去除无效字体文件，加快访问速度<br>4.去除暗黑模式功能</p>
 <h3 id="20240629更新"><a href="#20240629更新" class="headerlink" title="20240629更新"></a>20240629更新</h3><p>1.更新首页和logo<br>2.调整：<br>修复：删除显示Top后的数字<br>修复：暗黑模式闪烁问题<br>修复：修复暗黑模式，图片也被反色的问题</p>
 <h3 id="20240608更新"><a href="#20240608更新" class="headerlink" title="20240608更新"></a>20240608更新</h3><p>1.my_blog仓库设置为私密<br>2.启用对部分文章的加密功能<br>3.其他修正优化</p>
 <h3 id="20240325更新"><a href="#20240325更新" class="headerlink" title="20240325更新"></a>20240325更新</h3><p>1.修复更新主题带来的小bug<br>2.页眉由一言换为随机古诗词<br>3.启用资源压缩，精简源码，提高加载速度</p>
 <h3 id="20240330更新"><a href="#20240330更新" class="headerlink" title="20240330更新"></a>20240330更新</h3><p>1.更换主题为黑白默认，更清爽<br>2.更改list中置顶文章标签，补全文章作者<br>3.完成fragments碎片模块，精简无用资源文件</p>
-<p>[暂时失效]本站构建状态：<a href="https://github.com/yeliqin666/my_blog/actions/workflows/deploy.yml/badge.svg" title="pages-build-deployment" class="gallery-item" style="box-shadow: none;"> <img src="https://github.com/yeliqin666/my_blog/actions/workflows/deploy.yml/badge.svg" alt="pages-build-deployment"></a></p>
 <hr>
 </div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
         var options1 = {
