@@ -395,10 +395,10 @@
     <url>/2023/09/15/Resource2/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><p><a href="http://zs.xjtu.edu.cn/images/newadbanner.jpg" title="图片" class="gallery-item" style="box-shadow: none;"> <img src="http://zs.xjtu.edu.cn/images/newadbanner.jpg" alt="图片"></a></p>
 <blockquote>
-<p>整理一些学校的网站，避免办事的时候翻官网翻到眼花…</p>
+<p>整理一些学校的网站，避免办事的时候翻到眼花…</p>
 </blockquote>
 <ul>
-<li><p><a href="http://dean.xjtu.edu.cn/jxxx/xytz.htm">教务处-学业通知</a></p>
+<li><p><a href="https://dean.xjtu.edu.cn/jxxx/jxtz2.htm">教务通知</a></p>
 </li>
 <li><p><a href="https://nic.xjtu.edu.cn/">网络信息中心</a></p>
 </li>
@@ -418,13 +418,29 @@
 </li>
 <li><p><a href="https://card.xjtu.edu.cn/">校园卡中心</a></p>
 </li>
+<li><p><a href="https://ehall.xjtu.edu.cn/">教务办事服务大厅-ehall</a></p>
+</li>
+<li><p><a href="http://bkkq.xjtu.edu.cn/">本科考勤</a></p>
+</li>
+<li><p><a href="http://one2020.xjtu.edu.cn/EIP/edu/education/schoolcalendar/showCalendar.htm">交大校历</a></p>
+</li>
+<li><p><a href="https://stu.xjtu.edu.cn/">学生邮箱</a></p>
+</li>
+<li><p><a href="http://one2020.xjtu.edu.cn/EIP/nonlogin/homePage.htm">成绩单与在读证明凭据</a></p>
+</li>
 <li><p><a href="https://nethelp.xjtu.edu.cn/">校园网络专区</a></p>
 </li>
-<li><p><a href="https://wxjf.xjtu.edu.cn/">网费缴纳</a></p>
+<li><p><a href="https://wxjf.xjtu.edu.cn/">网费缴纳</a>    <a href="https://nethelp.xjtu.edu.cn/">入网</a></p>
 </li>
 <li><p><a href="http://one2020.xjtu.edu.cn/EIP/nonlogin/homePage.htm">综合服务大厅</a></p>
 </li>
-<li><p><a href="https://ehall.xjtu.edu.cn/">教务办事服务大厅-ehall</a></p>
+<li><p><a href="http://www.lib.xjtu.edu.cn/">钱学森图书馆</a></p>
+</li>
+<li><p><a href="http://vi.xjtu.edu.cn/index.htm">交大视觉形象</a></p>
+</li>
+<li><p><a href="http://video.xjtu.edu.cn/">交大影音</a></p>
+</li>
+<li><p><a href="https://ehall.xjtu.edu.cn/">学信网</a></p>
 </li>
 <li><p><a href="https://www.icourse163.org/">慕课MOOC</a></p>
 </li>
