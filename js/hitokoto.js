@@ -1,0 +1,1 @@
+fetch("https://v1.jinrishici.com/all.json").then(function(n){return n.json()}).then(function(n){document.getElementById("quote").innerText=n.content+"---"+n.author+"《"+n.origin+"》"}).catch(function(n){console.error(n)});
