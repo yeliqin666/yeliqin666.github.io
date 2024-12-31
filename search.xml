@@ -16,6 +16,76 @@
 </div>]]></content>
   </entry>
   <entry>
+    <title>新年快乐！</title>
+    <url>/2024/12/31/2025/</url>
+    <content><![CDATA[<div class=".article-gallery"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=276293&auto=1&height=66"></iframe>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025</title>
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .poem-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+        .poem-title {
+            font-size: 2.5em;
+            margin-bottom: 25px;
+            color: #555;
+        }
+        .poem-line {
+            font-size: 1.5em;
+            line-height: 1.6;
+            margin: 15px 0;
+            color: #333;
+        }
+        .poem-line::before,
+        .poem-line::after {
+            content: '';
+            display: inline-block;
+            width: 10%;
+            height: 1px;
+            vertical-align: middle;
+            background-color: #ccc;
+            margin: 0 10px;
+        }
+        .poem-line:first-child::before,
+        .poem-line:last-child::after {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="poem-container">
+        <div class="poem-title">你是我生命中一盏灯</div>
+        <div class="poem-line">照亮所有迷惘角落</div>
+        <div class="poem-line">是你流淌着爱</div>
+        <div class="poem-line">是爱浇灌着我</div>
+        <div class="poem-line">幸福是风霜雨雪都经过</div>
+        <div class="poem-line">再把阳光收获</div>
+    </div>
+</body>
+</html></div>]]></content>
+  </entry>
+  <entry>
     <title>LaTex模板分享</title>
     <url>/2024/09/03/LaTex01/</url>
     <content><![CDATA[<div class=".article-gallery"><p>分享个人用的LaTex书籍基础模板。<br>所含logo可在<a href="http://vi.xjtu.edu.cn/__local/2/F0/6C/8BC0384167B36D7F6D79CAB84CC_572344C2_9A84.png">此处下载</a></p>
