@@ -16,7 +16,7 @@
 </div>]]></content>
   </entry>
   <entry>
-    <title>md2tex说明文档</title>
+    <title>一个适用于pandoc的latex模板(支持中文)</title>
     <url>/2025/02/04/md2tex/</url>
     <content><![CDATA[<!doctype html>
 <html>
