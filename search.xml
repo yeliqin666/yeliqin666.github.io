@@ -16,6 +16,202 @@
 </div>]]></content>
   </entry>
   <entry>
+    <title>md2tex说明文档</title>
+    <url>/2025/02/04/md2tex/</url>
+    <content><![CDATA[<div class=".article-gallery"><h1 id="一级标题对应chapter"><a href="#一级标题对应chapter" class="headerlink" title="一级标题对应chapter"></a>一级标题对应chapter</h1><h2 id="二级标题实际对应section"><a href="#二级标题实际对应section" class="headerlink" title="二级标题实际对应section"></a>二级标题实际对应section</h2><h3 id="三级标题对应subsection"><a href="#三级标题对应subsection" class="headerlink" title="三级标题对应subsection"></a>三级标题对应subsection</h3><h4 id="四级对应subsubsection"><a href="#四级对应subsubsection" class="headerlink" title="四级对应subsubsection"></a>四级对应subsubsection</h4><h5 id="五级对应para"><a href="#五级对应para" class="headerlink" title="五级对应para"></a>五级对应para</h5><h6 id="六级对应subpara"><a href="#六级对应subpara" class="headerlink" title="六级对应subpara"></a>六级对应subpara</h6><blockquote>
+<p>[!IMPORTANT]</p>
+<p>本pandoc模板用于<strong>将markdown等格式转为latex的ctexbook文档</strong>。</p>
+<p>基于默认模板default.latex修改。添加了一些中文支持。</p>
+</blockquote>
+<blockquote>
+<p>[!TIP]</p>
+<p>使用xelatex编译，对中文支持较好；</p>
+<p>搭配typora食用更佳！</p>
+</blockquote>
+<h1 id="配置教程"><a href="#配置教程" class="headerlink" title="配置教程"></a>配置教程</h1><h2 id="安装pandoc与typora"><a href="#安装pandoc与typora" class="headerlink" title="安装pandoc与typora"></a>安装pandoc与typora</h2><h2 id="在typora的文件-偏好设置-导出-latex中添加自定义参数"><a href="#在typora的文件-偏好设置-导出-latex中添加自定义参数" class="headerlink" title="在typora的文件-偏好设置-导出-latex中添加自定义参数"></a>在typora的文件-偏好设置-导出-latex中添加自定义参数</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--template=path\to\this\yeliqin666.latex --top-level-division=chapter</span><br></pre></td></tr></table></figure>
+
+<h2 id="在markdown文件的导言区添加一些参数"><a href="#在markdown文件的导言区添加一些参数" class="headerlink" title="在markdown文件的导言区添加一些参数"></a>在markdown文件的导言区添加一些参数</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &quot;文档标题&quot;</span><br><span class="line">author:</span><br><span class="line">- yeliqin666</span><br><span class="line">- 叶利钦小号</span><br><span class="line">date: &quot;2025-02-04&quot;</span><br><span class="line">numbersections: true</span><br><span class="line">secnumdepth: 3</span><br><span class="line">toc: true #是否包含目录</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>十分简单，现在可以使用typora的<strong>保存为latex</strong>了。</p>
+<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><h2 id="对于文件转换"><a href="#对于文件转换" class="headerlink" title="对于文件转换"></a>对于文件转换</h2><p>并非十全十美，尤其对于中文文档。已经修复了删除线、下划线等样式的中文支持，公式中仍需以<code>\text&#123;&#125;</code>包裹中文。</p>
+<p>格式也并非一一对应，如md的<code>*斜体*</code>对应于latex的<code>emph</code>，latex的<code>emph</code>则会根据段落情况自动选择斜体或下划线以突出强调。</p>
+<h2 id="对于latex模板"><a href="#对于latex模板" class="headerlink" title="对于latex模板"></a>对于latex模板</h2><p>基于原始ctexbook修改，有很好的中文支持。</p>
+<p>照搬仲英学辅 大学物理tex模板，添加了一些数学、物理公式的包，按照中文习惯调整了前言、后记、章节编号等等。</p>
+<h2 id="一些乱七八糟的样式测试"><a href="#一些乱七八糟的样式测试" class="headerlink" title="一些乱七八糟的样式测试"></a>一些乱七八糟的样式测试</h2><p>**<u>段$para$内<del>可以</del></u>**<del>可以</del>输入符号如$$\phi \quad \psi$$。</p>
+<p>$equation$环境应如下设置，<em>其余环境同理</em>。<br>$$<br>\begin{equation}<br>\pi^2<br>\end{equation}<br>$$</p>
+<p>若不需要编号，则<br>$$<br>\vec{a}(r)<br>$$</p>
+<p>转换时默认不会含有图&#x2F;表名和label。</p>
+<p>图片</p>
+<p><a href="/assets/image-20250204152459336.png" title="image-20250204152459336" class="gallery-item" style="box-shadow: none;"> <img src="/assets/image-20250204152459336.png" alt="image-20250204152459336"></a></p>
+<p>表格</p>
+<table>
+<thead>
+<tr>
+<th>大纲级别</th>
+<th>英，中字体</th>
+<th>样式</th>
+<th>中文字号</th>
+<th>磅&#x2F;pt</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>封面标题</td>
+<td>Times New Roman，华文中宋</td>
+<td>加粗</td>
+<td>一号</td>
+<td>26</td>
+</tr>
+<tr>
+<td>封面表格内容</td>
+<td>Times New Roman，思源宋体</td>
+<td>加粗</td>
+<td>四号</td>
+<td>14</td>
+</tr>
+<tr>
+<td>论文总标题</td>
+<td>Times New Roman，华文中宋</td>
+<td>加粗</td>
+<td>二号 加粗</td>
+<td>22</td>
+</tr>
+<tr>
+<td>学校专业姓名</td>
+<td>Times New Roman，楷体</td>
+<td>无</td>
+<td>四号</td>
+<td>14</td>
+</tr>
+<tr>
+<td>摘要&#x2F;关键字</td>
+<td>Times New Roman，楷体</td>
+<td>加粗</td>
+<td>小五</td>
+<td>9</td>
+</tr>
+<tr>
+<td>摘要&#x2F;关键字的内容</td>
+<td>Times New Roman，楷体</td>
+<td>无</td>
+<td>小五</td>
+<td>9</td>
+</tr>
+<tr>
+<td>一级标题&#x2F;h1</td>
+<td>Times New Roman，华文中宋</td>
+<td>加粗</td>
+<td>小三</td>
+<td>15</td>
+</tr>
+<tr>
+<td>二级标题&#x2F;h2</td>
+<td>Times New Roman，华文中宋</td>
+<td>加粗</td>
+<td>四号</td>
+<td>14</td>
+</tr>
+<tr>
+<td>三级标题&#x2F;h3</td>
+<td>Times New Roman，华文中宋</td>
+<td>加粗</td>
+<td>小四</td>
+<td>12</td>
+</tr>
+<tr>
+<td>四、五、六级标题&#x2F;h4,h5,h6</td>
+<td>Times New Roman，楷体</td>
+<td>加粗</td>
+<td>小四</td>
+<td>12</td>
+</tr>
+<tr>
+<td>正文</td>
+<td>Times New Roman，思源宋体</td>
+<td>无，行间距1.5倍</td>
+<td>小四</td>
+<td>12</td>
+</tr>
+<tr>
+<td>表格标题</td>
+<td>Times New Roman，楷体</td>
+<td>加粗</td>
+<td>小四</td>
+<td>12</td>
+</tr>
+<tr>
+<td>表格内容</td>
+<td>Times New Roman，楷体</td>
+<td>无</td>
+<td>五号</td>
+<td>10.5</td>
+</tr>
+<tr>
+<td>引用块</td>
+<td>Times New Roman，楷体</td>
+<td>无</td>
+<td>小四</td>
+<td>12</td>
+</tr>
+<tr>
+<td>行内代码&#x2F;代码块</td>
+<td>Cantarell，思源宋体</td>
+<td>无</td>
+<td>小四</td>
+<td>12</td>
+</tr>
+</tbody></table>
+<p>项目列表</p>
+<p>有序列表：</p>
+<ol>
+<li>项目1</li>
+<li>项目2<ol>
+<li>项目2.1</li>
+<li>项目2.2<ol>
+<li>项目2.2.1</li>
+<li>项目2.2.2</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>无序列表：</p>
+<ul>
+<li>项目1</li>
+<li>项目2<ul>
+<li>项目2.1</li>
+<li>项目2.2<ul>
+<li>项目2.2.1</li>
+<li>项目2.2.2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>任务列表</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 吃饭</li>
+<li><input checked="" disabled="" type="checkbox"> 睡觉</li>
+<li><input disabled="" type="checkbox"> 学习</li>
+<li><input checked="" disabled="" type="checkbox"> 玩原神</li>
+</ul>
+<p>分割线</p>
+<hr>
+<p>引用块</p>
+<blockquote>
+<p><strong>仰天大笑出门去，我辈岂是蓬蒿人。</strong></p>
+</blockquote>
+<p>代码块</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line">answer = random.sample(<span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>),<span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(answer)</span><br><span class="line">a = b = n =<span class="number">0</span> <span class="comment">#</span></span><br><span class="line"><span class="keyword">while</span> a!=<span class="number">4</span> :</span><br><span class="line">    a = b = n = <span class="number">0</span></span><br><span class="line">    user = <span class="built_in">list</span>(<span class="built_in">input</span>(<span class="string">&#x27;請輸入四個數字：&#x27;</span>))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> user:</span><br><span class="line">      <span class="keyword">if</span> <span class="built_in">int</span>(user[n]) == answer[n]:</span><br><span class="line">        a += <span class="number">1</span></span><br><span class="line">      <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">int</span>(i) <span class="keyword">in</span> answer:</span><br><span class="line">          b += <span class="number">1</span></span><br><span class="line">      n += <span class="number">1</span></span><br><span class="line">    output = <span class="string">&#x27;,&#x27;</span>.join(user).replace(<span class="string">&#x27;,&#x27;</span>,<span class="string">&#x27;&#x27;</span>) <span class="comment">#重點：將串列轉換為字串的方法</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;output&#125;</span>:<span class="subst">&#123;a&#125;</span>A<span class="subst">&#123;b&#125;</span>B&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;答對了！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</div>]]></content>
+      <categories>
+        <category>资源</category>
+      </categories>
+      <tags>
+        <tag>latex</tag>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>新年快乐！</title>
     <url>/2024/12/31/2025/</url>
     <content><![CDATA[<div class=".article-gallery"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=276293&auto=1&height=66"></iframe>
