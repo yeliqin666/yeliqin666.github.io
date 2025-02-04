@@ -19,7 +19,7 @@
     <title>一个适用于pandoc的latex模板(支持中文)</title>
     <url>/2025/02/04/md2tex/</url>
     <content><![CDATA[<div class=".article-gallery"><p>如题。可能是春节假期里唯一有点意义的工作了（雾）</p>
-<p>模板<code>yeliqin666.latex</code><a href="assets/yeliqin666.latex">下载</a></p>
+<p>模板<code>yeliqin666.latex</code><a href="/assets/yeliqin666.latex">下载</a></p>
 <h1 id="一级标题对应chapter"><a href="#一级标题对应chapter" class="headerlink" title="一级标题对应chapter"></a>一级标题对应chapter</h1><h2 id="二级标题实际对应section"><a href="#二级标题实际对应section" class="headerlink" title="二级标题实际对应section"></a>二级标题实际对应section</h2><h3 id="三级标题对应subsection"><a href="#三级标题对应subsection" class="headerlink" title="三级标题对应subsection"></a>三级标题对应subsection</h3><h4 id="四级对应subsubsection"><a href="#四级对应subsubsection" class="headerlink" title="四级对应subsubsection"></a>四级对应subsubsection</h4><h5 id="五级对应para"><a href="#五级对应para" class="headerlink" title="五级对应para"></a>五级对应para</h5><h6 id="六级对应subpara"><a href="#六级对应subpara" class="headerlink" title="六级对应subpara"></a>六级对应subpara</h6><blockquote>
 <p>[!IMPORTANT]</p>
 <p>本pandoc模板用于<strong>将markdown等格式转为latex的ctexbook文档</strong>。</p>
@@ -31,10 +31,10 @@
 <p>搭配typora食用更佳！</p>
 </blockquote>
 <p>效果图：</p>
-<a href="assets/md2tex0.png" title="md图" class="gallery-item" style="box-shadow: none;"> <img src="assets/md2tex0.png" alt="md图"  /></a>
+<a href="/assets/md2tex0.png" title="md图" class="gallery-item" style="box-shadow: none;"> <img src="/assets/md2tex0.png" alt="md图"  /></a>
 
 <p><strong>转换后</strong></p>
-<a href="assets/md2tex1.png" title="pdf图" class="gallery-item" style="box-shadow: none;"> <img src="assets/md2tex1.png" alt="pdf图"  /></a>
+<a href="/assets/md2tex1.png" title="pdf图" class="gallery-item" style="box-shadow: none;"> <img src="/assets/md2tex1.png" alt="pdf图"  /></a>
 
 <h1 id="配置教程"><a href="#配置教程" class="headerlink" title="配置教程"></a>配置教程</h1><h2 id="安装pandoc与typora"><a href="#安装pandoc与typora" class="headerlink" title="安装pandoc与typora"></a>安装pandoc与typora</h2><h2 id="在typora的文件-偏好设置-导出-latex中添加自定义参数"><a href="#在typora的文件-偏好设置-导出-latex中添加自定义参数" class="headerlink" title="在typora的文件-偏好设置-导出-latex中添加自定义参数"></a>在typora的文件-偏好设置-导出-latex中添加自定义参数</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--template=path\to\this\yeliqin666.latex --top-level-division=chapter</span><br></pre></td></tr></table></figure>
 
