@@ -18,191 +18,1111 @@
   <entry>
     <title>md2tex说明文档</title>
     <url>/2025/02/04/md2tex/</url>
-    <content><![CDATA[<div class=".article-gallery"><h1 id="一级标题对应chapter"><a href="#一级标题对应chapter" class="headerlink" title="一级标题对应chapter"></a>一级标题对应chapter</h1><h2 id="二级标题实际对应section"><a href="#二级标题实际对应section" class="headerlink" title="二级标题实际对应section"></a>二级标题实际对应section</h2><h3 id="三级标题对应subsection"><a href="#三级标题对应subsection" class="headerlink" title="三级标题对应subsection"></a>三级标题对应subsection</h3><h4 id="四级对应subsubsection"><a href="#四级对应subsubsection" class="headerlink" title="四级对应subsubsection"></a>四级对应subsubsection</h4><h5 id="五级对应para"><a href="#五级对应para" class="headerlink" title="五级对应para"></a>五级对应para</h5><h6 id="六级对应subpara"><a href="#六级对应subpara" class="headerlink" title="六级对应subpara"></a>六级对应subpara</h6><blockquote>
-<p>[!IMPORTANT]</p>
-<p>本pandoc模板用于<strong>将markdown等格式转为latex的ctexbook文档</strong>。</p>
-<p>基于默认模板default.latex修改。添加了一些中文支持。</p>
-</blockquote>
-<blockquote>
-<p>[!TIP]</p>
-<p>使用xelatex编译，对中文支持较好；</p>
-<p>搭配typora食用更佳！</p>
-</blockquote>
-<h1 id="配置教程"><a href="#配置教程" class="headerlink" title="配置教程"></a>配置教程</h1><h2 id="安装pandoc与typora"><a href="#安装pandoc与typora" class="headerlink" title="安装pandoc与typora"></a>安装pandoc与typora</h2><h2 id="在typora的文件-偏好设置-导出-latex中添加自定义参数"><a href="#在typora的文件-偏好设置-导出-latex中添加自定义参数" class="headerlink" title="在typora的文件-偏好设置-导出-latex中添加自定义参数"></a>在typora的文件-偏好设置-导出-latex中添加自定义参数</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--template=path\to\this\yeliqin666.latex --top-level-division=chapter</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<h2 id="在markdown文件的导言区添加一些参数"><a href="#在markdown文件的导言区添加一些参数" class="headerlink" title="在markdown文件的导言区添加一些参数"></a>在markdown文件的导言区添加一些参数</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &quot;文档标题&quot;</span><br><span class="line">author:</span><br><span class="line">- yeliqin666</span><br><span class="line">- 叶利钦小号</span><br><span class="line">date: &quot;2025-02-04&quot;</span><br><span class="line">numbersections: true</span><br><span class="line">secnumdepth: 3</span><br><span class="line">toc: true #是否包含目录</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
-<p>十分简单，现在可以使用typora的<strong>保存为latex</strong>了。</p>
-<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><h2 id="对于文件转换"><a href="#对于文件转换" class="headerlink" title="对于文件转换"></a>对于文件转换</h2><p>并非十全十美，尤其对于中文文档。已经修复了删除线、下划线等样式的中文支持，公式中仍需以<code>\text&#123;&#125;</code>包裹中文。</p>
-<p>格式也并非一一对应，如md的<code>*斜体*</code>对应于latex的<code>emph</code>，latex的<code>emph</code>则会根据段落情况自动选择斜体或下划线以突出强调。</p>
-<h2 id="对于latex模板"><a href="#对于latex模板" class="headerlink" title="对于latex模板"></a>对于latex模板</h2><p>基于原始ctexbook修改，有很好的中文支持。</p>
-<p>照搬仲英学辅 大学物理tex模板，添加了一些数学、物理公式的包，按照中文习惯调整了前言、后记、章节编号等等。</p>
-<h2 id="一些乱七八糟的样式测试"><a href="#一些乱七八糟的样式测试" class="headerlink" title="一些乱七八糟的样式测试"></a>一些乱七八糟的样式测试</h2><p>**<u>段$para$内<del>可以</del></u>**<del>可以</del>输入符号如$$\phi \quad \psi$$。</p>
-<p>$equation$环境应如下设置，<em>其余环境同理</em>。<br>$$<br>\begin{equation}<br>\pi^2<br>\end{equation}<br>$$</p>
-<p>若不需要编号，则<br>$$<br>\vec{a}(r)<br>$$</p>
-<p>转换时默认不会含有图&#x2F;表名和label。</p>
-<p>图片</p>
-<p><a href="/assets/image-20250204152459336.png" title="image-20250204152459336" class="gallery-item" style="box-shadow: none;"> <img src="/assets/image-20250204152459336.png" alt="image-20250204152459336"></a></p>
-<p>表格</p>
-<table>
-<thead>
-<tr>
-<th>大纲级别</th>
-<th>英，中字体</th>
-<th>样式</th>
-<th>中文字号</th>
-<th>磅&#x2F;pt</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>封面标题</td>
-<td>Times New Roman，华文中宋</td>
-<td>加粗</td>
-<td>一号</td>
-<td>26</td>
-</tr>
-<tr>
-<td>封面表格内容</td>
-<td>Times New Roman，思源宋体</td>
-<td>加粗</td>
-<td>四号</td>
-<td>14</td>
-</tr>
-<tr>
-<td>论文总标题</td>
-<td>Times New Roman，华文中宋</td>
-<td>加粗</td>
-<td>二号 加粗</td>
-<td>22</td>
-</tr>
-<tr>
-<td>学校专业姓名</td>
-<td>Times New Roman，楷体</td>
-<td>无</td>
-<td>四号</td>
-<td>14</td>
-</tr>
-<tr>
-<td>摘要&#x2F;关键字</td>
-<td>Times New Roman，楷体</td>
-<td>加粗</td>
-<td>小五</td>
-<td>9</td>
-</tr>
-<tr>
-<td>摘要&#x2F;关键字的内容</td>
-<td>Times New Roman，楷体</td>
-<td>无</td>
-<td>小五</td>
-<td>9</td>
-</tr>
-<tr>
-<td>一级标题&#x2F;h1</td>
-<td>Times New Roman，华文中宋</td>
-<td>加粗</td>
-<td>小三</td>
-<td>15</td>
-</tr>
-<tr>
-<td>二级标题&#x2F;h2</td>
-<td>Times New Roman，华文中宋</td>
-<td>加粗</td>
-<td>四号</td>
-<td>14</td>
-</tr>
-<tr>
-<td>三级标题&#x2F;h3</td>
-<td>Times New Roman，华文中宋</td>
-<td>加粗</td>
-<td>小四</td>
-<td>12</td>
-</tr>
-<tr>
-<td>四、五、六级标题&#x2F;h4,h5,h6</td>
-<td>Times New Roman，楷体</td>
-<td>加粗</td>
-<td>小四</td>
-<td>12</td>
-</tr>
-<tr>
-<td>正文</td>
-<td>Times New Roman，思源宋体</td>
-<td>无，行间距1.5倍</td>
-<td>小四</td>
-<td>12</td>
-</tr>
-<tr>
-<td>表格标题</td>
-<td>Times New Roman，楷体</td>
-<td>加粗</td>
-<td>小四</td>
-<td>12</td>
-</tr>
-<tr>
-<td>表格内容</td>
-<td>Times New Roman，楷体</td>
-<td>无</td>
-<td>五号</td>
-<td>10.5</td>
-</tr>
-<tr>
-<td>引用块</td>
-<td>Times New Roman，楷体</td>
-<td>无</td>
-<td>小四</td>
-<td>12</td>
-</tr>
-<tr>
-<td>行内代码&#x2F;代码块</td>
-<td>Cantarell，思源宋体</td>
-<td>无</td>
-<td>小四</td>
-<td>12</td>
-</tr>
-</tbody></table>
-<p>项目列表</p>
-<p>有序列表：</p>
-<ol>
-<li>项目1</li>
-<li>项目2<ol>
-<li>项目2.1</li>
-<li>项目2.2<ol>
-<li>项目2.2.1</li>
-<li>项目2.2.2</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<p>无序列表：</p>
-<ul>
-<li>项目1</li>
-<li>项目2<ul>
-<li>项目2.1</li>
-<li>项目2.2<ul>
-<li>项目2.2.1</li>
-<li>项目2.2.2</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>任务列表</p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 吃饭</li>
-<li><input checked="" disabled="" type="checkbox"> 睡觉</li>
-<li><input disabled="" type="checkbox"> 学习</li>
-<li><input checked="" disabled="" type="checkbox"> 玩原神</li>
-</ul>
-<p>分割线</p>
-<hr>
-<p>引用块</p>
-<blockquote>
-<p><strong>仰天大笑出门去，我辈岂是蓬蒿人。</strong></p>
-</blockquote>
-<p>代码块</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line">answer = random.sample(<span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>),<span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(answer)</span><br><span class="line">a = b = n =<span class="number">0</span> <span class="comment">#</span></span><br><span class="line"><span class="keyword">while</span> a!=<span class="number">4</span> :</span><br><span class="line">    a = b = n = <span class="number">0</span></span><br><span class="line">    user = <span class="built_in">list</span>(<span class="built_in">input</span>(<span class="string">&#x27;請輸入四個數字：&#x27;</span>))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> user:</span><br><span class="line">      <span class="keyword">if</span> <span class="built_in">int</span>(user[n]) == answer[n]:</span><br><span class="line">        a += <span class="number">1</span></span><br><span class="line">      <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">int</span>(i) <span class="keyword">in</span> answer:</span><br><span class="line">          b += <span class="number">1</span></span><br><span class="line">      n += <span class="number">1</span></span><br><span class="line">    output = <span class="string">&#x27;,&#x27;</span>.join(user).replace(<span class="string">&#x27;,&#x27;</span>,<span class="string">&#x27;&#x27;</span>) <span class="comment">#重點：將串列轉換為字串的方法</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;output&#125;</span>:<span class="subst">&#123;a&#125;</span>A<span class="subst">&#123;b&#125;</span>B&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;答對了！&#x27;</span>)</span><br></pre></td></tr></table></figure>
-</div>]]></content>
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+
+
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/*打印页边距设置*/
+@media print {
+  #write {
+    padding: 0 !important;
+  }
+
+  #write a{
+    color: black !important;
+  }
+
+  @page {
+    margin: 2.5cm 2cm 2.5cm 2.5cm !important;
+    /* 页边距 */
+  }
+}
+
+#write {
+  font-family: "Times New Roman",'SourceHanSerifCN';
+  font-size: 12pt;
+  text-align: justify;
+  /* A4标准宽度 */
+  max-width: 21cm;
+  background-color: white;
+}
+
+
+#write .md-math-block,
+#write .md-rawblock,
+#write p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+#write p {
+  text-align: left;
+  line-height: 1.5em;
+}
+
+#write a{
+  color: rgb(181,54,41);
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 2px solid rgb(181,54,41);
+  border-radius: 2px;
+}
+
+img {
+  /* 避免图片在导出时被断开 */
+  page-break-inside: avoid;
+}
+
+strong {
+  font-weight: 900;
+}
+
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+/* typora 编写模式 */
+#typora-source {
+  font-family: "Cantarell", "SourceHanSerifCN";
+  line-height: 2em;
+}
+
+/* Text */
+
+/*
+ * Sidebar
+ */
+ #typora-sidebar {
+  font-family: 'Cantarell', 'SourceHanSerifCN';
+  height: 100%;
+  color: #40464f;
+  font-size: 0.92rem;
+  background-color:  #ffffff;
+}
+
+#sidebar-content.sidebar-content {
+  margin-top: .5rem;
+}
+
+/*
+* Sidebar - FileNode
+*/
+
+.active-tab-files #info-panel-tab-file .info-panel-tab-border,
+.active-tab-outline #info-panel-tab-outline .info-panel-tab-border,
+.ty-show-search #info-panel-tab-search .info-panel-tab-border {
+  border-radius: 10px;
+  height: 1px;
+  background-color: rgb(181,54,41);
+}
+
+.file-node-content {
+  color: rgb(181,54,41);
+  line-height: 1.6rem;
+}
+
+span.file-node-title-name-part {
+  color: #40464f;
+}
+
+span.file-node-title-ext-part {
+  color: #40464f;
+}
+
+.file-node-icon {
+  padding-right: 0.2rem;
+}
+
+.file-tree-node.active>.file-node-background {
+  border-left: 4px solid rgb(181,54,41);
+  border-color: rgb(181,54,41);
+}
+
+/*
+* Sidebar - Outline
+*/
+
+#outline-content {
+  height: 100%;
+  overflow-x: hidden;
+  line-height: 1.6rem;
+  font-size: .96rem;
+}
+
+#outline-content .outline-active,
+.pin-outline .outline-active {
+  color: rgb(181,54,41);
+}
+
+.outline-item {
+  padding-left: 2em;
+}
+
+.outline-item>.outline-expander:before {
+  transform: translateY(-1px) !important;
+}
+
+/* Meta Block */
+
+pre.md-meta-block {
+  font-family: 'JetBrainsMono';
+  color: rgb(181,54,41);
+  background: #f6f8fa;
+  padding: 1.5rem;
+  margin: -37px 0rem 3.8rem;
+  filter: drop-shadow(#e3e8f0 0px 3px 3px);
+}
+
+pre.md-fences-advanced.md-focus .md-fences-adv-panel {
+  border-radius: .8rem;
+}
+
+/*
+* Scrollbar
+*/
+
+#outline-content::-webkit-scrollbar {
+  width: .5rem;
+}
+
+#file-library::-webkit-scrollbar {
+  width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgb(181,54,41);
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+#write > h3.md-focus:before,
+#write > h4.md-focus:before,
+#write > h5.md-focus:before,
+#write > h6.md-focus:before,
+h3.md-focus:before,
+h4.md-focus:before,
+h5.md-focus:before,
+h6.md-focus:before {
+  color: inherit;
+  border: inherit;
+  border-radius: inherit;
+  position: inherit;
+  left: initial;
+  float: none;
+  top: initial;
+  font-size: inherit;
+  padding-left: inherit;
+  padding-right: inherit;
+  vertical-align: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  font-weight: 900;
+  page-break-after: avoid !important;
+}
+#write h1 {
+  font-family: "Times New Roman", "华文中宋";
+  font-size: 15pt;
+}
+#write h2 {
+  font-family: "Times New Roman", "华文中宋";
+  font-size: 14pt;
+}
+#write h3 {
+  font-family: "Times New Roman", "华文中宋";
+  font-size: 12pt;
+}
+#write h4 {
+  font-family: "Times New Roman", "楷体";
+  font-size: 12pt;
+}
+#write h5 {
+  font-family: "Times New Roman", "楷体";
+  font-size: 12pt;
+}
+#write h6 {
+  font-family: "Times New Roman", "楷体";
+  font-size: 12pt;
+}
+
+/* 标题自动加序号 */
+ #write {
+  counter-reset: h1
+}
+
+h1 {
+  counter-reset: h2
+}
+
+h2 {
+  counter-reset: h3
+}
+
+h3 {
+  counter-reset: h4
+}
+
+h4 {
+  counter-reset: h5
+}
+
+h5 {
+  counter-reset: h6
+}
+
+#write h1:before {
+  counter-increment: h1;
+  content: counter(h1) " "
+}
+
+#write h2:before {
+  counter-increment: h2;
+  content: counter(h1) "." counter(h2) " "
+}
+
+#write h3:before,
+h3.md-focus.md-heading:before {
+  counter-increment: h3;
+  content: counter(h1) "." counter(h2) "." counter(h3) " "
+}
+
+#write h4:before,
+h4.md-focus.md-heading:before {
+  counter-increment: h4;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " "
+}
+
+#write h5:before,
+h5.md-focus.md-heading:before {
+  counter-increment: h5;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " "
+}
+
+#write h6:before,
+h6.md-focus.md-heading:before {
+  counter-increment: h6;
+  content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) " "
+}
+
+#write>h3.md-focus:before,
+#write>h4.md-focus:before,
+#write>h5.md-focus:before,
+#write>h6.md-focus:before,
+h3.md-focus:before,
+h4.md-focus:before,
+h5.md-focus:before,
+h6.md-focus:before {
+  color: inherit;
+  border: inherit;
+  border-radius: inherit;
+  position: inherit;
+  left:initial;
+  float: none;
+  top:initial;
+  font-size: inherit;
+  padding-left: inherit;
+  padding-right: inherit;
+  vertical-align: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+
+/* 无序列表 */
+ul {
+  list-style: disc;
+}
+ul ul {
+  /*list-style: circle;*/
+  /* 请勿删除“–”后的空格, 他们对缩进有一定影响, 下同 */
+  list-style: "■   ";
+}
+ul ul ul {
+  list-style: "▪  ";
+}
+
+/* 有序列表 */
+ol {
+  list-style: decimal;
+}
+ol ol {
+  counter-reset: liist;
+  list-style: none;
+}
+ol ol li {
+  counter-increment: liist;
+  position: relative;
+}
+ol ol li::before {
+  content: "(" counter(liist,lower-alpha) ")";
+  position: absolute;
+  left: -1.8em;
+}
+ol ol ol {
+  counter-reset: liiist;
+  list-style: none;
+  margin: 0;
+}
+ol ol ol li {
+  counter-increment: liiist;
+  position: relative;
+}
+ol ol ol li::before {
+  content: counter(liiist,lower-roman) ".";
+  align-self: flex-end;
+  position: absolute;
+  left: -4.5em;
+  /* -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;*/
+  /* 为了让项目编号是重新用句点对齐而不是左对齐 */
+  width: 4em;
+  text-align: right;
+}
+
+li {
+  position: relative;
+}
+
+ol, ul {
+  padding-inline-start: 2em;
+}
+
+/* task列表 */
+/* Checkbox */
+
+#write input[type=checkbox] {
+  width: 0;
+}
+
+.task-list-item input::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0px; 
+  bottom: -1px;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 1.5px solid rgb(181,54,41);
+  border-radius: 2px;
+  background-color: #fdfdfd;
+  margin-top: -0.4rem;
+}
+
+/* 勾选后的样式 */
+.task-list-item input:checked::before {
+  background-color: rgb(181,54,41); 
+  border: 1.5px solid rgb(181,54,41); 
+}
+
+/* 勾选后的勾号 */
+.task-list-item input:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px; /* 根据需要调整 */
+  bottom: 2.5px; /* 根据需要调整 */
+  width: 7px; /* 根据需要调整 */
+  height: 12px; /* 根据需要调整 */
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* 
+.task-list-done {
+  text-decoration: line-through;
+  text-decoration-color: rgb(181,54,41);
+} */
+
+
+#write table {
+  /* 三线表第一条线宽度 */
+  border-top: 1.2pt solid;
+  /* 三线表第二条线宽度 */
+  border-bottom: 1pt solid;
+  font-family: "Times New Roman","楷体";
+  font-size: 10.5pt;
+  text-align: center;
+  page-break-inside: avoid;
+  border-spacing: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#write table td {
+  padding: 2px;
+}
+#write table tr {
+  padding: 2px;
+}
+#write th {
+  padding: 0px 6px;
+}
+#write thead {
+  /* 表格标题（首行）样式 */
+  /* 三线表表头的线 */
+  border-bottom: 0.5pt solid;
+  font-family: "Times New Roman","楷体" !important;
+  font-weight: 900;
+  font-size: 12pt;
+}
+
+
+blockquote {
+  display: block;
+  font-size: 12pt;
+  overflow: auto;
+  border-left: 5px solid rgb(181,54,41);
+  padding: 15px 30px 15px 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background: rgb(246, 248, 250);
+  box-shadow: 4px 4px 5px #c5c0c0;
+  border-radius:4px 15px 15px 4px;
+  font-family: 'Cantarell','SourceHanSerifCN';
+}
+
+
+/* 行内代码 */
+code {
+  font-family: 'Cantarell', 'SourceHanSerifCN';
+}
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code,
+p code,
+li code {
+  color: rgb(181,54,41);
+  background-color: #fefefe;
+  font-family: 'Cantarell', 'SourceHanSerifCN';
+  font-weight: 900;
+  text-align: justify;
+  vertical-align: baseline;
+  box-shadow: 1px 1px 5px #c8d3df;
+  padding: 2px;
+  background: rgb(246, 248, 250);
+  border-radius: 14px;
+  box-shadow: 1px 1px 5px #c8d3df;
+}
+
+/* 代码块样式 */
+
+.CodeMirror-lines {
+  padding-left: 4px;
+  font-family: 'Cantarell', 'SourceHanSerifCN';
+  font-size: 12pt;
+}
+
+.code-tooltip {
+  box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+  border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+  border: 1px solid #e7eaed;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  padding: 0;
+  padding: 2px 4px 0px 4px;
+  font-size: 0.9em;
+}
+
+code {
+  background-color: #f3f4f4;
+  padding: 0 2px 0 2px;
+}
+
+.md-fences {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding-top: 8px;
+  padding-bottom: 6px;
+}
+
+
+/* 目录 */
+.md-toc {
+  font-size: 12pt;
+}
+
+.md-toc-content {
+  margin-left: 2em;
+  /* 修复缺失上级标题时无法递增 */
+  counter-reset: toc-h2 toc-h3 toc-h4;
+  page-break-after: always;
+}
+
+.md-toc-inner {
+  margin-left: 0 !important;
+  color: black;
+}
+
+/* 目录标题内容属性 */
+.md-toc-h2,
+.md-toc-h3,
+.md-toc-h4,
+.md-toc-h5,
+.md-toc-h6 {
+  font-size: 12pt;
+  font-family: 'Cantarell',"楷体";
+}
+
+
+/* 目录标题前 */
+/* 序号重置 */
+.md-toc-content .md-toc-h1 {
+  display: 12pt;
+  counter-reset: toc-h1;
+}
+
+.md-toc-content .md-toc-h2 {
+  counter-reset: toc-h2;
+}
+.md-toc-content .md-toc-h3 {
+  counter-reset: toc-h3;
+}
+.md-toc-content .md-toc-h4 {
+  counter-reset: toc-h4;
+}
+.md-toc-content .md-toc-h5 {
+  counter-reset: toc-h5;
+}
+.md-toc-content .md-toc-h6 {
+  counter-reset: toc-h6;
+}
+/* 添加序号，序号自增 */
+.md-toc-content .md-toc-h1:before {
+  counter-increment: toc-h1;
+  content: counter(toc-h1);
+  margin-left: 1em;
+  margin-right: 0.5em;
+  color: black;
+}
+.md-toc-content .md-toc-h2:before {
+  counter-increment: toc-h2;
+  content: counter(toc-h1) "." counter(toc-h2);
+  margin-left: 2em;
+  margin-right: 0.5em;
+  color: black;
+}
+.md-toc-content .md-toc-h3:before {
+  counter-increment: toc-h3;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3);
+  margin-left: 3em;
+  margin-right: 0.5em;
+  color: black;
+}
+.md-toc-content .md-toc-h4:before {
+  counter-increment: toc-h4;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4);
+  margin-left: 3.5em;
+  margin-right: 0.5em;
+  color: black;
+}
+.md-toc-content .md-toc-h5:before {
+  counter-increment: toc-h5;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) "." counter(toc-h5);
+  margin-left: 5.5em;
+  margin-right: 0.5em;
+  color: black;
+}
+.md-toc-content .md-toc-h6:before {
+  counter-increment: toc-h6;
+  content: counter(toc-h1) "." counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) "." counter(toc-h5) "." counter(toc-h6);
+  margin-left: 7.5em;
+  margin-right: 0.5em;
+  color: black;
+}
+
+.md-toc-h4,
+.md-toc-h5,
+.md-toc-h6 {
+  display: none;
+}
+
+
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG2"] path[data-c], mjx-container[jax="SVG2"] use[data-c] {
+  stroke-width: 3;
+}
+
+g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+
+.MathJax g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+							stroke-width: 0;
+						}
+</style><title>md2tex说明文档</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='一级标题对应chapter'><span>一级标题对应chapter</span></h1><h2 id='二级标题实际对应section'><span>二级标题实际对应section</span></h2><h3 id='三级标题对应subsection'><span>三级标题对应subsection</span></h3><h4 id='四级对应subsubsection'><span>四级对应subsubsection</span></h4><h5 id='五级对应para'><span>五级对应para</span></h5><h6 id='六级对应subpara'><span>六级对应subpara</span></h6><div class="md-alert md-alert-important important"><p><span class='md-alert-text md-alert-text-important'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</span><br></p><p><span>本pandoc模板用于</span><strong><span>将markdown等格式转为latex的ctexbook文档</span></strong><span>。</span></p><p><span>基于默认模板default.latex修改。添加了一些中文支持。</span></p></div><div class="md-alert md-alert-tip tip"><p><span class='md-alert-text md-alert-text-tip'><svg viewBox="0 0 16 16" version="1.1" width="1em" height="1em" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</span><br></p><p><span>使用xelatex编译，对中文支持较好；</span></p><p><span>搭配typora食用更佳！</span></p></div><p><span>效果图：</span></p><p><img src="assets/md2tex0.png" alt="md图"  /></p><p><strong><span>转换后</span></strong></p><p><img src="assets/md2tex1.png" alt="pdf图"  /></p><h1 id='配置教程'><span>配置教程</span></h1><h2 id='安装pandoc与typora'><span>安装pandoc与typora</span></h2><h2 id='在typora的文件-偏好设置-导出-latex中添加自定义参数'><span>在typora的文件-偏好设置-导出-latex中添加自定义参数</span></h2><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.42438px; left: 7.98749px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">--template=path\to\this\yeliqin666.latex --top-level-division=chapter</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre><h2 id='在markdown文件的导言区添加一些参数'><span>在markdown文件的导言区添加一些参数</span></h2><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.42438px; left: 7.98749px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">---</span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">title: "文档标题"</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">author:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">- yeliqin666</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">- 叶利钦小号</span></pre><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">date: "2025-02-04"</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">numbersections: true</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">secnumdepth: 3</span></pre><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">toc: true #是否包含目录</span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">---</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 228px;"></div><div class="CodeMirror-gutters" style="display: none; height: 228px;"></div></div></div></pre><p><span>十分简单，现在可以使用typora的</span><strong><span>保存为latex</span></strong><span>了。</span></p><h1 id='说明'><span>说明</span></h1><h2 id='对于文件转换'><span>对于文件转换</span></h2><p><span>并非十全十美，尤其对于中文文档。已经修复了删除线、下划线等样式的中文支持，公式中仍需以</span><code>\text&#123;&#125;</code><span>包裹中文。</span></p><p><span>格式也并非一一对应，如md的</span><code>*斜体*</code><span>对应于latex的</span><code>emph</code><span>，latex的</span><code>emph</code><span>则会根据段落情况自动选择斜体或下划线以突出强调。</span></p><h2 id='对于latex模板'><span>对于latex模板</span></h2><p><span>基于原始ctexbook修改，有很好的中文支持。</span></p><p><span>照搬仲英学辅 大学物理tex模板，添加了一些数学、物理公式的包，按照中文习惯调整了前言、后记、章节编号等等。</span></p><h2 id='一些乱七八糟的样式测试'><span>一些乱七八糟的样式测试</span></h2><p><strong><u><span>段</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="4.552ex" height="1.439ex" role="img" focusable="false" viewBox="0 -442 2012 636" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.439ex;"><defs><path id="MJX-124-TEX-I-1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path><path id="MJX-124-TEX-I-1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path><path id="MJX-124-TEX-I-1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D45D" xlink:href="#MJX-124-TEX-I-1D45D"></use></g><g data-mml-node="mi" transform="translate(503,0)"><use data-c="1D44E" xlink:href="#MJX-124-TEX-I-1D44E"></use></g><g data-mml-node="mi" transform="translate(1032,0)"><use data-c="1D45F" xlink:href="#MJX-124-TEX-I-1D45F"></use></g><g data-mml-node="mi" transform="translate(1483,0)"><use data-c="1D44E" xlink:href="#MJX-124-TEX-I-1D44E"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mi>a</mi><mi>r</mi><mi>a</mi></math></mjx-assistive-mml></mjx-container><script type="math/tex">para</script><span>内</span><del><span>可以</span></del></u></strong><del><span>可以</span></del><span>输入符号如</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="5.084ex" height="2.034ex" role="img" focusable="false" viewBox="0 -694 2247 899" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.464ex;"><defs><path id="MJX-98-TEX-I-1D719" d="M409 688Q413 694 421 694H429H442Q448 688 448 686Q448 679 418 563Q411 535 404 504T392 458L388 442Q388 441 397 441T429 435T477 418Q521 397 550 357T579 260T548 151T471 65T374 11T279 -10H275L251 -105Q245 -128 238 -160Q230 -192 227 -198T215 -205H209Q189 -205 189 -198Q189 -193 211 -103L234 -11Q234 -10 226 -10Q221 -10 206 -8T161 6T107 36T62 89T43 171Q43 231 76 284T157 370T254 422T342 441Q347 441 348 445L378 567Q409 686 409 688ZM122 150Q122 116 134 91T167 53T203 35T237 27H244L337 404Q333 404 326 403T297 395T255 379T211 350T170 304Q152 276 137 237Q122 191 122 150ZM500 282Q500 320 484 347T444 385T405 400T381 404H378L332 217L284 29Q284 27 285 27Q293 27 317 33T357 47Q400 66 431 100T475 170T494 234T500 282Z"></path><path id="MJX-98-TEX-I-1D713" d="M161 441Q202 441 226 417T250 358Q250 338 218 252T187 127Q190 85 214 61Q235 43 257 37Q275 29 288 29H289L371 360Q455 691 456 692Q459 694 472 694Q492 694 492 687Q492 678 411 356Q329 28 329 27T335 26Q421 26 498 114T576 278Q576 302 568 319T550 343T532 361T524 384Q524 405 541 424T583 443Q602 443 618 425T634 366Q634 337 623 288T605 220Q573 125 492 57T329 -11H319L296 -104Q272 -198 272 -199Q270 -205 252 -205H239Q233 -199 233 -197Q233 -192 256 -102T279 -9Q272 -8 265 -8Q106 14 106 139Q106 174 139 264T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Q21 299 34 333T82 404T161 441Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D719" xlink:href="#MJX-98-TEX-I-1D719"></use></g><g data-mml-node="mstyle" transform="translate(596,0)"><g data-mml-node="mspace"></g></g><g data-mml-node="mi" transform="translate(1596,0)"><use data-c="1D713" xlink:href="#MJX-98-TEX-I-1D713"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ϕ</mi><mstyle scriptlevel="0"><mspace width="1em"></mspace></mstyle><mi>ψ</mi></math></mjx-assistive-mml></mjx-container><script type="math/tex">\phi \quad \psi</script><span>。</span></p><p><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="8.638ex" height="1.934ex" role="img" focusable="false" viewBox="0 -661 3818 855" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.439ex;"><defs><path id="MJX-99-TEX-I-1D452" d="M39 168Q39 225 58 272T107 350T174 402T244 433T307 442H310Q355 442 388 420T421 355Q421 265 310 237Q261 224 176 223Q139 223 138 221Q138 219 132 186T125 128Q125 81 146 54T209 26T302 45T394 111Q403 121 406 121Q410 121 419 112T429 98T420 82T390 55T344 24T281 -1T205 -11Q126 -11 83 42T39 168ZM373 353Q367 405 305 405Q272 405 244 391T199 357T170 316T154 280T149 261Q149 260 169 260Q282 260 327 284T373 353Z"></path><path id="MJX-99-TEX-I-1D45E" d="M33 157Q33 258 109 349T280 441Q340 441 372 389Q373 390 377 395T388 406T404 418Q438 442 450 442Q454 442 457 439T460 434Q460 425 391 149Q320 -135 320 -139Q320 -147 365 -148H390Q396 -156 396 -157T393 -175Q389 -188 383 -194H370Q339 -192 262 -192Q234 -192 211 -192T174 -192T157 -193Q143 -193 143 -185Q143 -182 145 -170Q149 -154 152 -151T172 -148Q220 -148 230 -141Q238 -136 258 -53T279 32Q279 33 272 29Q224 -10 172 -10Q117 -10 75 30T33 157ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path><path id="MJX-99-TEX-I-1D462" d="M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path id="MJX-99-TEX-I-1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path><path id="MJX-99-TEX-I-1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path><path id="MJX-99-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path><path id="MJX-99-TEX-I-1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path><path id="MJX-99-TEX-I-1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D452" xlink:href="#MJX-99-TEX-I-1D452"></use></g><g data-mml-node="mi" transform="translate(466,0)"><use data-c="1D45E" xlink:href="#MJX-99-TEX-I-1D45E"></use></g><g data-mml-node="mi" transform="translate(926,0)"><use data-c="1D462" xlink:href="#MJX-99-TEX-I-1D462"></use></g><g data-mml-node="mi" transform="translate(1498,0)"><use data-c="1D44E" xlink:href="#MJX-99-TEX-I-1D44E"></use></g><g data-mml-node="mi" transform="translate(2027,0)"><use data-c="1D461" xlink:href="#MJX-99-TEX-I-1D461"></use></g><g data-mml-node="mi" transform="translate(2388,0)"><use data-c="1D456" xlink:href="#MJX-99-TEX-I-1D456"></use></g><g data-mml-node="mi" transform="translate(2733,0)"><use data-c="1D45C" xlink:href="#MJX-99-TEX-I-1D45C"></use></g><g data-mml-node="mi" transform="translate(3218,0)"><use data-c="1D45B" xlink:href="#MJX-99-TEX-I-1D45B"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>e</mi><mi>q</mi><mi>u</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi></math></mjx-assistive-mml></mjx-container><script type="math/tex">equation</script><span>环境应如下设置，</span><em><span>其余环境同理</span></em><span>。</span></p><div contenteditable="false" spellcheck="false" class="mathjax-block md-end-block md-math-block md-rawblock" id="mathjax-n184" cid="n184" mdtype="math_block" data-math-tag-before="0" data-math-tag-after="1" data-math-labels="[]"><div class="md-math-container"><mjx-container class="MathJax" jax="SVG" display="true" width="full" style="min-width: 11.68ex; position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2.565ex" role="img" focusable="false" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.717ex; min-width: 11.68ex;"><defs><path id="MJX-126-TEX-I-1D70B" d="M132 -11Q98 -11 98 22V33L111 61Q186 219 220 334L228 358H196Q158 358 142 355T103 336Q92 329 81 318T62 297T53 285Q51 284 38 284Q19 284 19 294Q19 300 38 329T93 391T164 429Q171 431 389 431Q549 431 553 430Q573 423 573 402Q573 371 541 360Q535 358 472 358H408L405 341Q393 269 393 222Q393 170 402 129T421 65T431 37Q431 20 417 5T381 -10Q370 -10 363 -7T347 17T331 77Q330 86 330 121Q330 170 339 226T357 318T367 358H269L268 354Q268 351 249 275T206 114T175 17Q164 -11 132 -11Z"></path><path id="MJX-126-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-126-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-126-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-126-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(0.016176,-0.016176) translate(0, -817)"><g data-mml-node="math"><g data-mml-node="mtable" transform="translate(2078,0) translate(-2078,0)"><g transform="translate(0 817) matrix(1 0 0 -1 0 0) scale(61.82)"><svg data-table="true" preserveAspectRatio="xMidYMid" viewBox="503.3 -817 1 1133.9"><g transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="mlabeledtr" transform="translate(0,-67)"><g data-mml-node="mtd"><g data-mml-node="msup"><g data-mml-node="mi"><use data-c="1D70B" xlink:href="#MJX-126-TEX-I-1D70B"></use></g><g data-mml-node="mn" transform="translate(603,413) scale(0.707)"><use data-c="32" xlink:href="#MJX-126-TEX-N-32"></use></g></g></g></g></g></svg><svg data-labels="true" preserveAspectRatio="xMaxYMid" viewBox="1278 -817 1 1133.9"><g data-labels="true" transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="mtd" id="mjx-eqn:1" transform="translate(0,683)"><text data-id-align="true"></text><g data-idbox="true" transform="translate(0,-750)"><g data-mml-node="mtext"><use data-c="28" xlink:href="#MJX-126-TEX-N-28"></use><use data-c="31" xlink:href="#MJX-126-TEX-N-31" transform="translate(389,0)"></use><use data-c="29" xlink:href="#MJX-126-TEX-N-29" transform="translate(889,0)"></use></g></g></g></g></svg></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable displaystyle="true"><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><msup><mi>π</mi><mn>2</mn></msup></mtd></mlabeledtr></mtable></math></mjx-assistive-mml></mjx-container></div></div><p><span>若不需要编号，则</span></p><div contenteditable="false" spellcheck="false" class="mathjax-block md-end-block md-math-block md-rawblock" id="mathjax-n186" cid="n186" mdtype="math_block" data-math-tag-before="1" data-math-tag-after="2" data-math-labels="[]"><div class="md-math-container"><mjx-container class="MathJax" jax="SVG" display="true" width="full" style="min-width: 13.38ex; position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2.477ex" role="img" focusable="false" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.673ex; min-width: 13.38ex;"><defs><path id="MJX-128-TEX-I-1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path><path id="MJX-128-TEX-N-20D7" d="M377 694Q377 702 382 708T397 714Q404 714 409 709Q414 705 419 690Q429 653 460 633Q471 626 471 615Q471 606 468 603T454 594Q411 572 379 531Q377 529 374 525T369 519T364 517T357 516Q350 516 344 521T337 536Q337 555 384 595H213L42 596Q29 605 29 615Q29 622 42 635H401Q377 673 377 694Z"></path><path id="MJX-128-TEX-N-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path id="MJX-128-TEX-I-1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path id="MJX-128-TEX-N-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path><path id="MJX-128-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(0.016176,-0.016176) translate(0, -797.5)"><g data-mml-node="math"><g data-mml-node="mtable" transform="translate(2078,0) translate(-2078,0)"><g transform="translate(0 797.5) matrix(1 0 0 -1 0 0) scale(61.82)"><svg data-table="true" preserveAspectRatio="xMidYMid" viewBox="879 -797.5 1 1095"><g transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="mlabeledtr" transform="translate(0,-47.5)"><g data-mml-node="mtd"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mover"><g data-mml-node="mi"><use data-c="1D44E" xlink:href="#MJX-128-TEX-I-1D44E"></use></g><g data-mml-node="mo" transform="translate(264.5,31) translate(-250 0)"><use data-c="20D7" xlink:href="#MJX-128-TEX-N-20D7"></use></g></g></g><g data-mml-node="mo" transform="translate(529,0)"><use data-c="28" xlink:href="#MJX-128-TEX-N-28"></use></g><g data-mml-node="mi" transform="translate(918,0)"><use data-c="1D45F" xlink:href="#MJX-128-TEX-I-1D45F"></use></g><g data-mml-node="mo" transform="translate(1369,0)"><use data-c="29" xlink:href="#MJX-128-TEX-N-29"></use></g></g></g></g></svg><svg data-labels="true" preserveAspectRatio="xMaxYMid" viewBox="1278 -797.5 1 1095"><g data-labels="true" transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="mtd" id="mjx-eqn:2" transform="translate(0,702.5)"><text data-id-align="true"></text><g data-idbox="true" transform="translate(0,-750)"><g data-mml-node="mtext"><use data-c="28" xlink:href="#MJX-128-TEX-N-28"></use><use data-c="32" xlink:href="#MJX-128-TEX-N-32" transform="translate(389,0)"></use><use data-c="29" xlink:href="#MJX-128-TEX-N-29" transform="translate(889,0)"></use></g></g></g></g></svg></g></g></g></g></svg><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable displaystyle="true"><mlabeledtr><mtd><mtext>(2)</mtext></mtd><mtd><mrow data-mjx-texclass="ORD"><mover><mi>a</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mtd></mlabeledtr></mtable></math></mjx-assistive-mml></mjx-container></div></div><p><span>转换时默认不会含有图/表名和label。</span></p><p><span>表格</span></p><figure class='table-figure'><table><thead><tr><th><span>大纲级别</span></th><th><span>英，中字体</span></th><th><span>样式</span></th><th><span>中文字号</span></th><th><span>磅/pt</span></th></tr></thead><tbody><tr><td><span>封面标题</span></td><td><span>Times New Roman，华文中宋</span></td><td><span>加粗</span></td><td><span>一号</span></td><td><span>26</span></td></tr><tr><td><span>封面表格内容</span></td><td><span>Times New Roman，思源宋体</span></td><td><span>加粗</span></td><td><span>四号</span></td><td><span>14</span></td></tr><tr><td><span>论文总标题</span></td><td><span>Times New Roman，华文中宋</span></td><td><span>加粗</span></td><td><span>二号 加粗</span></td><td><span>22</span></td></tr><tr><td><span>学校专业姓名</span></td><td><span>Times New Roman，楷体</span></td><td><span>无</span></td><td><span>四号</span></td><td><span>14</span></td></tr><tr><td><span>摘要/关键字</span></td><td><span>Times New Roman，楷体</span></td><td><span>加粗</span></td><td><span>小五</span></td><td><span>9</span></td></tr><tr><td><span>摘要/关键字的内容</span></td><td><span>Times New Roman，楷体</span></td><td><span>无</span></td><td><span>小五</span></td><td><span>9</span></td></tr><tr><td><span>一级标题/h1</span></td><td><span>Times New Roman，华文中宋</span></td><td><span>加粗</span></td><td><span>小三</span></td><td><span>15</span></td></tr><tr><td><span>二级标题/h2</span></td><td><span>Times New Roman，华文中宋</span></td><td><span>加粗</span></td><td><span>四号</span></td><td><span>14</span></td></tr><tr><td><span>三级标题/h3</span></td><td><span>Times New Roman，华文中宋</span></td><td><span>加粗</span></td><td><span>小四</span></td><td><span>12</span></td></tr><tr><td><span>四、五、六级标题/h4,h5,h6</span></td><td><span>Times New Roman，楷体</span></td><td><span>加粗</span></td><td><span>小四</span></td><td><span>12</span></td></tr><tr><td><span>正文</span></td><td><span>Times New Roman，思源宋体</span></td><td><span>无，行间距1.5倍</span></td><td><span>小四</span></td><td><span>12</span></td></tr><tr><td><span>表格标题</span></td><td><span>Times New Roman，楷体</span></td><td><span>加粗</span></td><td><span>小四</span></td><td><span>12</span></td></tr><tr><td><span>表格内容</span></td><td><span>Times New Roman，楷体</span></td><td><span>无</span></td><td><span>五号</span></td><td><span>10.5</span></td></tr><tr><td><span>引用块</span></td><td><span>Times New Roman，楷体</span></td><td><span>无</span></td><td><span>小四</span></td><td><span>12</span></td></tr><tr><td><span>行内代码/代码块</span></td><td><span>Cantarell，思源宋体</span></td><td><span>无</span></td><td><span>小四</span></td><td><span>12</span></td></tr></tbody></table></figure><p><span>项目列表</span></p><p><span>有序列表：</span></p><ol><li><p><span>项目1</span></p></li><li><p><span>项目2</span></p><ol><li><p><span>项目2.1</span></p></li><li><p><span>项目2.2</span></p><ol><li><p><span>项目2.2.1</span></p></li><li><p><span>项目2.2.2</span></p></li></ol></li></ol></li></ol><p><span>无序列表：</span></p><ul><li><p><span>项目1</span></p></li><li><p><span>项目2</span></p><ul><li><p><span>项目2.1</span></p></li><li><p><span>项目2.2</span></p><ul><li><p><span>项目2.2.1</span></p></li><li><p><span>项目2.2.2</span></p></li></ul></li></ul></li></ul><p><span>任务列表</span></p><ul><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>吃饭</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>睡觉</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>学习</span></p></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>玩原神</span></p></li></ul><p><span>分割线</span></p><hr /><p><span>引用块</span></p><blockquote><p><strong><span>仰天大笑出门去，我辈岂是蓬蒿人。</span></strong></p></blockquote><p><span>代码块</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="python" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.42578px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> <span class="cm-variable">random</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">answer</span> <span class="cm-operator">=</span> <span class="cm-variable">random</span>.<span class="cm-property">sample</span>(<span class="cm-builtin">range</span>(<span class="cm-number">1</span>,<span class="cm-number">10</span>),<span class="cm-number">4</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">print</span>(<span class="cm-variable">answer</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">a</span> <span class="cm-operator">=</span> <span class="cm-variable">b</span> <span class="cm-operator">=</span> <span class="cm-variable">n</span> <span class="cm-operator">=</span><span class="cm-number">0</span> <span class="cm-comment">#</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">while</span> <span class="cm-variable">a</span><span class="cm-operator">!=</span><span class="cm-number">4</span> :</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">a</span> <span class="cm-operator">=</span> <span class="cm-variable">b</span> <span class="cm-operator">=</span> <span class="cm-variable">n</span> <span class="cm-operator">=</span> <span class="cm-number">0</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">user</span> <span class="cm-operator">=</span> <span class="cm-builtin">list</span>(<span class="cm-builtin">input</span>(<span class="cm-string">'請輸入四個數字：'</span>))</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">for</span> <span class="cm-variable">i</span> <span class="cm-keyword">in</span> <span class="cm-variable">user</span>:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-keyword cm-error">if</span> <span class="cm-builtin">int</span>(<span class="cm-variable">user</span>[<span class="cm-variable">n</span>]) <span class="cm-operator">==</span> <span class="cm-variable">answer</span>[<span class="cm-variable">n</span>]:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">a</span> <span class="cm-operator">+=</span> <span class="cm-number">1</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-keyword cm-error">else</span>:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">if</span> <span class="cm-builtin">int</span>(<span class="cm-variable">i</span>) <span class="cm-keyword">in</span> <span class="cm-variable">answer</span>:</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable cm-error">b</span> <span class="cm-operator">+=</span> <span class="cm-number">1</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-variable cm-error">n</span> <span class="cm-operator">+=</span> <span class="cm-number">1</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">output</span> <span class="cm-operator">=</span> <span class="cm-string">','</span>.<span class="cm-property">join</span>(<span class="cm-variable">user</span>).<span class="cm-property">replace</span>(<span class="cm-string">','</span>,<span class="cm-string">''</span>) <span class="cm-comment">#重點：將串列轉換為字串的方法</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-builtin">print</span>(<span class="cm-string">f'</span>{<span class="cm-variable">output</span>}<span class="cm-string">:</span>{<span class="cm-variable">a</span>}<span class="cm-string">A</span>{<span class="cm-variable">b</span>}<span class="cm-string">B'</span>)</span></pre><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">print</span>(<span class="cm-string">'答對了！'</span>)</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 388px;"></div><div class="CodeMirror-gutters" style="display: none; height: 388px;"></div></div></div></pre></div></div>
+</body>
+</html>]]></content>
       <categories>
         <category>资源</category>
       </categories>
