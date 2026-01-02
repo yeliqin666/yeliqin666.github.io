@@ -1,124 +1,21 @@
 <!doctype html>
-<html lang="zh-cmn-Hans-CN" data-theme="light"> <head>
+<html lang="zh-cmn-Hans-CN">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>音乐解锁 - Unlock Music</title>
+    <title>音乐解锁|Yeliqin666 Blog</title>
 
-    <meta name="description" content="音乐解锁 - Unlock Music" />
+    <meta name="description" content="音乐解锁|Yeliqin666 Blog" />
     <link rel="icon" href="./favicon.ico" />
     <link rel="apple-touch-icon" href="./pwa-512x512.png" sizes="512x512" />
-    <meta name="theme-color" content="#f7f5ed" /> 
+    <meta name="theme-color" content="#4DBA87" />
     <script type="module" crossorigin src="./assets/index-9LXcWydb.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/core-DJG_os-6.js">
     <link rel="modulepreload" crossorigin href="./assets/router-EoFJV_UF.js">
     <link rel="modulepreload" crossorigin href="./assets/store-CbSTXe1v.js">
     <link rel="modulepreload" crossorigin href="./assets/extras-XDpE5VTc.js">
     <link rel="stylesheet" crossorigin href="./assets/index-MQw2P5V5.css">
-    <link rel="manifest" href="./manifest.webmanifest">
-
-    <style>
-      /* --- 核心变量覆盖 --- */
-      :root {
-        /* 强制背景色为米白/纸张色 */
-        --b1: 247 245 237; /* #f7f5ed */
-        --b2: 247 245 237;
-        --b3: 235 233 225;
-        --bc: 40 40 40; /* 接近黑色的墨水色 */
-        --p: 40 40 40;  /* 主色调改为墨黑 */
-        --s: 100 100 100; /* 辅色为灰色 */
-        
-        /* 字体：衬线体，LaTeX 风格 */
-        --font-sans: "Times New Roman", "Noto Serif SC", "Songti SC", "SimSun", serif !important;
-        --rounded-box: 0px !important;
-        --rounded-btn: 0px !important;
-        --rounded-badge: 0px !important;
-        --animation-btn: 0s !important;
-        --animation-input: 0s !important;
-      }
-
-      /* --- 全局布局与背景 --- */
-      body {
-        background-color: #e0e0e0; /* 桌面背景色（深灰，把纸衬托出来） */
-        display: flex;
-        justify_content: center;
-        min-height: 100vh;
-      }
-
-      #root {
-        background-color: #f7f5ed !important;
-        max-width: 900px;
-        margin: 0 auto;
-        /* A4 纸阴影效果 */
-        box-shadow: 0 0 15px rgba(0,0,0,0.1), 0 0 3px rgba(0,0,0,0.05);
-        min-height: 100vh;
-        /* 模拟横线信纸效果（可选，不喜欢可以删掉下面这行 background-image） */
-        background-image: linear-gradient(#e8e6de 1px, transparent 1px);
-        background-size: 100% 2rem; /* 行高 */
-        border-left: 1px solid #ddd;
-        border-right: 1px solid #ddd;
-      }
-
-      /* --- 元素锐化 (去圆角) --- */
-      div, button, input, span, a, section {
-        border-radius: 0 !important; /* 暴力去除所有圆角 */
-        font-family: "Times New Roman", "Noto Serif SC", serif !important;
-      }
-
-      /* --- 选项卡 Tabs --- */
-      .tabs {
-        border-bottom: 2px solid #000 !important;
-        background: transparent !important;
-      }
-      .tab {
-        color: #666 !important;
-        border: 1px solid transparent;
-        border-bottom: none;
-      }
-      .tab-active {
-        color: #000 !important;
-        font-weight: bold !important;
-        border: 2px solid #000 !important;
-        border-bottom: 1px solid #f7f5ed !important; /* 遮住底边线 */
-        background-color: #f7f5ed !important;
-        margin-bottom: -2px;
-      }
-
-      /* --- 拖拽区域 / 主要容器 --- */
-      /* 把它改成虚线框，像试卷上的答题区 */
-      .file-drop-zone, .hero {
-        border: 2px dashed #666 !important;
-        background-color: rgba(255,255,255,0.5) !important;
-        margin: 1rem !important;
-      }
-
-      /* --- 按钮 --- */
-      .btn {
-        background-color: transparent !important;
-        border: 2px solid #000 !important;
-        color: #000 !important;
-        text-transform: uppercase;
-        font-weight: bold;
-        box-shadow: 2px 2px 0px #000 !important; /* 复古位移阴影 */
-        transition: all 0.1s;
-      }
-      .btn:active {
-        transform: translate(2px, 2px);
-        box-shadow: none !important;
-      }
-
-      /* --- 列表/表格 --- */
-      .table, .list {
-        background: transparent !important;
-      }
-      .table tr, .list-item {
-        border-bottom: 1px solid #999 !important;
-      }
-
-      /* --- 隐藏一些不协调的 Material 元素 --- */
-      /* 比如波纹效果 */
-      span.ripple { display: none !important; }
-    </style>
-  </head>
+  <link rel="manifest" href="./manifest.webmanifest"></head>
 
   <body>
     <main id="root"></main>
