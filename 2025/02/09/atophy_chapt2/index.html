@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" name="viewport"><meta name="description" content="原子物理学笔记(2)——量子力学导论"><meta name="hexo-theme-A4" content="v2.0.0"><link rel="alternate icon" type="image/webp" href="/img/favicon.png"><title>Yeliqin666</title><link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/css/highlight/style1.css"><link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/css/a11y-dark.min.css"><link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/css/reset.css"><link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/css/markdown.css"><link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/css/fonts.css"><link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/css/waline.css"><link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/css/ui.css"><link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/css/style.css"><link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/css/returnToTop.css"><link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/css/unicons.css"><link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/css/toc.css"><link rel="stylesheet" href="/css/returnToLastPage.css"><link rel="stylesheet" href="/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css"><meta name="generator" content="Hexo 8.1.1"></head><style>:root{--waline-theme-color:#333333;--waline-color:#333333;--waline-border-color:#333333;--waline-white:#333333;--waline-bgcolor-light:#f2f2f2}body{color:#333;background:#f2f2f2}.post-md code{background:#e6e6e6;color:#555}.post-md .highlight,.post-md pre{background:#e6e6e6;color:#555}pre .header,pre .inheritance,pre .ruby .symbol,pre .string,pre .value,pre .xml .cdata{color:#333}pre .built_in,pre .constant,pre .literal,pre .number,pre .params,pre .preprocessor{color:#333}.year-font-color{color:#333!important}.wl-card span.wl-nick{color:#333}.wl-card .wl-badge{border:1px solid #333;color:#333}.wl-btn{border:1px solid #333;color:#333}.wl-btn.primary{color:#f2f2f2}.wl-header label{color:#333}a{color:#000}.post-md a{color:#000}.nav li a{color:#000}.archive-main a:link{color:#000}.archive-main a:visited{color:#999}.archive li span{color:#333}.post-main-title{color:#333}.post-md h1,.post-md h2,.post-md h3,.post-md h4,.post-md h5,.post-md h6{color:#333}[data-waline] p{color:#333}[data-waline] a{color:#333}.wl-sort li.active{color:#333}.wl-card .wl-meta>span{background:#f2f2f2}.paper{background:#f2f2f2}.index-main{background:#f2f2f2}.paper-main{background:#f2f2f2}.wl-panel{background:#f2f2f2}.archive li:nth-child(odd){background:#f2f2f2}.archive li:nth-child(2n){background:#f2f2f2}.post-md table tr:nth-child(odd) td{background:#f2f2f2}.post-md table tr:nth-child(2n) td{background:#f2f2f2}.progress-wrap::after{color:#333}.progress-wrap svg.progress-circle path{stroke:#333333}.progress-wrap::before{background-image:linear-gradient(298deg,#000,#000)}.return-to-last-progress-wrap::after{color:#333}.return-to-last-progress-wrap svg.progress-circle path{stroke:#333333}.return-to-last-progress-wrap::before{background-image:linear-gradient(298deg,#000,#000)}.left-toc-container::-webkit-scrollbar-thumb{background-color:#333}.bs-docs-sidebar .nav>.active>a,.bs-docs-sidebar .nav>li>a:focus,.bs-docs-sidebar .nav>li>a:hover{color:#000;border-left-color:#000}.bs-docs-sidebar .nav>li>a{color:#333}</style><body><div class="left-toc-container"><nav id="toc" class="bs-docs-sidebar"></nav></div><div class="paper"><div class="shadow-drop-2-bottom paper-main"><div class="header"><div class="header-container"><style>.header-img{width:56px;height:auto;object-fit:cover;transition:transform .3s ease-in-out;border-radius:0}</style><img alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.png"><div class="header-content"><a class="logo" href="/">Yeliqin666</a> <span class="description">Yeliqin666的个人博客</span></div></div><ul class="nav"><li><a href="/">🏃首页</a></li><li><a href="/list/">🌕文章</a></li><li><a href="/tags/">📌标签</a></li><li><a href="/categories/">🔖分类</a></li><li><a href="/fragments/">📅碎片</a></li><li><a href="/about/">📰关于</a></li><li><a href="/unlockmusic/">🎵音乐解锁</a></li><li><a href="/friends/">🤝友链</a></li></ul></div><div class="post-main"><div class="post-main-title" style="text-align:center">原子物理学笔记(2)——量子力学导论</div><div class="post-head-meta-center"><span>字数总计：3.5k</span> &nbsp; | &nbsp; <span>阅读估时：17分钟</span> &nbsp; | &nbsp; <span id="busuanzi_container_page_pv">阅读量：<span id="busuanzi_value_page_pv"></span>次</span></div><div class="post-md"><ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E5%AF%BC%E8%AE%BA"><span class="post-toc-text">量子力学导论</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B3%A2%E7%B2%92%E4%BA%8C%E8%B1%A1%E6%80%A7"><span class="post-toc-text">波粒二象性</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%BE%B7%E5%B8%83%E7%BD%97%E6%84%8F%E6%B3%A2%E7%9A%84%E5%AE%9E%E9%AA%8C%E9%AA%8C%E8%AF%81%E2%80%94%E2%80%94%E6%88%B4%E7%BB%B4%E9%80%8A-%E9%9D%A9%E6%9C%AB%E5%AE%9E%E9%AA%8C"><span class="post-toc-text">德布罗意波的实验验证——戴维逊-革末实验</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B3%A2%E5%87%BD%E6%95%B0"><span class="post-toc-text">波函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Schrodinger-%E6%96%B9%E7%A8%8B"><span class="post-toc-text">Schrodinger 方程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Schrodinger-%E6%96%B9%E7%A8%8B%E7%9A%84%E5%BB%BA%E7%AB%8B"><span class="post-toc-text">Schrodinger 方程的建立</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9A%E6%80%81-Schrodinger-%E6%96%B9%E7%A8%8B"><span class="post-toc-text">定态 Schrodinger 方程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Schrodinger-%E6%96%B9%E7%A8%8B%E7%9A%84%E5%BA%94%E7%94%A8"><span class="post-toc-text">Schrodinger 方程的应用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%80%E7%BB%B4%E8%B0%90%E6%8C%AF%E5%AD%90"><span class="post-toc-text">一维谐振子</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%83%BD%E9%87%8F%E6%9C%AC%E5%BE%81%E5%80%BC%E4%B8%8E%E6%B3%A2%E5%87%BD%E6%95%B0"><span class="post-toc-text">能量本征值与波函数</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%AE%97%E7%AC%A6%E4%B8%8E%E5%8A%9B%E5%AD%A6%E9%87%8F"><span class="post-toc-text">算符与力学量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AE%97%E7%AC%A6%E4%B8%8E%E5%AF%B9%E6%98%93%E5%85%B3%E7%B3%BB"><span class="post-toc-text">算符与对易关系</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%A1%A8%E8%B1%A1%E4%B8%8E%E5%8A%9B%E5%AD%A6%E9%87%8F%E7%9A%84%E5%B9%B3%E5%9D%87%E5%80%BC"><span class="post-toc-text">表象与力学量的平均值</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-%E8%A1%A8%E8%B1%A1%E4%B8%8E%E8%A1%A8%E8%B1%A1%E5%8F%98%E6%8D%A2"><span class="post-toc-text">1. 表象与表象变换</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-%E5%8A%9B%E5%AD%A6%E9%87%8F%E7%9A%84%E5%B9%B3%E5%9D%87%E5%80%BC"><span class="post-toc-text">2. 力学量的平均值</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8A%9B%E5%AD%A6%E9%87%8F%E6%9C%89%E7%A1%AE%E5%AE%9A%E5%80%BC%E7%9A%84%E6%9D%A1%E4%BB%B6"><span class="post-toc-text">力学量有确定值的条件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%8E%84%E7%B1%B3%E7%AE%97%E7%AC%A6%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="post-toc-text">厄米算符的性质</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%8A%9B%E5%AD%A6%E9%87%8F%E5%85%B7%E6%9C%89%E7%A1%AE%E5%AE%9A%E5%80%BC%E7%9A%84%E6%9D%A1%E4%BB%B6"><span class="post-toc-text">力学量具有确定值的条件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%88%E6%81%92%E9%87%8F"><span class="post-toc-text">守恒量</span></a></li></ol></li></ol></li></ol></li></ol><div class=".article-gallery"><h1 id="量子力学导论"><a href="#量子力学导论" class="headerlink" title="量子力学导论"></a>量子力学导论</h1><h2 id="波粒二象性"><a href="#波粒二象性" class="headerlink" title="波粒二象性"></a>波粒二象性</h2><ol><li>光子能量:<script type="math/tex;mode=display">\begin{equation}
+E = h\nu = \hbar\omega
+\end{equation}</script></li><li>光子动量:<script type="math/tex;mode=display">\begin{equation}
+p = \frac{h}{\lambda} = \hbar k
+\end{equation}</script></li><li>de Broglie 波长:<script type="math/tex;mode=display">\begin{equation}
+\lambda = \frac{h}{p}
+\end{equation}</script></li><li><p>不确定关系:</p><script type="math/tex;mode=display">\begin{equation}
+\Delta x \Delta p_x \geqslant \frac{\hbar}{2}, \quad \Delta \boldsymbol{r} \Delta \boldsymbol{p} \geqslant \frac{\hbar}{2}, \quad \Delta E \Delta t \geqslant \frac{\hbar}{2}
+\end{equation}</script></li><li><p>常用相对论能量-动量关系</p><script type="math/tex;mode=display">\begin{equation}
+E^2=p^2c^2+m_0^2c^4
+\end{equation}</script><script type="math/tex;mode=display">\begin{equation}
+E=E_K+m_0c^2
+\end{equation}</script></li></ol><p>可得出$E_k$的两种表达*：</p><ol><li><strong>用速度 v表示</strong>：<script type="math/tex;mode=display">E_K = m_0 c^2 \left( \frac{1}{\sqrt{1 - v^2/c^2}} - 1 \right)</script></li><li><strong>用动量 p表示</strong>：</li></ol><script type="math/tex;mode=display">E_K = \sqrt{p^2 c^2 + m_0^2 c^4} - m_0 c^2</script><h3 id="德布罗意波的实验验证——戴维逊-革末实验"><a href="#德布罗意波的实验验证——戴维逊-革末实验" class="headerlink" title="德布罗意波的实验验证——戴维逊-革末实验"></a>德布罗意波的实验验证——戴维逊-革末实验</h3><p>布拉格公式：</p><script type="math/tex;mode=display">\begin{equation}
+2d \sin\theta = n\lambda
+   \end{equation}</script><p>d：晶体中相邻原子层（晶面）的间距（晶面间距）。<br>$\theta$：入射波与晶面的夹角，称为掠射角（入射角的余角，即入射方向与晶面的夹角）。</p><p><a href="/imgs/atophy/brog.png" title="晶体布拉格衍射" class="gallery-item" style="box-shadow:none"><img src="/imgs/atophy/brog.png" alt="晶体布拉格衍射" style="zoom:40%"></a></p><p>应用于本例，布拉格衍射的晶格常数为 $a$，入射与出射方向的夹角为 $\theta$ ，则强波束射出的条件是</p><script type="math/tex;mode=display">\begin{equation}
+n\lambda = a\sin\theta
+   \end{equation}</script><p>在非相对论近似下，</p><script type="math/tex;mode=display">\begin{equation}
+\lambda = \frac{h}{p} = \frac{h}{\sqrt{2mE_{\mathrm{k}}}} = \frac{hc}{\sqrt{2mc^{2}E_{\mathrm{k}}}} = \frac{1.226}{\sqrt{E_{\mathrm{k}}(\mathrm{eV})}}\mathrm{nm} 
+   \end{equation}</script><p>当入射电子能量$E_{\mathrm{k}} = 54\mathrm{eV}$时，可算得 $\lambda = 0.167\mathrm{nm}$。进而</p><script type="math/tex;mode=display">\sin\theta = \frac{n}{a}\cdot\lambda = \frac{n}{a}\cdot\frac{1.226\mathrm{nm}}{\sqrt{E_{\mathrm{k}}(\mathrm{eV})}}</script><p>对于镍晶体，晶格常数$a = 0.215\mathrm{nm}$ ，若取入射电子能量$E = 54\mathrm{eV}$ ，则</p><script type="math/tex;mode=display">\sin\theta = 0.776n</script><h2 id="波函数"><a href="#波函数" class="headerlink" title="波函数"></a>波函数</h2><p>单值、连续、可微、归一化——是量子力学中为了描述粒子状态并确保物理理论的合<br>理性而提出的数学要求。</p><ol><li>波函数:<script type="math/tex;mode=display">\begin{equation}
+\psi(r, t) = \psi_0 e^{i(\boldsymbol{k \cdot r} - \omega t)}
+\end{equation}</script></li><li>统计诠释:<script type="math/tex;mode=display">\begin{equation}
+P = |\psi(r, t)|^2 dV
+\end{equation}</script></li><li>归一化条件:<script type="math/tex;mode=display">\begin{equation}
+\int_{-\infty}^{+\infty} |\psi(r, t)|^2 dV = 1
+\end{equation}</script>4.态叠加原理：<script type="math/tex;mode=display">\begin{equation}
+\psi(r, t) = \psi_1(r, t)+\psi_2(r, t)
+\end{equation}</script><script type="math/tex;mode=display">\begin{equation}
+|\psi(r, t)|^2 = \psi(r, t) \psi^*(r, t)
+\end{equation}</script><h2 id="Schrodinger-方程"><a href="#Schrodinger-方程" class="headerlink" title="Schrodinger 方程"></a>Schrodinger 方程</h2></li></ol><h3 id="Schrodinger-方程的建立"><a href="#Schrodinger-方程的建立" class="headerlink" title="Schrodinger 方程的建立"></a>Schrodinger 方程的建立</h3><ol><li><p>电磁波的波动方程:</p><script type="math/tex;mode=display">\begin{equation}
+\left( \hat{E}^2 - c^2 \hat{p} \right) \psi(r, t) = 0
+\end{equation}</script><script type="math/tex;mode=display">\begin{equation}
+\nabla^2 \psi(r, t) - \frac{1}{c^2} \frac{\partial^2}{\partial t^2} \psi(r, t) = 0
+\end{equation}</script></li><li><p>相对论 Schrodinger 方程:</p><p>(1) Klein-Gordon 方程:</p><script type="math/tex;mode=display">\begin{equation}
+E^2 = p^2 c^2 + m_0^2 c^4
+\end{equation}</script></li></ol><script type="math/tex;mode=display">\begin{equation}
+  \nabla^2 \psi(r, t) - \frac{1}{c^2} \frac{\partial^2}{\partial t^2} \psi(r, t) - \frac{m_0^2 c^2}{\hbar^2} = 0
+  \end{equation}</script><p>(2) Dirac 方程:</p><script type="math/tex;mode=display">\begin{equation}
+  E = \alpha c p + \beta m_0 c^2
+  \end{equation}</script><script type="math/tex;mode=display">\begin{equation}
+  i\hbar \frac{\partial}{\partial t} \psi(r, t) = \left( -i\hbar c \alpha \cdot \nabla + \beta m_0 c^2 \right) \psi(r, t)
+  \end{equation}</script><ol><li><p>非相对论 Schrodinger 方程:</p><script type="math/tex;mode=display">\begin{equation}
+E = \frac{p^2}{2m} + V
+\end{equation}</script><p>(1) 一维 Schrodinger 方程:</p><script type="math/tex;mode=display">\begin{equation}
+\left[ -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x, t) \right] \psi(x, t) = i\hbar \frac{\partial}{\partial t} \psi(x, t)
+\end{equation}</script><p>(2) 三维 Schrodinger 方程:</p><script type="math/tex;mode=display">\begin{equation}
+\left[ -\frac{\hbar^2}{2m} \nabla^2 + V(r, t) \right] \psi(r, t) = i\hbar \frac{\partial}{\partial t} \psi(r, t)
+\end{equation}</script><h3 id="定态-Schrodinger-方程"><a href="#定态-Schrodinger-方程" class="headerlink" title="定态 Schrodinger 方程"></a>定态 Schrodinger 方程</h3><p>定态是体系的一种特殊状态，即能量本征态。</p></li><li><p>势场 $ V(r) $ 不显含时间 $ t $，Schrodinger 方程变为：</p><script type="math/tex;mode=display">\begin{equation}
+\left[ -\frac{\hbar^2}{2m} \nabla^2 + V(r) \right] \psi(r, t) = i\hbar \frac{\partial}{\partial t} \psi(r, t)
+\end{equation}</script></li><li>分离变量：<script type="math/tex;mode=display">\begin{equation}
+\psi(r, t) = \psi(r) T(t)
+\end{equation}</script></li></ol><script type="math/tex;mode=display">\begin{equation}
+   \frac{i\hbar}{T} \frac{dT}{dt} = \frac{1}{\psi} \left[ -\frac{\hbar^2}{2m} \nabla^2 + V(r) \right] \psi = E
+   \end{equation}</script><ol><li><p>时间部分：</p><script type="math/tex;mode=display">\begin{equation}
+T(t) = T_0 e^{-iEt/\hbar}
+\end{equation}</script><p>这里的相位因子$e^{-iEt/\hbar}$描述了波函数随时间的周期性振荡. 相位的变化速率与能量直接相关，这反映了量子系统中的能量－时间关系.</p></li><li><p>定态波函数：</p><script type="math/tex;mode=display">\begin{equation}
+\psi(r, t) = \psi(r) e^{-iEt/\hbar}
+\end{equation}</script></li><li><p>空间部分即定态 Schrodinger 方程：</p><script type="math/tex;mode=display">\begin{equation}
+\left[ -\frac{\hbar^2}{2m} \nabla^2 + V(r) \right] \psi(r) = E \psi(r)
+\end{equation}</script><h3 id="Schrodinger-方程的应用"><a href="#Schrodinger-方程的应用" class="headerlink" title="Schrodinger 方程的应用"></a>Schrodinger 方程的应用</h3></li><li><p>一维无限深势阱：</p><script type="math/tex;mode=display">\begin{equation}
+V(x) = 
+\begin{cases}
+0 & 0 \leq x \leq a \\
+\infty & others.
+\end{cases}
+\end{equation}</script><p>(1) Schrodinger 方程：</p><script type="math/tex;mode=display">\begin{equation}
+\frac{\mathrm{d}^2 \psi}{\mathrm{d}x^2} + k^2 \psi = 0, \quad k^2 = \frac{2mE}{\hbar^2}
+\end{equation}</script></li></ol><script type="math/tex;mode=display">\begin{equation}
+  \psi(x) = A \sin kx + B \cos kx
+  \end{equation}</script><p>(2) 边界条件：</p><script type="math/tex;mode=display">\begin{equation}
+  B = 0, \quad ka = n\pi, \quad n = 1, 2, \ldots
+  \end{equation}</script><p>(3) 波函数：</p><script type="math/tex;mode=display">\begin{equation}
+  \psi_n(x) = \sqrt{\frac{2}{a}} \sin \frac{n\pi x}{a} \quad ,0 \lt x \lt a
+  \end{equation}</script><p>(4) 能量：</p><script type="math/tex;mode=display">\begin{equation}
+  E_n = \frac{\hbar^2 k^2}{2m} = \frac{n^2 \pi^2 \hbar^2}{2ma^2}
+  \end{equation}</script><ol><li>一维有限深势阱：束缚态 $ E &lt; V_0 $<script type="math/tex;mode=display">\begin{equation}
+V(x) = 
+\begin{cases}
+0 & -a \leq x \leq a \\
+V_0 & others.
+\end{cases}
+\end{equation}</script>(1) 当 $ |x| \leq a $ 时，<script type="math/tex;mode=display">\begin{equation}
+\frac{\mathrm{d}^2 \psi}{\mathrm{d}x^2} + k^2 \psi = 0, \quad k^2 = \frac{2mE}{\hbar^2}
+\end{equation}</script></li></ol><script type="math/tex;mode=display">\begin{equation}
+  \psi(x) = A \sin kx + B \cos kx
+  \end{equation}</script><p>(2) 当 $ |x| \geq a $ 时，</p><script type="math/tex;mode=display">\begin{equation}
+  \frac{\mathrm{d}^2 \psi}{\mathrm{d}x^2} - k'^2 \psi = 0, \quad k'^2 = \frac{2m(V_0 - E)}{\hbar^2}
+  \end{equation}</script><script type="math/tex;mode=display">\begin{equation}
+  \psi(x) = 
+  \begin{cases}
+  C e^{k'x} & x < -a \\
+  D e^{-k'x} & x > a
+  \end{cases}
+  \end{equation}</script><p>(3) 势是偶函数，仅讨论偶函数解</p><script type="math/tex;mode=display">\begin{equation}
+\psi(x) = 
+\begin{cases}
+De^{-k'x} & x > a \\
+B \cos kx & 0 < x \leq a \\
+\psi(-x) & x < 0
+\end{cases}
+\end{equation}</script><p>(4) 边界条件:</p><script type="math/tex;mode=display">\begin{equation}
+De^{-k'a} = B \cos ka, \quad -k'De^{-k'a} = -kB \sin ka
+\end{equation}</script><script type="math/tex;mode=display">\begin{equation}
+k' = k \tan ka
+\end{equation}</script><ol><li>方势垒的隧道效应:<script type="math/tex;mode=display">\begin{equation}
+V(x) = 
+\begin{cases}
+0 & x < 0, \; x > a \\
+V_0 & 0 \leq x \leq a
+\end{cases}
+\end{equation}</script>(1) 当 $ x &lt; 0 $ 时,<script type="math/tex;mode=display">\begin{equation}
+\frac{\mathrm{d}^2 \psi}{\mathrm{d}x^2} + k_1^2 \psi = 0, \quad k_1^2 = \frac{2mE}{\hbar^2}
+\end{equation}</script></li></ol><script type="math/tex;mode=display">\begin{equation}
+\psi_1(x) = Ae^{ik_1x} + Be^{-ik_1x}
+\end{equation}</script><p>(2) 当 $ 0 &lt; x &lt; a $ 时,</p><script type="math/tex;mode=display">\begin{equation}
+\frac{\mathrm{d}^2 \psi}{\mathrm{d}x^2} - k_2^2 \psi = 0, \quad k_2^2 = \frac{2m(V - E)}{\hbar^2}
+\end{equation}</script><script type="math/tex;mode=display">\begin{equation}
+\psi_2(x) = Ce^{k_2x} + De^{-k_2x}
+\end{equation}</script><p>(3) 当 $ x &gt; a $ 时，没有入射波 $ \Rightarrow G = 0 $</p><script type="math/tex;mode=display">\begin{equation}
+\psi_3(x) = Fe^{ik_1x} + Ge^{-ik_1x}
+\end{equation}</script><p>(4) 透射概率:</p><script type="math/tex;mode=display">\begin{equation}
+T = \frac{|F|^2}{|A|^2} = \frac{16k_1^2k_2^2}{(k_1^2 + k_2^2)^2(e^{-k_2a} - e^{k_2a})^2 + 16k_1^2k_2^2}
+\end{equation}</script><p>如果 $ k_2 a \gg 1, e^{k_2 a} \gg e^{-k_2 a} $，透射概率可以近似为</p><script type="math/tex;mode=display">\begin{equation}
+T \approx \frac{16 k_1^2 k_2^2}{(k_1^2 + k_2^2)^2 e^{2 k_2 a}} = \frac{16 E (V - E)}{V^2} e^{-2 k_2 a} = \frac{16 E (V - E)}{V^2} e^{-\frac{2a \sqrt{2m(V-E)}}{\hbar}}. 
+\end{equation}</script><p>(5) 反射概率:</p><script type="math/tex;mode=display">\begin{equation}
+R = \frac{|B|^2}{|A|^2} = \frac{(k_1^2 + k_2^2)^2(e^{-k_2a} - e^{k_2a})^2}{(k_1^2 + k_2^2)^2(e^{-k_2a} - e^{k_2a})^2 + 16k_1^2k_2^2}
+\end{equation}</script><h3 id="一维谐振子"><a href="#一维谐振子" class="headerlink" title="一维谐振子"></a>一维谐振子</h3><ul><li><strong>哈密顿算符</strong>:<script type="math/tex;mode=display">\begin{equation}
+  \hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2} m\omega^2 \hat{x}^2.
+\end{equation}</script>其中 $\omega = \sqrt{\frac{k}{m}}$ 是系统的固有角频率。</li><li><strong>定态薛定谔方程</strong>:</li></ul><script type="math/tex;mode=display">\begin{equation}
+    -\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2} + \frac{1}{2} m\omega^2 x^2 \psi(x) = E\psi(x).
+\end{equation}</script><ul><li><strong>无量纲变量</strong>:<script type="math/tex;mode=display">\begin{equation}
+  \xi = \sqrt{\frac{m\omega}{\hbar}} x, \quad \lambda = \frac{2E}{\hbar\omega},
+\end{equation}</script>方程变为：<script type="math/tex;mode=display">\begin{equation}
+  \frac{d^2\psi(\xi)}{d\xi^2} + (\lambda - \xi^2)\psi(\xi) = 0.
+\end{equation}</script></li></ul><h4 id="能量本征值与波函数"><a href="#能量本征值与波函数" class="headerlink" title="能量本征值与波函数"></a>能量本征值与波函数</h4><ul><li><strong>能量本征值</strong>:<script type="math/tex;mode=display">\begin{equation}
+  E_n = \left(n + \frac{1}{2}\right)\hbar\omega, \quad n = 0, 1, 2, \cdots
+\end{equation}</script></li><li><strong>归一化的本征函数</strong>:</li></ul><script type="math/tex;mode=display">\begin{equation}
+    \psi_n(x) = \left(\frac{m\omega}{\pi\hbar}\right)^{1/4} \frac{1}{\sqrt{2^n n!}} H_n\left(\sqrt{\frac{m\omega}{\hbar}} x\right)e^{-\frac{m\omega x^2}{2\hbar}},
+\end{equation}</script><pre><code>其中 $H_n(\xi)$ 是厄米多项式。
+</code></pre><h2 id="算符与力学量"><a href="#算符与力学量" class="headerlink" title="算符与力学量"></a>算符与力学量</h2><h3 id="算符与对易关系"><a href="#算符与对易关系" class="headerlink" title="算符与对易关系"></a>算符与对易关系</h3><ol><li>算符:<br>(1) Hamilton 算符:<script type="math/tex;mode=display">\begin{equation}
+\hat{H} = -\frac{\hbar^2}{2m} \nabla^2 + V
+\end{equation}</script>(2) 动量算符:<script type="math/tex;mode=display">\begin{equation}
+\hat{p} = -i\hbar \nabla
+\end{equation}</script>(3) 能量算符:<script type="math/tex;mode=display">\begin{equation}
+\hat{E} = i\hbar \frac{\partial}{\partial t}
+\end{equation}</script>(4) 轨道角动量算符:<script type="math/tex;mode=display">\begin{equation}
+\hat{L}_x = y\hat{p}_z - z\hat{p}_y, \quad \hat{L}_y = z\hat{p}_x - x\hat{p}_z, \quad \hat{L}_z = x\hat{p}_y - y\hat{p}_x
+\end{equation}</script></li></ol><script type="math/tex;mode=display">\begin{equation}
+  \hat{L}^2 = \hat{L}_x^2 + \hat{L}_y^2 + \hat{L}_z^2
+  \end{equation}</script><p>球坐标下，</p><script type="math/tex;mode=display">\begin{equation}
+  \hat{L}_x = -i\hbar \left( -\sin \varphi \frac{\partial}{\partial \theta} - \cos \varphi \cot \theta \frac{\partial}{\partial \varphi} \right)
+  \end{equation}</script><script type="math/tex;mode=display">\begin{equation}
+  \hat{L}_y = -i\hbar \left( +\cos \varphi \frac{\partial}{\partial \theta} - \sin \varphi \cot \theta \frac{\partial}{\partial \varphi} \right)
+  \end{equation}</script><script type="math/tex;mode=display">\begin{equation}
+  \hat{L}_z = -i\hbar \frac{\partial}{\partial \varphi}
+  \end{equation}</script><script type="math/tex;mode=display">\begin{equation}
+  \hat{L}^2 = -\hbar^2 \left[ \frac{1}{\sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \varphi^2} \right]
+  \end{equation}</script><ol><li><p>正则对易关系:</p><p>(1) 坐标与动量的对易关系:</p><script type="math/tex;mode=display">\begin{equation}
+[\hat{x}_{\alpha}, \hat{p}_{\beta}] = i\hbar \delta_{\alpha \beta}
+\end{equation}</script><p>(2) 动量算符的对易关系:</p><script type="math/tex;mode=display">\begin{equation}
+[\hat{p}_{\alpha}, \hat{p}_{\beta}] = 0
+\end{equation}</script><p>(3) 坐标与角动量的对易关系:</p><script type="math/tex;mode=display">\begin{equation}
+[\hat{x}_{\alpha}, \hat{L}_{\beta}] = \varepsilon_{\alpha \beta \gamma} i\hbar \hat{x}_{\gamma}
+\end{equation}</script><p>(4) 动量与角动量的对易关系:</p><script type="math/tex;mode=display">\begin{equation}
+[\hat{p}_{\alpha}, \hat{L}_{\beta}] = \varepsilon_{\alpha \beta \gamma} i\hbar \hat{p}_{\gamma}
+\end{equation}</script><p>(5) 角动量算符的对易关系:</p><script type="math/tex;mode=display">\begin{equation}
+[\hat{L}_{\alpha}, \hat{L}_{\beta}] = \varepsilon_{\alpha \beta \gamma} i\hbar \hat{L}_{\gamma}
+\end{equation}</script></li></ol><script type="math/tex;mode=display">\begin{equation}
+  [\hat{L}^2, \hat{L}] = 0
+  \end{equation}</script><ol><li>本征方程:<script type="math/tex;mode=display">\begin{equation}
+\hat{O} f_n = \lambda_n f_n
+\end{equation}</script>一个本征值对应于 $ n $ 个本征函数，称这一本征函数是 $ n $ 度简并的。</li></ol><h3 id="表象与力学量的平均值"><a href="#表象与力学量的平均值" class="headerlink" title="表象与力学量的平均值"></a>表象与力学量的平均值</h3><h4 id="1-表象与表象变换"><a href="#1-表象与表象变换" class="headerlink" title="1. 表象与表象变换"></a>1. 表象与表象变换</h4><p>在量子力学中，<strong>表象</strong>是指用一组完备的正交归一基底来描述量子系统的状态和力学量。不同的表象对应于不同的基底，但物理本质是相同的。</p><ul><li><strong>位置表象</strong>：基底是位置本征态 $|x\rangle$，态矢量在位置表象中的表示为波函数 $\psi(x) = \langle x | \psi \rangle$。</li><li><strong>动量表象</strong>：基底是动量本征态 $|p\rangle$，态矢量在动量表象中的表示为波函数 $\varphi(p) = \langle p | \psi \rangle$。</li><li><strong>能量表象</strong>：基底是哈密顿量的本征态 $|E_n\rangle$，态矢量在能量表象中的表示为系数 $c_n = \langle E_n | \psi \rangle$。</li></ul><p>不同表象之间的转换可以通过幺正变换实现。例如，从位置表象到动量表象的转换可以通过傅里叶变换实现：</p><script type="math/tex;mode=display">\begin{equation}
+\varphi(p) = \frac{1}{\sqrt{2\pi\hbar}} \int_{-\infty}^{\infty} \psi(x)e^{-ipx/\hbar} dx
+   \end{equation}</script><p>反之，从动量表象到位置表象的转换为：</p><script type="math/tex;mode=display">\begin{equation}
+\psi(x) = \frac{1}{\sqrt{2\pi\hbar}} \int_{-\infty}^{\infty} \varphi(p)e^{ipx/\hbar} dp
+   \end{equation}</script><h4 id="2-力学量的平均值"><a href="#2-力学量的平均值" class="headerlink" title="2. 力学量的平均值"></a>2. 力学量的平均值</h4><p>对于一个力学量 $A$，其算符为 $\hat{A}$，在态 $|\psi\rangle$ 下的平均值定义为：</p><script type="math/tex;mode=display">\begin{equation}
+\langle A \rangle = \langle \psi | \hat{A} | \psi \rangle
+   \end{equation}</script><ul><li>在位置表象中：如果态矢量 $|\psi\rangle$ 在位置表象中的表示为波函数 $\psi(x) = \langle x | \psi \rangle$，则其的平均值可以表示为：<script type="math/tex;mode=display">\begin{equation}
+\langle A \rangle = \int_{-\infty}^{\infty} \psi^*(x) \hat{A} \psi(x) dx
+ \end{equation}</script></li><li>在动量表象中：如果态矢量 $|\psi\rangle$ 在动量表象中的表示为波函数 $\varphi(p) = \langle p | \psi \rangle$，则其平均值可以表示为：<script type="math/tex;mode=display">\begin{equation}
+\langle A \rangle = \int_{-\infty}^{\infty} \varphi^*(p) \hat{A} \varphi(p) dp
+ \end{equation}</script></li></ul><p>例如位置算符 $x$ 的平均值：</p><script type="math/tex;mode=display">\langle x \rangle = \int_{-\infty}^{\infty} \psi^*(x)x\psi(x)dx.</script><p>动量算符 $p$ 的平均值：</p><script type="math/tex;mode=display">\langle p \rangle = \int_{-\infty}^{\infty} \psi^*(x)\left(-i\hbar \frac{\partial}{\partial x}\right) \psi(x)dx.</script><h3 id="力学量有确定值的条件"><a href="#力学量有确定值的条件" class="headerlink" title="力学量有确定值的条件"></a>力学量有确定值的条件</h3><h4 id="厄米算符的性质"><a href="#厄米算符的性质" class="headerlink" title="厄米算符的性质"></a>厄米算符的性质</h4><p>在量子力学中，所有可观测量（如位置、动量、能量等）都由厄米算符描述。一个算符 $\hat{A}$ 如果满足以下条件，则称为厄米算符：</p><script type="math/tex;mode=display">\begin{equation}
+\int \psi^* \hat{A}\phi dx = \int (\hat{A}\psi)^*\phi dx
+   \end{equation}</script><p>对于任意两个波函数 $\psi$ 和 $\phi$。</p><ul><li><strong>厄米算符的本征值为实数</strong>：假设厄米算符 $\hat{A}$ 的本征函数为 ${\phi_n}$，对应本征值为 ${\lambda_n}$，则有<script type="math/tex">\lambda_n^* = \lambda_n</script></li><li><strong>不同本征值的本征函数具有正交归一性</strong>：即<script type="math/tex;mode=display">\int \phi_k^* \phi_l dx = \delta_{kl}</script></li></ul><h4 id="力学量具有确定值的条件"><a href="#力学量具有确定值的条件" class="headerlink" title="力学量具有确定值的条件"></a>力学量具有确定值的条件</h4><ol><li><p>当体系处于力学量 $A$ 的本征态时，即 $\hat{A}\phi = \lambda \phi$，对 $A$ 进行测量，将会以100%的概率得到确定值 $\lambda$，这也是系统的平均值。</p></li><li><p>如果体系不是处于本征态而是任意一个叠加态 $\psi(x) = \sum_n c_n \phi_n(x)$，其中 ${\phi_n}$ 构成完全系，对应本征值为 ${\lambda_n}$。通过计算系数 $c_n$ 可知，测得 $\lambda_n$ 的概率为 $|c_n|^2$。(洪恩规则)</p></li><li><p>不同力学量同时有确定值：<br>当体系处于波函数$\psi(x)$（$\hat{A},\hat{B}$ 本征波函数的叠加态）所描写的状态时，测量力学量$A$、$B$所得的值，必定是算符$\hat{A},\hat{B}$的本征值之一，测得$\lambda_n,\mu_n$的概率为$\vert c_n\vert^2$</p></li></ol><p><strong>推论</strong>：一组算符${\hat{A}_1,\hat{A}_2,\cdots}$有共同本征函数且构成完全系，它们同时有确定值。相应地，这组物理量对应的算符中的任何两个都互相对易。</p><h4 id="守恒量"><a href="#守恒量" class="headerlink" title="守恒量"></a>守恒量</h4><p>如果物理量的算符 $\hat{A}$ 不显含时间 $t$ 并且与哈密顿算符 $\hat{H}$ 对易，则其平均值不随时间变化，即</p><script type="math/tex;mode=display">\begin{equation}
+\frac{d\langle \hat{A} \rangle}{dt} = \frac{\partial \langle \hat{A} \rangle}{\partial t} + \frac{i}{\bar{h}} [\hat{A}, \hat{H}] = 0
+   \end{equation}</script><p>此时称物理量 $A$ 是守恒量。例如：</p><ul><li>能量是守恒量，因为体系的哈密顿量通常不显含时间。</li><li>自由粒子的能量、动量和角动量都是守恒量。（哈密顿算符仅包含动能项）</li><li>在中心力场中，粒子的动量不是守恒量，但$\hat{L}^2$ 、 $\hat{L}_z$ 、 $\hat{H}$是守恒量。</li></ul><p>一组彼此独立且相互对易的算符构成一个力学量完全集，如果给定一组量子数之后能够完全确定体系的一个可能的状态。例如，在中心力场中，哈密顿算符 $\hat{H}$、角动量平方 $\hat{L}^2$ 和角动量分量 $\hat{L}_z$ 构成了一个力学量完全集，并且它们有共同的本征函数。这些对应的量子数被称为好量子数，参与对系统的描述。</p></div></div><div class="post-meta"><i><div class="post-author"><span>本文作者： yeliqin666</span></div><span>2025-02-09</span> <span>该篇文章被 yeliqin666</span> <span>打上标签: <a href="/tags/%E4%BD%9C%E4%B8%9A/">作业 </a></span><span>归为分类: <a href="/categories/%E8%B5%84%E6%BA%90/">资源</a></span></i></div><br><div class="post-footer-pre-next"><span>上一篇：<a href="/2025/02/11/atophy_chapt3/">原子物理学笔记(3)——氢原子与碱金属原子</a></span> <span class="post-footer-pre-next-last-span-right">下一篇：<a href="/2025/02/06/atophy_chapt1/">原子物理学笔记(1)——从经典物理到量子物理</a></span></div><div class="comments-container"><div id="comment-anchor"></div><div class="comment-area-title"></div><div id="giscus"></div><script src="https://giscus.app/client.js" data-repo="yeliqin666/yeliqin666.github.io" data-repo-id="R_kgDOJ8sWdA" data-category-id="DIC_kwDOJ8sWdM4C0dCO" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="noborder_light" data-lang="zh-CN" crossorigin="anonymous" async></script></div></div><div class="footer"><span>© 2024-2026 in Xi&#39;an Jiaotong University</span></div><div class="footer-last"><span>好好学习，天天向上✍️</span> <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span></div><script src="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/js/highlight.min.js"></script><script src="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/js/highlightjs-line-numbers.js"></script><script src="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/js/randomHeaderContent.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script><script src="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/js/returnToTop.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script><script src="https://jsd.cdn.zzko.cn/npm/hexo-theme-a4@latest/source/js/toc.js"></script><script src="/js/lightgallery/lightgallery.umd.min.js"></script><script src="/js/lightgallery/plugins/lg-thumbnail.umd.min.js"></script><script src="/js/lightgallery/plugins/lg-fullscreen.umd.min.js"></script><script src="/js/lightgallery/plugins/lg-autoplay.umd.min.js"></script><script src="/js/lightgallery/plugins/lg-zoom.umd.min.js"></script><script src="/js/lightgallery/plugins/lg-rotate.umd.min.js"></script><script src="/js/lightgallery/plugins/lg-paper.umd.min.js"></script><script>if("undefined"!=typeof lightGallery){var options1={selector:".gallery-item",plugins:[lgThumbnail,lgFullscreen,lgAutoplay,lgZoom,lgRotate,lgPager],thumbnail:!0,zoom:!0,rotate:!0,autoplay:!0,fullScreen:!0,pager:!1,zoomFromOrigin:!0,actualSize:!0,enableZoomAfter:300};lightGallery(document.getElementsByClassName(".article-gallery")[0],options1)}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="progress-wrap shadow-drop-2-bottom"><svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/></svg></div><div class="return-to-last-progress-wrap shadow-drop-2-bottom"><svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/></svg></div><script type="text/x-mathjax-config">MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></div></body></html><script src="/js/emojiHandler.js"></script><script>document.addEventListener("DOMContentLoaded",()=>{wrapEmojis(".paper")})</script>
