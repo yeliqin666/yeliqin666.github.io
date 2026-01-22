@@ -1,1 +1,14 @@
-fetch("https://v1.jinrishici.com/all.json").then(function(n){return n.json()}).then(function(n){document.getElementById("quote").innerText=n.content+"---"+n.author+"《"+n.origin+"》"}).catch(function(n){console.error(n)});
+fetch('https://v1.jinrishici.com/all.json') // 具体接口信息：https://developer.hitokoto.cn/sentence/
+    .then(function (res) {
+        return res.json();
+    })
+    .then(function (data) {
+        var hitokoto = document.getElementById('quote')
+        hitokoto.innerText = data.content+'---'+data.author+'《'+data.origin+'》';
+    })
+    .catch(function (err) {
+        console.error(err);
+    })
+
+
+
