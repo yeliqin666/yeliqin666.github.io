@@ -31,10 +31,10 @@
 
       if (scroll > offset) {
         wrap.classList.add('active-progress');
-        if (lastPage) lastPage.style.bottom = '100px';
+        if (lastPage) lastPage.style.bottom = '80px';
       } else {
         wrap.classList.remove('active-progress');
-        if (lastPage) lastPage.style.bottom = '45px';
+        if (lastPage) lastPage.style.bottom = '28px';
       }
     }
 

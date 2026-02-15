@@ -11,9 +11,9 @@
 
     var topBtn = document.querySelector('.progress-wrap');
     if (topBtn && topBtn.classList.contains('active-progress')) {
-      wrap.style.bottom = '100px';
+      wrap.style.bottom = '80px';
     } else {
-      wrap.style.bottom = '45px';
+      wrap.style.bottom = '28px';
     }
     wrap.classList.add('active-progress');
 
