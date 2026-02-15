@@ -33,7 +33,6 @@ function wrapEmojis(selector) {
           }
           if (matches[i]) {
             const span = document.createElement("span");
-            span.className = "darkmode-ignore";
             span.textContent = matches[i];
             newNodes.push(span);
           }
