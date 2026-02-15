@@ -99,7 +99,6 @@
       })
       .catch(function (err) {
         clearTimeout(timer);
-        console.warn('Hitokoto API failed:', err.message || err);
         el.textContent = fallback;
       });
   }
