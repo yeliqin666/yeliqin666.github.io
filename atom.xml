@@ -10,7 +10,56 @@
   <rights>All rights reserved 2026, yeliqin666</rights>
   <subtitle>刘润钦的个人博客</subtitle>
   <title>Yeliqin666</title>
-  <updated>2026-02-19T10:29:18.000Z</updated>
+  <updated>2026-02-18T16:00:00.000Z</updated>
+  <entry>
+    <author>
+      <name>yeliqin666</name>
+    </author>
+    <category term="资源" scheme="https://www.runqinliu666.cn/categories/%E8%B5%84%E6%BA%90/"/>
+    <category term="技术" scheme="https://www.runqinliu666.cn/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="博客" scheme="https://www.runqinliu666.cn/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <content>
+      <![CDATA[<div class="article-gallery"><blockquote><p>本文由AI自助生成…</p></blockquote><p>拖了很久，终于把这个博客的主题整理成独立仓库发出来了。</p><h2 id="为什么要做这件事">为什么要做这件事</h2><p>最初用的是 <a href="https://github.com/HiNinoJay/hexo-theme-A4">hexo-theme-A4</a>，纸张美学这个方向我很喜欢，用着用着就开始折腾美化。先是替换掉了jQuery，然后觉得颜色不够有生命力，改了配色，又移植了 Typora 主题 <a href="https://github.com/sumruler/typora-theme-phycat">Phycat</a>的排版层级……发现跟A4风格分叉了，就干脆起了个名字：<strong>晴纸</strong>（qingzhi）。</p><p>「晴天与素纸」，我想要的博客质感，动效与生命力。</p><p>主色是「霁蓝」，一种偏冷的钢蓝色（<code>#5B8BA4</code>），灵感来自雨后放晴的天空。</p><p>排版上移植了 Phycat 的标题层级系统：</p><ul><li>H1：居中 + 渐变细条装饰</li><li>H2：渐变胶囊标签</li><li>H3：左侧竖条</li><li>H4/H5：实心/空心圆点</li></ul><p><code>mark</code> 像荧光笔一样从下往上浮起，<code>kbd</code> 是 3D键帽，加粗文字会带主题色深色点缀。</p><p>字体用的是小米的 <strong>MiSans</strong>（HyperOS 3系统字体），三个字重，走 jsDelivr 按需加载。</p><p>原始的 A4 主题依赖 jQuery，我全部用原生 Web API重写了六个功能模块：<code>IntersectionObserver</code>做懒加载、<code>fetch</code> 替换 AJAX、<code>scrollIntoView</code>做目录定位。</p><p>CSS 上引入了 CSS Custom Properties 作为设计Token，颜色、字体、宽度全部通过 <code>_config.yml</code> 注入 CSS变量，不需要动 CSS 文件本身。</p><p>另外还做了：</p><ul><li><strong>专栏系统</strong>：front-matter 写 <code>series</code> +<code>series_index</code> 就自动生成专栏导航</li><li><strong>Fragment 便签</strong>：6 种颜色的 Hexo标签，用于文章内的重点框</li><li><strong>工具箱</strong>：42 个纯前端小工具，函数绘图、进制转换、Cron解析等等，每个工具是一个自描述 JS 对象</li><li><strong>图片灯箱</strong>：LightGallery，加<code>data-no-gallery</code> 跳过某张图</li><li><strong>最近更新页</strong>：只有在 front-matter 里手动写了<code>updated:</code> 才进列表，不读 git 时间</li></ul><h3 id="安装">安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> your-hexo-site</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/yeliqin666/hexo-theme-qingzhi themes/qingzhi</span><br><span class="line">npm install --save hexo-wordcount hexo-generator-search hexo-renderer-pandoc hexo-filter-mathjax</span><br></pre></td></tr></table></figure><p>站点配置里 <code>theme: qingzhi</code>，然后把<code>themes/qingzhi/_config.yml</code> 里的注释读一遍就能上手。需要Pandoc 本地安装（用于公式渲染）。</p><p>仓库地址：<a href="https://github.com/yeliqin666/hexo-theme-qingzhi">yeliqin666/hexo-theme-qingzhi</a></p><h3 id="提了官方-pr">提了官方 PR</h3><p>已经向 <a href="https://github.com/hexojs/site">hexojs/site</a> 提了PR，流程就是往仓库里加一个 yml 文件和一张 800×500 的截图。目前是 Open状态，等待维护者审核。如果过了，晴纸会出现在 <a href="https://hexo.io/themes/">hexo.io/themes</a> 官方列表里。</p><p>官方列表里有不少审美差异极大的主题并存，从极简白板到高度风格化的二次元主页都有。不知道我这个能不能通过，嘿嘿。</p><h3 id="感谢-ai-们">感谢 AI 们</h3><p>主题的 JS 模块重写、CSS 架构、工具箱里的各种功能，基本都是 VibeCoding全程。ChatGPT、Gemini、Claude、豆包轮番上阵，每次以为搞定了，下一个 bug又冒出来。调试一个动画的 timing 可以在四个 AI之间绕两个小时，但最后它们还是帮我把坑都填上了。差点被主页APlayer气晕。</p></div><script>if("undefined"!=typeof lightGallery) {        var options1 = {            selector: '.gallery-item'        };        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);        }</script>]]>
+    </content>
+    <id>https://www.runqinliu666.cn/2026/02/19/qingzhi-theme-release/</id>
+    <link href="https://www.runqinliu666.cn/2026/02/19/qingzhi-theme-release/"/>
+    <published>2026-02-18T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<div class="article-gallery"><blockquote>
+<p>本文由AI自助生成…</p>
+</blockquote>
+<p>拖了很久，终于把这个博客的主题整理成独立仓库发出来了。</p>
+<h2 id="为什么要做这件事">为什么要做这件事</h2>
+<p>最初用的是 <a href="https://github.com/HiNinoJay/hexo-theme-A4">hexo-theme-A4</a>，纸张美学这个方向我很喜欢，用着用着就开始折腾美化。先是替换掉了
+jQuery，然后觉得颜色不够有生命力，改了配色，又移植了 Typora 主题 <a href]]>
+    </summary>
+    <title>晴纸 —— 我的博客主题开源了</title>
+    <updated>2026-02-18T16:00:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>yeliqin666</name>
+    </author>
+    <category term="资源" scheme="https://www.runqinliu666.cn/categories/%E8%B5%84%E6%BA%90/"/>
+    <category term="工具" scheme="https://www.runqinliu666.cn/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="技术" scheme="https://www.runqinliu666.cn/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="Android" scheme="https://www.runqinliu666.cn/tags/Android/"/>
+    <content>
+      <![CDATA[<div class="article-gallery"><p>第一次安卓开发，全程Vibe Coding，实践证明AI无敌。</p><p>做了个 Android App，叫<strong>岱宗盒子</strong>。名字取自<del>「会当凌绝顶，一览众山小」——岱宗是泰山的别称，也是交大里那栋图书馆楼的气质</del>神秘沙东小群，我爱岱宗，我爱盒子👅 仓库：<a href="https://github.com/yeliqin666/xjtu-toolbox-android">yeliqin666/xjtu-toolbox-android</a></p><h3 id="能做什么">📶 能做什么</h3><table><colgroup><col style="width: 50%"><col style="width: 50%"></colgroup><thead><tr><th>模块</th><th>功能</th></tr></thead><tbody><tr><td>🔐 统一认证</td><td>CAS 登录（RSA 加密 + MFA 手机验证码），支持本科/研究生账户</td></tr><tr><td>🌐 WebVPN</td><td>自动检测校内/校外，校外走 webvpn.xjtu.edu.cn</td></tr><tr><td>📅 课表</td><td>周视图，带考试安排和教材信息</td></tr><tr><td>📊 成绩</td><td>JWAPP 正式成绩 + FineReport 报表，绕过评教限制</td></tr><tr><td>✅ 考勤</td><td>全 20 周流水，正常/迟到/缺勤统计</td></tr><tr><td>🏫 空闲教室</td><td>按节次筛选，CDN 数据不需要登录</td></tr><tr><td>💳 校园卡</td><td>余额 + 月度消费图表</td></tr><tr><td>📚 图书馆</td><td>座位预约、在座/续座/签退</td></tr><tr><td>📢 通知公告</td><td>一网通办 + 各学院通知聚合</td></tr><tr><td>📝 评教</td><td>一键评教</td></tr><tr><td>🎓 研究生</td><td>GMIS 系统接入</td></tr></tbody></table><h3 id="技术选型">🛠️ 技术选型</h3><p>纯 Kotlin + Jetpack Compose，目标是 Android 12+（API 31），Release 包R8 压缩后约 4.4MB。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Kotlin 2.0</span><br><span class="line">Jetpack Compose + Material 3 (Material You)</span><br><span class="line">OkHttp 4.12 + Brotli 压缩</span><br><span class="line">Jsoup 1.18（HTML 解析）</span><br><span class="line">AGP 9.0 + Gradle 9.2</span><br></pre></td></tr></table></figure><p>网络部分有点复杂：校园卡是公网，不需要WebVPN；考勤和图书馆是校内服务，校外自动走 WebVPN 代理；空闲教室走CDN，不需要任何认证。每个模块的登录态独立维护。</p><h3 id="构建">🔧 构建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Debug</span></span><br><span class="line">./gradlew assembleDebug</span><br><span class="line"></span><br><span class="line"><span class="comment"># Release（R8 压缩，约 4.4MB）</span></span><br><span class="line">./gradlew assembleRelease</span><br></pre></td></tr></table></figure><p>推 tag 后 GitHub Actions 自动构建并发 Release：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git tag v1.0-alpha</span><br><span class="line">git push origin v1.0-alpha</span><br></pre></td></tr></table></figure><h3 id="感谢-ai-们">🤖 感谢 AI 们</h3><p>开发过程一言难尽。全程 Vibe Coding，在ChatGPT、Gemini、Claude、豆包之间反复横跳，每次满怀希望地遇到报错，换来一段跑不通的新代码。修一个bug 的流程大概是：问 ChatGPT → 新 bug → 问 Claude → 绕回原 bug → 问Gemini →发现是个拼写错误。经典开发链，最后摆烂让Agent和SubAgent博弈。</p><p>感谢ChatGPT、Gemini、Claude、豆包，感谢你们前赴后继帮我写了那么多跑不通的代码，最终共同造就了这个App（以及这篇Blog）。</p><h3 id="致谢">🙏 致谢</h3><p>核心算法参考了 Python 项目 <a href="https://github.com/yan-xiaoo/XJTUToolBox">XJTUToolBox</a>（<a href="https://github.com/yan-xiaoo"><span class="citation" data-cites="yan-xiaoo">@yan-xiaoo</span></a>），包括 CAS登录流程、WebVPN 加解密、FineReport 报表解析、空闲教室 CDN数据、学期时间计算等。感谢！</p><h3 id="现在的状态">📍 现在的状态</h3><p>v1.1-beta，能跑，主要功能都有，部分细节还在打磨。后续想做的：</p><ul><li>图书馆定时抢座</li><li>智能抢课</li><li>通知订阅 + Push</li><li>思源学堂解析版</li></ul><h3 id="废话">废话</h3><p>一开始想用的是HyperOS主题或者直接用HyperOS等OEM的控件，后来发现这种模式需要写大量xml和调试布局，效率太低了。转Jetpack Compose之后开发效率提升了一个数量级，<del>至少对AI来说</del>。</p><p>Compose 的声明式 UI 对 AI 非常友好，感觉比传统 View好写得多。Material You 的动态配色直接就能用，不用自己调 Token。就是 AGP9.0 配置坦荡，踩了几个坑。</p><p>遇到问题欢迎 issue，或者评论区见。</p></div><script>if("undefined"!=typeof lightGallery) {        var options1 = {            selector: '.gallery-item'        };        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);        }</script>]]>
+    </content>
+    <id>https://www.runqinliu666.cn/2026/02/19/xjtu-toolbox-android/</id>
+    <link href="https://www.runqinliu666.cn/2026/02/19/xjtu-toolbox-android/"/>
+    <published>2026-02-18T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<div class="article-gallery"><p>第一次安卓开发，全程Vibe Coding，实践证明AI无敌。</p>
+<p>做了个 Android App，叫<strong>岱宗盒子</strong>。
+名字取自<del>「会当凌绝顶，一览众山小」——岱宗是泰山的别称，也是交大里那栋图书馆楼的气质</del>
+神秘沙东小群，我爱岱宗，我爱盒子👅 仓库：<a href="https://github.com/yeliqin666/xjtu-toolbox-android">yeliqin666/xjtu-toolbox-android</a></p>
+<h3 id="能做什么]]>
+    </summary>
+    <title>岱宗盒子 —— 给交大人做的 Android 校园工具箱</title>
+    <updated>2026-02-18T16:00:00.000Z</updated>
+  </entry>
   <entry>
     <author>
       <name>yeliqin666</name>
@@ -37,7 +86,7 @@
 <li><strong>多版本兼容</]]>
     </summary>
     <title>人民日报一键下载 - Python 增强版</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -64,7 +113,7 @@
     <a href="/pdfs/opt]]>
     </summary>
     <title>光学——课程笔记</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -94,7 +143,7 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
 <li>]]>
     </summary>
     <title>量子力学核心问题</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -119,7 +168,7 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
   <div class="pdf-embed-mobile">]]>
     </summary>
     <title>数学物理方法——线性空间部分笔记</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -143,7 +192,7 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
 <p>脚本托管在 GitHub，安]]>
     </summary>
     <title>科学文库下载助手 v2.5发布</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -168,7 +217,7 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
 <p><a target="_blank" rel="noopener" href="/imgs/1.jpg" tit]]>
     </summary>
     <title>新年贺词</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -191,7 +240,7 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
 <li><p><span class="math inline"><em>β</em></span> 稳定线: <span class="math display"><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align:]]>
     </summary>
     <title>原子核物理概论——原子物理学笔记(6)</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -214,7 +263,7 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
 <li><p>单电子原子的总磁矩（有效磁矩）: <span class="math display"><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -1.577ex;" xmlns="http://www.w3.org/]]>
     </summary>
     <title>磁场中的原子——原子物理学笔记(5)</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -236,7 +285,7 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
 <li><p>第 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 34]]>
     </summary>
     <title>多电子原子——原子物理学笔记(4)</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -260,7 +309,7 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
 <li>定态 Schrodinger 方程: <span class="math display"><mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -2.041ex;]]>
     </summary>
     <title>氢原子与碱金属原子——原子物理学笔记(3)</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -283,7 +332,7 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
 <li><p>光子动量: <span class="math display"><mjx-container class="MathJax" jax="SVG" display="true"><sv]]>
     </summary>
     <title>量子力学导论——原子物理学笔记(2)</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -310,7 +359,7 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
 <li><p>谱辐射本领]]>
     </summary>
     <title>从经典物理到量子物理——原子物理学笔记(1)</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -334,7 +383,7 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
 <h3 id]]>
     </summary>
     <title>一个适用于pandoc的latex模板(支持中文)</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -358,7 +407,7 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
 <p>再]]>
     </summary>
     <title>新年快乐！</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -378,7 +427,7 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
 <p>效果图(请无视内容)： <a target="_blank" rel="noopener" href="imgs/latex0101.png" title="封面" class="gallery-item" style="box-sha]]>
     </summary>
     <title>LaTex模板分享</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -395,7 +444,7 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
     <published>2024-05-07T08:17:40.000Z</published>
     <summary>您好，这里需要密码才能访问</summary>
     <title>对唯象理论与数学框架推动物理理论构建、演化的思考</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -418,7 +467,7 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
 <p>“爱因斯坦不能理解。”奥本海默回到车上，平静里带着一丝苦楚对他的秘书说。</p>]]>
     </summary>
     <title>奥本海默与魔鬼谈判</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -441,51 +490,6 @@ Operator）的本征值为实数，且不同本征值的本征函数相互正交
 <p>一千顷]]>
     </summary>
     <title>水调歌头·黄州快哉亭赠张偓佺【苏轼】</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>yeliqin666</name>
-    </author>
-    <category term="读书" scheme="https://www.runqinliu666.cn/categories/%E8%AF%BB%E4%B9%A6/"/>
-    <category term="读书" scheme="https://www.runqinliu666.cn/tags/%E8%AF%BB%E4%B9%A6/"/>
-    <content>
-      <![CDATA[<div class="article-gallery"><blockquote><p>　　豫章故郡，洪都新府。星分翼轸，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，徐孺下陈蕃之榻。雄州雾列，俊采星驰。台隍枕夷夏之交，宾主尽东南之美。都督阎公之雅望，棨戟遥临；宇文新州之懿范，襜帷暂驻。十旬休假，胜友如云；千里逢迎，高朋满座。腾蛟起凤，孟学士之词宗；紫电青霜，王将军之武库。家君作宰，路出名区；童子何知，躬逢胜饯。</p></blockquote><p><em>这里是汉代的豫章郡城，如今是洪州的都督府，天上的方位属于翼、轸两星宿的分野，地上的位置连结着衡山和庐山。以三江为衣襟，以五湖为衣带，控制着楚地，连接着闽越。这里物产的华美，有如天降之宝，其光彩上冲牛斗之宿。这里的土地有灵秀之气，陈蕃专为徐孺设下几榻。洪州境内的建筑如云雾排列，有才能的人士如流星一般奔驰驱走。城池据于中原与南夷的交界之处，宾客与主人包括了东南地区最优秀的人物。都督阎公，享有崇高的名望，远道来到洪州坐镇，宇文州牧，是美德的楷模，赴任途中在此暂留。每逢十日一旬的假期，来了很多的良友，迎接远客，高贵的朋友坐满了席位。文词宗主孟学士所作文章就像腾起的蛟龙、飞舞的彩凤；王将军的兵器库中，藏有像紫电、青霜这样锋利的宝剑。由于父亲在交趾做县令，我在探亲途中经过这个著名的地方。我年幼无知，竟有幸亲身参加了这次盛大的宴会。</em></p><span id="more"></span><blockquote><p>　　时维九月，序属三秋。潦水尽而寒潭清，烟光凝而暮山紫。俨骖騑于上路，访风景于崇阿。临帝子之长洲，得天人之旧馆。层峦耸翠，上出重霄；飞阁流丹，下临无地。鹤汀凫渚，穷岛屿之萦回；桂殿兰宫，即冈峦之体势。（天人一作：仙人；层峦一作：层台；即冈 一作：列冈；飞阁流丹一作：飞阁翔丹）</p></blockquote><p><em>正当深秋九月之时，雨后的积水消尽，寒凉的潭水清澈，天空凝结着淡淡的云烟，暮霭中山峦呈现一片紫色。在高高的山路上驾着马车，在崇山峻岭中访求风景。来到昔日帝子的长洲，找到仙人居住过的宫殿。这里山峦重叠，青翠的山峰耸入云霄。凌空的楼阁，红色的阁道犹如飞翔在天，从阁上看不到地面。仙鹤野鸭栖止的水边平地和水中小洲，极尽岛屿的纡曲回环之势；华丽威严的宫殿，依凭起伏的山峦而建。</em></p><blockquote><p>　　披绣闼，俯雕甍，山原旷其盈视，川泽纡其骇瞩。闾阎扑地，钟鸣鼎食之家；舸舰弥津，青雀黄龙之舳。云销雨霁，彩彻区明。落霞与孤鹜齐飞，秋水共长天一色。渔舟唱晚，响穷彭蠡之滨，雁阵惊寒，声断衡阳之浦。(轴通：舳；迷津 一作：弥津；云销雨霁，彩彻区明一作：虹销雨霁，彩彻云衢)</p></blockquote><p><em>推开雕花精美的阁门，俯视彩饰的屋脊，山峰平原尽收眼底，河流迂回的令人惊讶。遍地是里巷宅舍，许多钟鸣鼎食的富贵人家。舸舰塞满了渡口，尽是雕上了青雀黄龙花纹的大船。云消雨停，阳光普照，天空晴朗；落日映射下的彩霞与孤单的野鸭一齐飞翔，秋天的江水和辽阔的天空连成一片，浑然一色。傍晚时分，渔夫在渔船上歌唱，那歌声响彻彭蠡湖滨；深秋时节，雁群感到寒意而发出惊叫，哀鸣声一直持续到衡阳的水滨。</em></p><blockquote><p>　　遥襟甫畅，逸兴遄飞。爽籁发而清风生，纤歌凝而白云遏。睢园绿竹，气凌彭泽之樽；邺水朱华，光照临川之笔。四美具，二难并。穷睇眄于中天，极娱游于暇日。天高地迥，觉宇宙之无穷；兴尽悲来，识盈虚之有数。望长安于日下，目吴会于云间。地势极而南溟深，天柱高而北辰远。关山难越，谁悲失路之人；萍水相逢，尽是他乡之客。怀帝阍而不见，奉宣室以何年？(遥襟甫畅一作：遥吟俯畅)</p></blockquote><p><em>放眼远望，胸襟顿时感到舒畅，超逸的兴致立即兴起。排箫的音响引来徐徐清风，柔缓的歌声吸引住飘动的白云。今日盛宴好比当年梁园雅集，大家酒量也胜过陶渊明。参加宴会的文人学士，就像当年的曹植，写出”朱华冒绿池”一般的美丽诗句，其风流文采映照着谢灵运的诗笔。音乐与饮食、文章和言语这四种美好的事物都已经齐备，贤主、嘉宾这两个难得的条件也凑合在一起了。向天空中极目远眺，在假日里尽情欢娱。苍天高远，大地寥廓，令人感到宇宙的无穷无尽。欢乐逝去，悲哀袭来，意识到万事万物的的消长兴衰是有定数的。远望长安沉落到夕阳之下，遥看吴郡隐现在云雾之间。地理形势极为偏远，南方大海特别幽深，昆仑山上天柱高耸，缈缈夜空北极远悬。关山重重难以越过，有谁同情我这不得志的人？偶然相逢，满座都是他乡的客人。怀念着君王的宫门，但却不被召见，什么时候才能像贾谊那样到宣室侍奉君王呢？</em></p><blockquote><p>　　嗟乎！时运不齐，命途多舛。冯唐易老，李广难封。屈贾谊于长沙，非无圣主；窜梁鸿于海曲，岂乏明时？所赖君子见机，达人知命。老当益壮，宁移白首之心？穷且益坚，不坠青云之志。酌贪泉而觉爽，处涸辙以犹欢。北海虽赊，扶摇可接；东隅已逝，桑榆非晚。孟尝高洁，空余报国之情；阮籍猖狂，岂效穷途之哭！(见机一作：安贫)</p></blockquote><p><em>呵，各人的时机不同，人生的命运多有不顺。冯唐容易衰老，李广立功无数却难得封侯。使贾谊这样有才华的人屈居于长沙，并不是当时没有圣明的君主，使梁鸿逃匿到齐鲁海滨，不是在政治昌明的时代吗？只不过由于君子能了解时机，通达的人知道自己的命运罢了。年岁虽老而心犹壮，怎能在白头时改变心情？遭遇穷困而意志更加坚定，在任何情况下也不放弃自己的凌云之志。即使喝了贪泉的水，也觉得清爽可口，并不滋生贪心；即使像鲋鱼处于即将干涸的车辙中，依然开朗愉快。北海虽然遥远，乘着大风仍然可以到达；晨光虽已逝去，珍惜黄昏却为时不晚。孟尝心性高洁，但白白地怀抱着报国的热情，阮籍为人放纵不羁，我们怎能学他走到穷途就哭泣的行为呢！</em></p><blockquote><p>　　勃，三尺微命，一介书生。无路请缨，等终军之弱冠；有怀投笔，慕宗悫之长风。舍簪笏于百龄，奉晨昏于万里。非谢家之宝树，接孟氏之芳邻。他日趋庭，叨陪鲤对；今兹捧袂，喜托龙门。杨意不逢，抚凌云而自惜；钟期既遇，奏流水以何惭？</p></blockquote><p><em>我地位卑微，只是一介书生。虽然和终军年龄相等，却没有报国的机会。像班超那样有投笔从戎的豪情，也有宗悫”乘风破浪”的壮志。如今我抛弃了一生的功名，不远万里去朝夕侍奉父亲。虽然不是谢玄那样的人才，但也和许多贤德之士相交往。过些日子，我将到父亲身边，一定要像孔鲤那样接受父亲的教诲；而今天我能谒见阎公受到接待，高兴得如同登上龙门一样。假如碰不上杨得意那样引荐的人，就只有抚拍着自己的文章而自我叹惜。既然已经遇到了钟子期，就弹奏一曲《流水》又有什么羞愧呢？</em></p><blockquote><p>　　呜呼！胜地不常，盛筵难再；兰亭已矣，梓泽丘墟。临别赠言，幸承恩于伟饯；登高作赋，是所望于群公。敢竭鄙怀，恭疏短引；一言均赋，四韵俱成。请洒潘江，各倾陆海云尔。</p></blockquote><p><em>呵！名胜之地不能常存，盛大的宴会难以再逢。兰亭集会的盛况已成陈迹，石崇的梓泽也变成了废墟。承蒙这个宴会的恩赐，让我临别时作了这一篇序文，至于登高作赋，这只有指望在座诸公了。我只是冒昧地尽我微薄的心意，作了短短的引言。我的一首四韵小诗也已写成。请各位像潘岳、陆机那样，展现江海般的文才吧！</em></p><blockquote><p>　　滕王高阁临江渚，佩玉鸣鸾罢歌舞。</p></blockquote><p><em>巍峨高耸的滕王阁俯临着江心的沙洲，想当初佩玉、鸾铃鸣响的豪华歌舞已经停止了。</em></p><blockquote><p>　　画栋朝飞南浦云，珠帘暮卷西山雨。</p></blockquote><p><em>早晨，南浦轻云掠过滕王阁的画栋；傍晚时分，西山烟雨卷起滕王阁的珠帘。</em></p><blockquote><p>　　闲云潭影日悠悠，物换星移几度秋。</p></blockquote><p><em>悠闲的彩云影子倒映在江水中，整天悠悠然地漂浮着；时光易逝，人事变迁，不知已经度过几个春秋。</em></p><blockquote><p>　　阁中帝子今何在？槛外长江空自流。</p></blockquote><p><em>昔日游赏于高阁中的滕王如今已不知哪里去了，只有那栏杆外的滔滔江水空自向远方奔流。</em></p></div><script>if("undefined"!=typeof lightGallery) {        var options1 = {            selector: '.gallery-item'        };        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);        }</script>]]>
-    </content>
-    <id>https://www.runqinliu666.cn/2023/09/16/poem-tengwangge/</id>
-    <link href="https://www.runqinliu666.cn/2023/09/16/poem-tengwangge/"/>
-    <published>2023-09-16T07:43:58.000Z</published>
-    <summary>
-      <![CDATA[<div class="article-gallery"><blockquote>
-<p>　　豫章故郡，洪都新府。星分翼轸，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，徐孺下陈蕃之榻。雄州雾列，俊采星驰。台隍枕夷夏之交，宾主尽东南之美。都督阎公之雅望，棨戟遥临；宇文新州之懿范，襜帷暂驻。十旬休假，胜友如云；千里逢迎，高朋满座。腾蛟起凤，孟学士之词宗；紫电青霜，王将军之武库。家君作宰，路出名区；童子何知，躬逢胜饯。</p>
-</blockquote>
-<p><em>这里是汉代的豫章郡城，如今是洪州的都督府，天上的方位属于翼、轸两星宿的分野，地上的位置连结着衡山和庐山。以三江为衣襟，以五湖为衣带，控制着楚地，连接着闽越。这里物产的华美，有如天降之宝，其光彩上冲牛斗之宿。这里的土地有灵秀之气，陈蕃专为徐孺设下几榻。洪州境内的建筑如云雾排列，有才能的人士如流星一般奔驰驱走。城池据于中原与南夷的交界之处，宾客与主人包括了东南地区最优秀的人物。都督阎公，享有崇高的名望，远道来到洪州坐镇，宇文州牧，是美德的楷模，赴任途中在此暂留。每逢十日一旬的假期，来了很多的良友，迎接远客，高贵的朋友坐满了席位。文词宗主孟学士所作文章就像腾起的蛟龙、飞舞的彩凤；王将军的兵器库中，藏有像紫电、青霜这样锋利的宝剑。由于父亲在交趾做县令，我在探亲途中经过这个著名的地方。我年幼无知，竟有幸亲身参加了这次盛大的宴会。</em></p>]]>
-    </summary>
-    <title>滕王阁序-王勃</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>yeliqin666</name>
-    </author>
-    <category term="资源" scheme="https://www.runqinliu666.cn/categories/%E8%B5%84%E6%BA%90/"/>
-    <category term="工具" scheme="https://www.runqinliu666.cn/tags/%E5%B7%A5%E5%85%B7/"/>
-    <category term="资源" scheme="https://www.runqinliu666.cn/tags/%E8%B5%84%E6%BA%90/"/>
-    <content>
-      <![CDATA[<div class="article-gallery"><ul><li><p><a href="https://pan.baidu.com/s/1OjPuG0jeWZzodOXcnuUf0g">V神-Adobe全家桶</a>提取码：1122</p></li><li><p><a href="https://www.foodieguide.com/iptvsearch/">电视直播源搜索</a></p></li><li><p><a href="https://www.ghxi.com/">果核剥壳</a></p></li><li><p><a href="https://ikuuu.club/">IKUUU</a></p></li><li><p><a href="https://www.yxssp.com/">异星软件空间</a></p></li><li><p><a href="https://greasyfork.org/zh-CN/scripts">油猴脚本</a></p></li><li><p><a href="https://www.canva.cn/">CANVA可画</a></p></li><li><p><a href="https://roms.miuier.com/zh-cn/">MIUI更新仓库</a></p></li><li><p><a href="https://github.com/topjohnwu/Magisk/releases">Magisk</a></p></li><li><p><a href="https://github.com/yc9559">YC9559</a></p></li><li><p><a href="https://github.com/LSPosed/LSPosed/releases">LSPosed</a></p></li></ul><iframe class="iframe_video" src="//player.bilibili.com/player.html?aid=934978627&amp;cid=464171873&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div><script>if("undefined"!=typeof lightGallery) {        var options1 = {            selector: '.gallery-item'        };        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);        }</script>]]>
-    </content>
-    <id>https://www.runqinliu666.cn/2023/09/16/resource-software/</id>
-    <link href="https://www.runqinliu666.cn/2023/09/16/resource-software/"/>
-    <published>2023-09-16T04:56:53.000Z</published>
-    <summary>
-      <![CDATA[<div class="article-gallery"><ul>
-<li><p><a href="https://pan.baidu.com/s/1OjPuG0jeWZzodOXcnuUf0g">V神-Adobe全家桶</a>
-提取码：1122</p></li>
-<li><p><a href="https://www.foodieguide.com/iptvsearch/">电视直播源搜索</a></p></li>
-<li><p><a href="https://www.ghxi.com/">果核剥壳</a></p></li>
-<li><p><a href="https://ikuuu.cl]]>
-    </summary>
-    <title>玩机资源整理（1）</title>
-    <updated>2026-02-19T10:29:18.000Z</updated>
+    <updated>2026-02-19T11:12:00.000Z</updated>
   </entry>
 </feed>

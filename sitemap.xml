@@ -298,6 +298,24 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://www.runqinliu666.cn/2026/02/19/qingzhi-theme-release/</loc>
+    
+    <lastmod>2026-02-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.runqinliu666.cn/2026/02/19/xjtu-toolbox-android/</loc>
+    
+    <lastmod>2026-02-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   <url>
     <loc>https://www.runqinliu666.cn/</loc>
@@ -358,6 +376,20 @@
   
   <url>
     <loc>https://www.runqinliu666.cn/tags/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.runqinliu666.cn/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.runqinliu666.cn/tags/Android/</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
