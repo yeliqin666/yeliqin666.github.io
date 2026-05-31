@@ -1,0 +1,67 @@
+---
+name: paper-reading
+description: Use when reading academic papers, PDFs, arXiv pages, figures, tables, methods, experiments, ablations, or literature-review notes. Provides a grounded paper-analysis workflow.
+---
+
+# Paper Reading
+
+Use this skill when the user asks for paper reading, paper explanation, literature notes, PDF analysis, arXiv analysis, method comparison, experiment interpretation, or research synthesis.
+
+## Reading contract
+
+Never treat a paper as a blob of text. Treat it as a set of claims backed by evidence.
+
+For each major claim, collect:
+
+- where it appears
+- what evidence supports it
+- what assumption it needs
+- what would falsify or weaken it
+
+## Minimal report skeleton
+
+1. Identity
+   - title, authors, venue/year if available
+
+2. Question
+   - what problem the paper attacks
+   - why previous work was insufficient
+
+3. Contribution
+   - separate method, empirical result, dataset, theory, and system contributions
+
+4. Method
+   - inputs and outputs
+   - model or algorithm mechanism
+   - training or inference procedure
+   - key equations and their roles
+
+5. Evidence
+   - datasets
+   - baselines
+   - metrics
+   - main tables
+   - ablations
+   - figures
+
+6. Limits
+   - stated limitations
+   - hidden assumptions
+   - failure cases
+   - missing experiments
+
+7. Takeaway
+   - one precise sentence
+   - do not exceed what the evidence supports
+
+## Quality checks
+
+- Did you attach evidence to every important claim?
+- Did you separate the authors' claim from your interpretation?
+- Did you read captions and tables, not only the abstract?
+- Did you inspect ablations before praising the method?
+- Did you mark uncertainty rather than smoothing it away?
+
+## Output style
+
+Write plainly. Prefer concrete nouns and direct verbs. Avoid generic praise.
