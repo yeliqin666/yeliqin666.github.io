@@ -1,0 +1,166 @@
+\documentclass[UTF8,
+$if(fontsize)$
+  $fontsize$,
+$endif$
+$if(papersize)$
+  $papersize$paper,
+$endif$
+$for(classoption)$
+  $classoption$$sep$,
+$endfor$
+]{ctexbook} % 默认使用 ctexbook 文档类
+
+% 引入所需的包
+\usepackage{amsmath}          % 数学公式支持
+\usepackage{extarrows}        % 扩展箭头符号
+\usepackage{graphicx}         % 插图支持
+\usepackage{amssymb}          % 额外的数学符号
+\usepackage{float}            % 控制图形和表格位置
+\usepackage[a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry} % 页面布局设置
+\usepackage{multicol}         % 多列排版支持
+\usepackage{diagbox}          % 支持对角线表格
+\usepackage{fancyhdr}         % 自定义页眉和页脚
+\usepackage{tikz}             % 绘图包
+\usepackage{mathrsfs}         % 数学脚本字体
+\usepackage[hidelinks]{hyperref} % 超链接支持，且隐藏边框
+\usepackage{subfigure}        % 子图支持
+\usepackage{esint}            % 支持闭合曲面积分符号
+\usepackage{thmtools}         % 定理环境支持
+\usepackage{physics}          % 物理符号支持
+\usepackage{datetime2}
+\usepackage{ulem}
+\usepackage{soul}
+\renewcommand{\ul}{\uline}
+\renewcommand{\st}{\sout} % 修复下划线和删除线的中文支持
+
+% 定理环境
+\declaretheorem[name=Theorem, numberwithin=section]{thm}
+\declaretheorem[name=Definition, numberwithin=section]{defi}
+\declaretheorem[name=Lemma, numberwithin=section]{lem}
+\declaretheorem[name=Proof, numberwithin=section]{proof}
+\declaretheorem[name=Example, numberwithin=section]{eg}
+
+$if(beamerarticle)$
+\usepackage{beamerarticle} % needs to be loaded first
+$endif$
+\usepackage{xcolor}
+$if(geometry)$
+\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+$endif$
+
+$--
+$-- section numbering
+$--
+$if(numbersections)$
+\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
+$else$
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+$endif$
+$fonts.latex()$
+$font-settings.latex()$
+$common.latex()$
+$for(header-includes)$
+$header-includes$
+$endfor$
+$after-header-includes.latex()$
+$hypersetup.latex()$
+
+$if(title)$
+\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
+$endif$
+$if(subtitle)$
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{$subtitle$}
+$endif$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$if(date)$
+\date{$date$}
+$else$
+\DTMsetdatestyle{iso}
+\date{\today} % 如果没有指定日期，则使用今天的日期
+$endif$
+
+\begin{document}
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+$if(title)$
+\maketitle
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+$endif$
+
+$for(include-before)$
+$include-before$
+
+$endfor$
+$if(toc)$
+$if(toc-title)$
+\renewcommand*\contentsname{$toc-title$}
+$endif$
+% 前言部分
+\frontmatter
+\chapter*{前言} % 使用 * 来避免编号
+\addcontentsline{toc}{chapter}{前言} % 将前言添加到目录中
+% 在此处输入前言的内容
+{
+$if(colorlinks)$
+\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$$endif$}
+$endif$
+\setcounter{tocdepth}{$toc-depth$}
+\tableofcontents
+}
+$endif$
+$if(lof)$
+\listoffigures
+$endif$
+$if(lot)$
+\listoftables
+$endif$
+$if(linestretch)$
+\setstretch{$linestretch$}
+$endif$
+\mainmatter
+$body$
+
+\backmatter
+% 后记部分
+\clearpage % 或 \cleardoublepage 如果你需要新的右页开始
+\phantomsection % 确保超链接定位正确
+\chapter*{后记}
+\addcontentsline{toc}{chapter}{后记}
+% 在此处输入后记的内容
+
+$if(nocite-ids)$
+\nocite{$for(nocite-ids)$$it$$sep$, $endfor$}
+$endif$
+$if(natbib)$
+$if(bibliography)$
+$if(biblio-title)$
+$if(has-chapters)$
+\renewcommand\bibname{$biblio-title$}
+$else$
+\renewcommand\refname{$biblio-title$}
+$endif$
+$endif$
+\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+
+$endif$
+$endif$
+$if(biblatex)$
+\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+
+$endif$
+$for(include-after)$
+$include-after$
+
+$endfor$
+\end{document}
