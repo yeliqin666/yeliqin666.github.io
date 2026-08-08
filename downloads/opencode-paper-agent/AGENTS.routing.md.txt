@@ -1,0 +1,32 @@
+# Agent Routing Rules
+
+Use this file as `AGENTS.md` in the project root when you want opencode agents to share the same operating rules.
+
+## Roles
+
+- Primary agents own intent, plan, delegation, verification, and final delivery.
+- Subagents own narrow independent work. They return evidence and judgement, not chatter.
+- Skills provide procedures and checklists. They do not decide when they are right; the agent decides.
+
+## Paper workflow
+
+1. The `paper` primary agent receives the user request.
+2. It reads the original source and drafts a first technical understanding.
+3. For substantive scientific claims, it sends the original source to `reader-deep` for blind review.
+4. It compares both readings.
+5. If the conflict matters, it sends the source and both readings to `arbiter`.
+6. If arbitration is still uncertain, it calls `diagnose` and tells the user what remains unresolved.
+
+## Dispatch rules
+
+- Do not send unrelated work to one subagent call.
+- Do not show the primary draft to the blind reader.
+- Do not ask a subagent to change files unless its role explicitly allows editing.
+- Do not treat model agreement as proof. Check the source.
+
+## Output rules
+
+- Prefer evidence with section, page, figure, table, or equation anchors.
+- Mark uncertainty.
+- Never invent citations, results, datasets, or claims.
+- Keep Chinese clean and modern. No boilerplate transitions.
