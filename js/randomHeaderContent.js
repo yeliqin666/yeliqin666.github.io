@@ -1,0 +1,1 @@
+!function(){"use strict";document.addEventListener("DOMContentLoaded",function(){var t=document.querySelectorAll("#hiddenHeaderContentArray span"),e=document.getElementById("targetSpan");t.length&&e&&(e.textContent=t[Math.floor(Math.random()*t.length)].textContent)})}();

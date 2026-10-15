@@ -1,0 +1,1 @@
+!function(){"use strict";try{var t=localStorage.getItem("miuix-next-mode")||"system",e=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light",a="light"===t||"dark"===t?t:e,i=document.documentElement;i.setAttribute("data-miuix-next-mode",t),i.setAttribute("data-miuix-next-resolved",a)}catch(t){}}();
