@@ -1,0 +1,8 @@
+# robots.txt for https://www.runqinliu666.cn/
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.runqinliu666.cn/sitemap.xml
+Sitemap: https://www.runqinliu666.cn/baidusitemap.xml
